@@ -17,10 +17,10 @@ interface ActivationLinkProps {
 export const ActivationLink = ({ url }: ActivationLinkProps) => (
   <Html>
     <Head />
-    <Preview>Pixiemist magic link for registration</Preview>
+    <Preview>TestingAI magic link for registration</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Hey!! Welcome Back to Pixiemist</Heading>
+        <Heading style={h1}>Hey!! Welcome Back to TestingAI</Heading>
         <Link
           href={url}
           target="_blank"

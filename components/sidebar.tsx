@@ -31,7 +31,7 @@ export const Sidebar = ({ creationCount, isPro }: SidebarProps) => {
             <Image fill alt="Logo" src="/logo3.png" sizes="50%" />
           </div>
           <h1 className={cn(montserrat.className, "text-2xl font-bold")}>
-            Pixiemist
+            TestingAI
           </h1>
         </Link>
         <div className="flex items-center pl-3">

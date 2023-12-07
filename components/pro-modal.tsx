@@ -1,40 +1,23 @@
+// components/ProModal.tsx
 "use client";
 
-import axios from "axios";
-import Image from "next/image";
-import { useState } from "react";
-
-import { usePromodal } from "@/store/promodal-store";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import toast from "react-hot-toast";
-import { useTheme } from "next-themes";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { usePromodal } from '@/store/promodal-store';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import StripePricingTable from '@/components/pricing-table';
+import { useTheme } from 'next-themes';
 
 export const ProModal = () => {
   const proModal = usePromodal();
-  const [loading, setLoading] = useState(false);
-
   const { resolvedTheme } = useTheme();
-
-  const onSubscribe = async () => {
-    try {
-      setLoading(true);
-
-      const response = await axios.get("/api/stripe");
-      window.location.href = response.data.url;
-    } catch (err) {
-      toast.error("Pro Subscription Failed");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <>
       <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
         <DialogContent className="w-full rounded-md bg-white/50 backdrop-blur transition-opacity dark:bg-slate-900/50 md:bg-white/30">
           <h1 className="mb-4 text-center text-2xl font-bold">
-            Upgrade to PRO
+            Choose Your Package
           </h1>
           {resolvedTheme === "dark" ? (
             <Image
@@ -54,11 +37,9 @@ export const ProModal = () => {
             />
           )}
           <p className="mb-4 text-center text-gray-600 dark:text-white">
-            Enjoy unlimited creations and unlock the full potential!
+            Select a package that fits your needs.
           </p>
-          <Button onClick={onSubscribe} disabled={loading}>
-            Subscribe
-          </Button>
+          <StripePricingTable />
         </DialogContent>
       </Dialog>
     </>

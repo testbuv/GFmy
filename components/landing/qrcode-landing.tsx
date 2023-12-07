@@ -1,5 +1,4 @@
 import React from "react";
-import { Input } from "../ui/input";
 import Image from "next/image";
 import { DM_Serif_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -14,19 +13,12 @@ export const QRCodeLanding = () => {
           Generate Stylised QR Codes from your prompts.
         </h1>
       </div>
-
       <div>
-        <Input
-          placeholder="Christmas Explosion in sky, 8k, cinematic"
-          value="Christmas Explosion in sky, 8k, cinematic"
-          className="bg-white text-xs md:text-sm"
-          readOnly={true}
-        />
         <Image
           src="/qrlanding.png"
           alt="QR Code"
-          width={350}
-          height={350}
+          width={800}
+          height={500}
           className="mt-2 rounded-sm"
         />
       </div>

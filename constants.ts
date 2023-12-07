@@ -1,4 +1,4 @@
-export const MAX_FREE_COUNT = 10;
+export const MAX_FREE_COUNT = 15;
 
 export const routes = [
   {
@@ -8,10 +8,10 @@ export const routes = [
   },
 
   {
-    label: "Background Remove",
-    path: "/bg-remove",
-    description: "Remove Background from your Image",
-    image: "/dashboard/bg-remove-dashboard.png",
+    label: "Image Generation",
+    path: "/stable-diffusion",
+    description: "Generate Art from the text prompt.",
+    image: "/dashboard/imagegen-dashboard.png",
   },
   {
     label: "Image Upscale",
@@ -26,16 +26,10 @@ export const routes = [
     image: "/dashboard/qr-dashboard.png",
   },
   {
-    label: "Artistic Realism",
-    path: "/real-art",
-    description: "Bringing Your Art to Life",
-    image: "/dashboard/real-art-dashboard.png",
-  },
-  {
-    label: "Face Swap",
-    path: "/face-swap",
-    description: "Your Face, Their Body ",
-    image: "/dashboard/face-swap-dashboard.png",
+    label: "Background Remove",
+    path: "/bg-remove",
+    description: "Remove Background from your Image",
+    image: "/dashboard/bg-remove-dashboard.png",
   },
   {
     label: "Settings",

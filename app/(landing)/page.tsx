@@ -3,7 +3,8 @@ import { getCurrentUser } from "@/lib/session";
 import { LandingHero } from "@/components/landing/landing-hero";
 import { LandingNav } from "@/components/landing/landing-nav";
 import { LandingSection } from "@/components/landing/landing-section";
-import { LandingSectionSecond } from "@/components/landing/landing-section-second";
+import { LandingSectionFirst } from "@/components/landing/landing-section-first";
+import { LandingSectionTwo } from "@/components/landing/landing-section-two";
 import { LandingSectionThree } from "@/components/landing/landing-section-three";
 import { LandingFooter } from "@/components/landing/landing-footer";
 
@@ -22,14 +23,15 @@ export default async function Landing() {
           <LandingSection />
         </section>
         <section className="mx-auto h-screen w-full bg-white">
-          <LandingSectionSecond />
-        </section>
+        <LandingSectionFirst />
+       </section>
+       <section className="mx-auto h-screen w-full bg-white">
+  <LandingSectionTwo />
+ </section>
         <div className="h-60 bg-white lg:hidden"></div>
         <section className="mx-auto h-screen w-full bg-white">
           <LandingSectionThree />
-        </section>
-        <div className="h-64 bg-white md:h-96 lg:hidden"></div>
-        <section className="mx-auto mt-6 max-w-screen-xl">
+        </section>        <section className="mx-auto mt-6 max-w-screen-xl">
           <LandingFooter />
         </section>
       </main>

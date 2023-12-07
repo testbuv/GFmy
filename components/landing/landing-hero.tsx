@@ -28,7 +28,7 @@ export const LandingHero = ({ user }: LandingHeroProps) => {
         <h1>Unlock a world of creative possibilities with </h1>
         <div
           className={cn(
-            "h-16 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-6xl text-transparent md:h-24 md:text-8xl",
+            "h-16 bg-gradient-to-r from-gray-100 to-gray-900 bg-clip-text text-6xl text-transparent md:h-24 md:text-8xl",
             font_2.className,
           )}
         >

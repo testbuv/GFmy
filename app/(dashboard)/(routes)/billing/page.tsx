@@ -1,53 +1,40 @@
-import React from "react";
+// pages/billing.tsx
+"use client";
 
-import { redirect } from "next/navigation";
-import { Metadata } from "next";
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react';
 
-import { Heading } from "@/components/heading";
-import { HeadingShell } from "@/components/shell";
-import { getCurrentUser } from "@/lib/session";
-import { getUserSubscription } from "@/lib/subscription";
-import { stripe } from "@/lib/stripe";
-import { BillingCard } from "@/components/billing";
+import { Heading } from '@/components/heading';
+import { HeadingShell } from '@/components/shell';
+import StripePricingTable from '@/components/pricing-table';
 
-export const metadata: Metadata = {
-  title: "Billing",
-  description: "Handle your payment and subscription details.",
-};
+const BillingPage: React.FC = () => {
+  const router = useRouter();
+  const { data: session, status } = useSession();
 
-export default async function BillingPage() {
-  const user = await getCurrentUser();
-  if (!user) {
-    redirect("/sign-in");
-  }
-  const subscriptionPlan = await getUserSubscription(user.id);
+  useEffect(() => {
+    // If not authenticated and the session status is "unauthenticated", redirect to sign-in
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin');
+    }
+  }, [status, router]);
 
-  if (subscriptionPlan instanceof Error) {
-    redirect("/sign-in");
-  }
-  let isCancelled = false;
-  if (subscriptionPlan.isPro && subscriptionPlan.stripeSubscriptionId) {
-    const stripePlan = await stripe.subscriptions.retrieve(
-      subscriptionPlan.stripeSubscriptionId,
-    );
-    isCancelled = stripePlan.cancel_at_period_end;
+  // Show loading state while checking session
+  if (status === 'loading') {
+    return <div>Loading...</div>;
   }
 
   return (
     <>
       <HeadingShell>
-        <Heading
-          heading="Billing"
-          subHeading="Handle your payment and subscription details."
-        />
+        <Heading heading="Billing" subHeading="Purchase tokens for your usage." />
       </HeadingShell>
       <div className="grid ">
-        <BillingCard
-          className="mt-10"
-          subscriptionPlan={subscriptionPlan}
-          isCancelled={isCancelled}
-        />
+        <StripePricingTable />
       </div>
     </>
   );
-}
+};
+
+export default BillingPage;

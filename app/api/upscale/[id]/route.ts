@@ -26,8 +26,8 @@ export async function GET(
   } else {
     if (prediction?.status === "succeeded") {
       // Max size to cloudinary is 10MB [Free plan]
-      // const cloudinary_resp = await uploadImage(replicate_res);
-      //   const cloudinary_resp = await uploadImage(prediction.output as string);
+      //const cloudinary_resp = await uploadImage(replicate_res);
+      //const cloudinary_resp = await uploadImage(prediction.output as string);
 
       await prismadb.creation.create({
         data: {
