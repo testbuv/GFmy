@@ -15,7 +15,7 @@ export const ProModal = () => {
   return (
     <>
       <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
-        <DialogContent className="w-full rounded-md bg-white/50 backdrop-blur transition-opacity dark:bg-slate-900/50 md:bg-white/30">
+        <DialogContent className="w-full max-h-screen overflow-y-auto rounded-md bg-white/50 backdrop-blur transition-opacity dark:bg-slate-900/50 md:bg-white/30">
           <h1 className="mb-4 text-center text-2xl font-bold">
             Choose Your Package
           </h1>
@@ -39,7 +39,9 @@ export const ProModal = () => {
           <p className="mb-4 text-center text-gray-600 dark:text-white">
             Select a package that fits your needs.
           </p>
-          <StripePricingTable />
+          <div className="w-full md:w-3/4 mx-auto">
+            <StripePricingTable />
+          </div>
         </DialogContent>
       </Dialog>
     </>
