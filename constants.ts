@@ -14,10 +14,28 @@ export const routes = [
     image: "/dashboard/imagegen-dashboard.png",
   },
   {
+    label: "Video Generation",
+    path: "/video",
+    description: "Generate Video from the text prompt.",
+    image: "/dashboard/imagegen-dashboard.png",
+  },
+  {
     label: "Image Upscale",
     path: "/upscale",
     description: "Upscale your Image",
     image: "/dashboard/upscale-dashboard.png",
+  },
+  {
+    label: "Sound Generation",
+    path: "/music",
+    description: "Generate sounds from the text prompt.",
+    image: "/dashboard/imagegen-dashboard.png",
+  },
+  {
+    label: "Chat with AI",
+    path: "/conversation",
+    description: "Chat with AI.",
+    image: "/dashboard/imagegen-dashboard.png",
   },
   {
     label: "QR Code Generator",

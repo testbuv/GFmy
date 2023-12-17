@@ -28,14 +28,13 @@ export async function GET(
   if (prediction?.status === "succeeded") {
     const imageUrls = prediction.output as string[];
 
-    // Save the generated image URLs in your database
-    // await prismadb.creation.createMany({
-      // data: imageUrls.map((imageUrl) => ({
-        // imageUrl,
-        // domain: "stable-diffusion",
-        // userId: user.id,
-      // })),
-    // });
+    await prismadb.creation.createMany({
+      data: imageUrls.map((imageUrl) => ({
+        imageUrl,
+        domain: "stable-diffusion",
+        userId: user.id,
+      })),
+    });
 
     return NextResponse.json({
       status: prediction.status,
