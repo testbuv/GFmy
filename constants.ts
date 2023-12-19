@@ -1,4 +1,4 @@
-export const MAX_FREE_COUNT = 15;
+export const MAX_FREE_COUNT = 30;
 
 export const routes = [
   {
@@ -29,12 +29,6 @@ export const routes = [
     label: "Sound Generation",
     path: "/music",
     description: "Generate sounds from the text prompt.",
-    image: "/dashboard/imagegen-dashboard.png",
-  },
-  {
-    label: "Chat with AI",
-    path: "/conversation",
-    description: "Chat with AI.",
     image: "/dashboard/imagegen-dashboard.png",
   },
   {

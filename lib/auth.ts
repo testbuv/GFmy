@@ -4,7 +4,7 @@ import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 
 import prismadb from "@/lib/db";
-import { transporter } from "@/lib/mail";
+import { sendMail } from "@/lib/mail";
 import { render } from "@react-email/render";
 import { NewUserEmail } from "@/components/email/new-user";
 import { ActivationLink } from "@/components/email/activation";
@@ -46,7 +46,7 @@ export const authOptions: NextAuthOptions = {
           html,
         };
         try {
-          await transporter.sendMail(mailOptions);
+          await sendMail(mailOptions);
           console.log("Message Sent");
         } catch (err) {
           console.log("ERROR while sending");

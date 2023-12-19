@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       return new NextResponse("Free Tier Ended", { status: 403 });
     }
 
-    const modelURL = "riffusion/riffusion:8cf61ea6c56afd61d8f5b9ffd14d7c216c0a93844ce2d82ac1c9ecc9c7f24e05";
+    const modelURL = "8cf61ea6c56afd61d8f5b9ffd14d7c216c0a93844ce2d82ac1c9ecc9c7f24e05";
 
     const req_options = {
       prompt_a: prompt_a,

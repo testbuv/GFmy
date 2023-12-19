@@ -55,49 +55,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
-      <Form {...form}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="grid gap-2">
-            <div className="grid gap-1">
-              <FormField
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        type="email"
-                        autoCapitalize="none"
-                        autoCorrect="off"
-                        disabled={isLoading || isGoogleLoading}
-                        placeholder="johndoe@example.com"
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              {errors?.email && (
-                <p className="px-1 text-xs text-red-500">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
-            <Button disabled={isLoading}>
-              {isLoading && (
-                <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
-              )}
-              Sign In With Email
-            </Button>
-          </div>
-        </form>
-      </Form>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t"></span>
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
+            Sign in
           </span>
         </div>
       </div>

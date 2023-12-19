@@ -44,9 +44,6 @@ export default function RegisterPage() {
             <h1 className="text-2xl font-semibold tracking-tight">
               Welcome to TestingAI
             </h1>
-            <p className="text-sm">
-              Enter your email below to sign in to your account
-            </p>
           </div>
           <UserAuthForm />
         </div>
