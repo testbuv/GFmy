@@ -14,6 +14,12 @@ export const routes = [
     image: "/dashboard/imagegen-dashboard.png",
   },
   {
+    label: "Artistic Realism",
+    path: "/real-art",
+    description: "Bringing Your Art to Life",
+    image: "/dashboard/imagegen-dashboard.png",
+  },
+  {
     label: "Video Generation",
     path: "/video",
     description: "Generate Video from the text prompt.",
