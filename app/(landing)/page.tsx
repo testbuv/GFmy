@@ -7,6 +7,8 @@ import { LandingSectionFirst } from "@/components/landing/landing-section-first"
 import { LandingSectionTwo } from "@/components/landing/landing-section-two";
 import { LandingSectionThree } from "@/components/landing/landing-section-three";
 import { LandingFooter } from "@/components/landing/landing-footer";
+import { CookieConsent } from "@/components/landing/cookies-consent";
+
 
 export default async function Landing() {
   const user = await getCurrentUser();
@@ -31,7 +33,9 @@ export default async function Landing() {
         <div className="h-60 bg-white lg:hidden"></div>
         <section className="mx-auto h-screen w-full bg-white">
           <LandingSectionThree />
-        </section>        <section className="mx-auto mt-6 max-w-screen-xl">
+        </section>    
+        <CookieConsent />    
+        <section className="mx-auto mt-6 max-w-screen-xl">
           <LandingFooter />
         </section>
       </main>
