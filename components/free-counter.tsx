@@ -28,7 +28,7 @@ export const FreeCounter = ({ creationCount, isPro }: FreeCounterProps) => {
       <Card className=" border-none bg-slate-900 shadow-lg shadow-primary">
         <CardHeader>
           <CardTitle className="text-md text-center font-semibold text-white ">
-            {creationCount}/{MAX_FREE_COUNT} Free Creations
+            {creationCount}/{MAX_FREE_COUNT} Creations Available
           </CardTitle>
         </CardHeader>
         <CardContent className="text-center">
