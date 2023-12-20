@@ -1,4 +1,4 @@
-export const MAX_FREE_COUNT = 30;
+export const MAX_FREE_COUNT = 5;
 
 export const routes = [
   {
@@ -14,28 +14,10 @@ export const routes = [
     image: "/dashboard/imagegen-dashboard.png",
   },
   {
-    label: "Artistic Realism",
-    path: "/real-art",
-    description: "Bringing Your Art to Life",
-    image: "/dashboard/imagegen-dashboard.png",
-  },
-  {
-    label: "Video Generation",
-    path: "/video",
-    description: "Generate Video from the text prompt.",
-    image: "/dashboard/imagegen-dashboard.png",
-  },
-  {
     label: "Image Upscale",
     path: "/upscale",
     description: "Upscale your Image",
     image: "/dashboard/upscale-dashboard.png",
-  },
-  {
-    label: "Sound Generation",
-    path: "/music",
-    description: "Generate sounds from the text prompt.",
-    image: "/dashboard/imagegen-dashboard.png",
   },
   {
     label: "QR Code Generator",
