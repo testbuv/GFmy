@@ -1,36 +1,63 @@
 import { getCurrentUser } from "@/lib/session";
-import { MAX_FREE_COUNT } from "@/constants";
-import prismadb from "@/lib/db";
+import prismadb from "@/lib/db"; 
+export const checkApiLimit = async (
+  ) => {
 
-export const checkApiLimit = async () => {
   const user = await getCurrentUser();
 
-  if (!user) return;
+  if(!user) {
+    throw new Error("Not authenticated");
+  }
 
-  const count = await prismadb.creation.count({
+  const tokenBalance = await prismadb.user.findUnique({
     where: {
-      userId: user.id,
-    },
-  });
+      id: user.id
 
-  if (count && count >= MAX_FREE_COUNT) {
-    return false;
-  } else {
+    },
+    select: {
+      credits: true    
+    }   
+  });
+  
+  const creationCount = await getCreationCount();
+
+  if (tokenBalance && tokenBalance.credits && creationCount >= tokenBalance.credits) {
+    throw new Error("Out of credits");
+  } else {  
     return true;
   }
+
 };
 
 export const getCreationCount = async () => {
+
   const user = await getCurrentUser();
 
-  if (!user) return 0;
+  if(!user) {
+    return 0;
+  }
 
   const count = await prismadb.creation.count({
-    where: {
-      userId: user.id,
-    },
+    where: {  
+      userId: user.id
+    }
   });
 
-  if (count) return count;
-  else return 0;
+  return count; 
+
 };
+
+export const getUserTokenBalance = async (userId: string) => {
+
+  const tokenBalance = await prismadb.user.findUnique({
+    where: {
+      id: userId 
+    },
+    select: {
+      credits: true    
+    }   
+  });
+
+  return tokenBalance?.credits ?? 0;
+
+}

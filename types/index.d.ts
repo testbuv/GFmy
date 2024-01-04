@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { Purchase, User } from "@prisma/client";
 
 export interface FileWithPreview extends File {
   preview: string;
@@ -9,10 +9,7 @@ export interface OutputImgSlider {
   outputURL: string;
 }
 
-export type UserWithTokenBalance = Pick<User, "email" | "name" | "id"> & {
-  tokenBalance: number; // Assuming you have a field for token balance in your User model
-};
-
+export type UserWithTokenBalance = Pick<User, "email" | "name" | "id" | "purchases" | "credits"> 
 // If you are no longer using the subscription fields, you can remove them
 // If you still need them for any reason, keep them in the type
 export type UserSubscriptionPlan = Pick<

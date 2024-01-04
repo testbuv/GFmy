@@ -1,8 +1,9 @@
-import { headers } from "next/headers";
+import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import prismadb from "@/lib/db";
 import { stripe } from "@/lib/stripe";
-import { NextRequest, NextResponse } from "next/server";
+
+const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
@@ -14,25 +15,49 @@ export async function POST(req: NextRequest) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!,
+      webhookSecret
     );
   } catch (err: any) {
+    console.log(`❌ Error message: ${err.message}`);
     return new NextResponse("WEBHOOK ERROR:" + err.message, { status: 400 });
   }
 
-  if (event.type === "payment_intent.succeeded") {
+  console.log("✅ Success:", event.id);
+
+  if (event.type === "payment_intent.succeeded" || event.type === "checkout.session.completed") {
     const paymentIntent = event.data.object as Stripe.PaymentIntent;
+    const userId = paymentIntent.metadata.userId;
+    let creditAmount = calculateCreditAmount(paymentIntent.amount);
 
-    if (!paymentIntent?.metadata?.userId) {
-      return new NextResponse("No user id in payment intent", { status: 400 });
+    if (userId) {
+      await prismadb.user.update({
+        where: { id: userId },
+        data: { credits: { increment: creditAmount } },
+      });
+
+      await prismadb.purchase.create({
+        data: {
+          creditAmount: creditAmount,
+          userId: userId,
+        },
+      });
     }
-
-    await prismadb.creation.createMany({
-      data: Array(Number(paymentIntent?.metadata?.creationsCount)).fill({
-        userId: paymentIntent?.metadata?.userId,
-      }),
-    });
   }
 
   return new NextResponse(null, { status: 200 });
+}
+
+function calculateCreditAmount(amount: number): number {
+  const amountEuros = amount / 100; // Convert to full EUR units
+
+  switch (amountEuros) {
+    case 10:
+      return 20;
+    case 20:
+      return 100;
+    case 35:
+      return 200;
+    default:
+      return amountEuros / 0.5; // Custom rate: 0.5 EUR per credit
+  }
 }

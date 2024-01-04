@@ -65,9 +65,7 @@ export const Sidebar = ({ creationCount, isPro }: SidebarProps) => {
             </Link>
           ))}
         </div>
-
       </div>
-      <FreeCounter creationCount={creationCount} isPro={isPro} />
     </div>
   );
 };
