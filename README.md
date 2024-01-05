@@ -23,7 +23,7 @@ A SaaS application for image editing using AI.
 1. Install dependencies using pnpm:
 
 ```sh
-pnpm install
+yarn
 ```
 
 2. Copy `.env.example` to `.env` and update the variables according to the need.
@@ -35,7 +35,7 @@ cp .env.example .env
 3. Start the development server:
 
 ```sh
-pnpm dev
+yarn run dev
 ```
 
 <br />
