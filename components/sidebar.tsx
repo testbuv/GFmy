@@ -8,17 +8,18 @@ import { usePathname } from "next/navigation";
 import { routes } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/store";
-import { FreeCounter } from "./free-counter";
+import { FreeCounter} from "./free-counter";
 import { UserAvatar } from "./user-avatar";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
 interface SidebarProps {
   creationCount: number;
+  userCredits: number;
   isPro: boolean;
 }
 
-export const Sidebar = ({ creationCount, isPro }: SidebarProps) => {
+export const Sidebar = ({ creationCount,userCredits, isPro }: SidebarProps) => {
   const pathname = usePathname();
 
   const user = useUserStore((state) => state.user);
@@ -65,7 +66,9 @@ export const Sidebar = ({ creationCount, isPro }: SidebarProps) => {
             </Link>
           ))}
         </div>
+
       </div>
+      <FreeCounter creationCount={creationCount} isPro={isPro} userCredits={userCredits} />
     </div>
   );
 };

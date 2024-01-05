@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 
-import { UserSubscriptionPlan } from "@/types";
-import { cn, formatDate } from "@/lib/utils";
+import { UserWithTokenBalance } from "@/types";
+import { cn } from "@/lib/utils";
 import {
   Card,
   CardContent,
@@ -18,13 +18,12 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 interface BillingCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  subscriptionPlan: UserSubscriptionPlan;
+  subscriptionPlan: UserWithTokenBalance;
   isCancelled: boolean;
 }
 
 export const BillingCard = ({
   subscriptionPlan,
-  isCancelled,
   className,
 }: BillingCardProps) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -69,16 +68,6 @@ export const BillingCard = ({
             {isLoading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
             {subscriptionPlan.isPro ? "Manage Subscription" : "Upgrade to Pro"}
           </Button>
-          {subscriptionPlan.isPro ? (
-            <p className=" text-xs font-medium">
-              {isCancelled
-                ? "Your plan will expire on "
-                : "Your plan will renew on "}
-              {formatDate(subscriptionPlan.stripeCurrentPeriodEnd!)}.
-            </p>
-          ) : (
-            <></>
-          )}
         </CardFooter>
       </Card>
     </div>

@@ -1,5 +1,6 @@
 import { getCurrentUser } from "@/lib/session";
 import prismadb from "@/lib/db"; 
+
 export const checkApiLimit = async (
   ) => {
 
@@ -30,34 +31,16 @@ export const checkApiLimit = async (
 };
 
 export const getCreationCount = async () => {
-
   const user = await getCurrentUser();
 
-  if(!user) {
-    return 0;
-  }
+  if (!user) return 0;
 
   const count = await prismadb.creation.count({
-    where: {  
-      userId: user.id
-    }
-  });
-
-  return count; 
-
-};
-
-export const getUserTokenBalance = async (userId: string) => {
-
-  const tokenBalance = await prismadb.user.findUnique({
     where: {
-      id: userId 
+      userId: user.id,
     },
-    select: {
-      credits: true    
-    }   
   });
 
-  return tokenBalance?.credits ?? 0;
-
-}
+  if (count) return count;
+  else return 0;
+};

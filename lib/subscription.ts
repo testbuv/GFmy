@@ -1,20 +1,21 @@
 import prismadb from "@/lib/db";
-import { UserSubscriptionPlan } from "@/types";
+import { UserWithTokenBalance } from "@/types";
 
-const GRACE_PERIOD_MS = 86_400_000;
 
 export async function getUserSubscription(
   userId: string,
-): Promise<UserSubscriptionPlan | Error> {
+): Promise<UserWithTokenBalance | Error> {
   const user = await prismadb.user.findUnique({
     where: {
       id: userId,
     },
     select: {
-      stripeSubscriptionId: true,
       stripeCustomerId: true,
-      stripePriceId: true,
-      stripeCurrentPeriodEnd: true,
+      email: true,
+      name: true,
+        id: true,
+        purchases: true,
+        credits: true
     },
   });
 
@@ -22,9 +23,7 @@ export async function getUserSubscription(
     return new Error("User not found");
   }
 
-  const isPro =
-    user.stripePriceId &&
-    user.stripeCurrentPeriodEnd?.getTime()! + GRACE_PERIOD_MS > Date.now();
+  const isPro = user.purchases && user.purchases.length > 0;
 
   return {
     ...user,
