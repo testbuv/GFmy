@@ -44,3 +44,18 @@ export const getCreationCount = async () => {
   if (count) return count;
   else return 0;
 };
+
+export function calculateCreditAmount(amount: number): number {
+  const amountEuros = amount / 100; // Convert to full EUR units
+
+  switch (amountEuros) {
+    case 10:
+      return 20;
+    case 20:
+      return 100;
+    case 35:
+      return 200;
+    default:
+      return amountEuros / 0.5; // Custom rate: 0.5 EUR per credit
+  }
+}

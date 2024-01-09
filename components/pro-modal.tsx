@@ -1,17 +1,21 @@
-// components/ProModal.tsx
 "use client";
 
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { usePromodal } from '@/store/promodal-store';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import StripePricingTable from '@/components/pricing-table';
+import { useRouter } from "next/navigation";
 import { useTheme } from 'next-themes';
+import { Button } from "@/components/ui/button";
 
 export const ProModal = () => {
   const proModal = usePromodal();
   const { resolvedTheme } = useTheme();
+  const router = useRouter();
 
+  const redirectToPricingTable = () => {
+    router.push('/dashboard/billing'); 
+  };
   return (
     <>
       <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
@@ -40,7 +44,9 @@ export const ProModal = () => {
             Select a package that fits your needs.
           </p>
           <div className="w-full md:w-3/4 mx-auto">
-            <StripePricingTable />
+          <Button onClick={redirectToPricingTable}>
+            Buy Credits
+          </Button>
           </div>
         </DialogContent>
       </Dialog>

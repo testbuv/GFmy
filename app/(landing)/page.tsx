@@ -6,7 +6,7 @@ import { LandingSection } from "@/components/landing/landing-section";
 import { LandingSectionFirst } from "@/components/landing/landing-section-first";
 import { LandingSectionTwo } from "@/components/landing/landing-section-two";
 import { LandingSectionThree } from "@/components/landing/landing-section-three";
-import { LandingFooter } from "@/components/landing/landing-footer";
+import {LandingFooter} from "@/components/landing/landing-footer";
 import { CookieConsent } from "@/components/landing/cookies-consent";
 
 

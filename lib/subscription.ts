@@ -10,7 +10,6 @@ export async function getUserSubscription(
       id: userId,
     },
     select: {
-      stripeCustomerId: true,
       email: true,
       name: true,
         id: true,

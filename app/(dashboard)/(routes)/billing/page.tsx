@@ -2,12 +2,10 @@ import React from "react";
 
 import { redirect } from "next/navigation";
 import { Metadata } from "next";
-
-import { Heading } from "@/components/heading";
-import { HeadingShell } from "@/components/shell";
+import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { getCurrentUser} from "@/lib/session";
-import { getUserSubscription } from "@/lib/subscription";
-import { ProModal } from "@/components/pro-modal";
+import  StripePricingTable  from "@/components/pricing-table";
+import { Credits } from "@/components/credits";
 
 export const metadata: Metadata = {
   title: "Billing",
@@ -19,24 +17,32 @@ export default async function BillingPage() {
   if (!user) {
     redirect("/sign-in");
   }
-  const subscriptionPlan = await getUserSubscription(user.id);
-
-  if (subscriptionPlan instanceof Error) {
-    redirect("/sign-in");
-  }
- 
-
-  return (
+return (
     <>
-      <HeadingShell>
-        <Heading
-          heading="Billing"
-          subHeading="Handle your payment and subscription details."
-        />
-      </HeadingShell>
+     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-slate-900">
+    <div className="w-full max-w-xl">
+<Card className="mb-8">
+<CardHeader>
+<CardTitle className="text-center">Your AI Replicate Tokens</CardTitle>
+</CardHeader>
+<CardContent className="flex flex-col items-center gap-4">
+<div className="text-5xl font-bold">2</div>
+<p className="text-gray-100">Tokens remaining</p>
+
+</CardContent>
+</Card>
+<Card>
+<CardHeader>
+<CardTitle className="text-center">Buy More Tokens</CardTitle>
+</CardHeader>
+<CardContent>
       <div className="grid ">
-       <ProModal />
+      <StripePricingTable user={user} />
       </div>
+      </CardContent>
+</Card>
+</div>
+</main>
     </>
   );
 }

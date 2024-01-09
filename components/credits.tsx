@@ -3,33 +3,24 @@
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-import { usePromodal } from "@/store/promodal-store";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 
-interface FreeCounterProps {
+interface CreditsProps {
   creationCount: number;
-  isPro: boolean;
   userCredits: number;
 }
 
-export const FreeCounter = ({ creationCount, isPro, userCredits }: FreeCounterProps) => {
+export const Credits = ({ creationCount, userCredits }: CreditsProps) => {
   const [mounted, setMounted] = useState(false);
-  const proModal = usePromodal();
-  const router = useRouter();
 
-  const redirectToPricingTable = () => {
-    router.push('/billing'); 
-  };
+  
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
-
-  return isPro ? (
+  
     <></>
-  ) : (
+ (
     <div className=" px-8 py-4 md:px-4">
       <Card className=" border-none bg-slate-900 shadow-lg shadow-primary">
         <CardHeader>
@@ -42,13 +33,7 @@ export const FreeCounter = ({ creationCount, isPro, userCredits }: FreeCounterPr
             className="h-3 outline-none"
             value={Math.min((creationCount / userCredits) * 100, 100)}
           />
-          <Button
-            onClick={redirectToPricingTable}
-            className="mt-2 w-full rounded-md border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-white"
-            variant="outline"
-          >
-            Upgrade
-          </Button>
+
         </CardContent>
       </Card>
     </div>

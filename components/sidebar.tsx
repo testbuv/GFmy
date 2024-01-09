@@ -19,7 +19,7 @@ interface SidebarProps {
   isPro: boolean;
 }
 
-export const Sidebar = ({ creationCount,userCredits, isPro }: SidebarProps) => {
+export const Sidebar = ({ creationCount, userCredits, isPro }: SidebarProps) => {
   const pathname = usePathname();
 
   const user = useUserStore((state) => state.user);

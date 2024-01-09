@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { LandingHero } from "@/components/landing/landing-hero";
 import { LandingNav } from "@/components/landing/landing-nav";
-import { LandingFooter } from "@/components/landing/landing-footer";
+import {LandingFooter}  from "@/components/landing/landing-footer";
 
 export const metadata: Metadata = {
     title: 'Cookies Policy',
@@ -64,8 +64,11 @@ const Cookies = () => {
                         </ul>
                     </section>
                 </div>
+                <section className="mx-auto mt-6 max-w-screen-xl">
+          <LandingFooter />
+        </section>
             </main>
-            <LandingFooter />
+            
         </>
     );
 };
