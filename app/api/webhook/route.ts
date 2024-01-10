@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import prismadb from "@/lib/db";
-import { stripe } from "@/lib/stripe";
 import { calculateCreditAmount } from "@/lib/api-limit";
 import Cors from "micro-cors";
+
+const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
+  apiVersion: "2023-08-16",
+  typescript: true,
+});
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
@@ -28,16 +32,19 @@ export async function POST(req: NextRequest) {
   console.log("✅ Success:", event.id);
 
   if (event.type === "payment_intent.succeeded" || event.type === "checkout.session.completed") {
-    const paymentIntent = event.data.object as Stripe.PaymentIntent;
-    console.log(`💰 PaymentIntent: ${JSON.stringify(paymentIntent)}`);
+    const session = event.data.object as Stripe.Checkout.Session;
+    console.log(`💰 session: ${JSON.stringify(session)}`);
 
-    const userEmail = paymentIntent.metadata.email;
     
-    let creditAmount = calculateCreditAmount(paymentIntent.amount);
+    const userId = session.client_reference_id
+    console.log(`📧 User email: ${userId}`);
+
+    
+    let creditAmount = calculateCreditAmount(session.amount_total!);
 
     await prismadb.user.update({
       where: {
-        email: userEmail,
+        id: userId!,
       },
       data: {
         credits: {
@@ -51,7 +58,7 @@ export async function POST(req: NextRequest) {
         creditAmount: creditAmount,
         user: {
           connect: {
-            email: userEmail,
+            id: userId!,
           },
         },
       },
