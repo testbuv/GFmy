@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from 'next-auth'
+import { User } from 'next-auth';
 import Script from "next/script";
 
 

@@ -15,11 +15,6 @@ DROP INDEX "users_stripe_subscription_id_key";
 
 -- AlterTable
 ALTER TABLE "purchases" ALTER COLUMN "creditAmount" DROP NOT NULL;
-ALTER TABLE "users" ALTER COLUMN "credits" DROP NOT NULL;
-DROP INDEX "purchases_stripeSessionId_key";
-
--- AlterTable
-ALTER TABLE "purchases" DROP COLUMN "stripeSessionId";
 
 -- AlterTable
 ALTER TABLE "users" DROP COLUMN "stripe_current_period_end",

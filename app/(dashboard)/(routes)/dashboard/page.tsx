@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
-
+import Image from "next/image";
 import { DashboardCard } from "@/components/dashboard-card";
 import { tools } from "@/constants";
 

@@ -52,7 +52,7 @@ model User {
   accounts               Account[]
   sessions               Session[]
   creations              Creation[]
-  credits                Int      @default(3)
+  credits                Int?      @default(3)
   purchases              Purchase[]
 
   @@map("users")
@@ -83,7 +83,7 @@ model Purchase {
   id              String   @id @default(cuid())
   userId          String
   user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  creditAmount    Int
+  creditAmount    Int?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
