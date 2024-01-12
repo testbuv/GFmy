@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
   typescript: true,
 });
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 const webhookSecret: string = process.env.STRIPE_WEBHOOK_SECRET || "";
 
