@@ -49,7 +49,7 @@ export const UserAccountNav = () => {
           <Link href="/dashboard">Dashboard</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/billing">Subscription</Link>
+          <Link href="/billing">Buy Credits</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/settings">Settings</Link>
@@ -59,7 +59,7 @@ export const UserAccountNav = () => {
           <LogOut className="mr-2 h-4 w-4" />
           <span>Sign Out</span>
         </DropdownMenuItem>
-      </DropdownMenuContent>
+      </DropdownMenuContent>m
     </DropdownMenu>
   );
 };

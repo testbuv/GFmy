@@ -3,19 +3,16 @@
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-import { usePromodal } from "@/store/promodal-store";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 interface FreeCounterProps {
   creationCount: number;
-  isPro: boolean;
   userCredits: number;
 }
 
-export const FreeCounter = ({ creationCount, isPro, userCredits }: FreeCounterProps) => {
+export const FreeCounter = ({ creationCount, userCredits }: FreeCounterProps) => {
   const [mounted, setMounted] = useState(false);
-  const proModal = usePromodal();
   const router = useRouter();
 
   const redirectToPricingTable = () => {
@@ -27,9 +24,7 @@ export const FreeCounter = ({ creationCount, isPro, userCredits }: FreeCounterPr
 
   if (!mounted) return null;
 
-  return isPro ? (
-    <></>
-  ) : (
+  return (
     <div className=" px-8 py-4 md:px-4">
       <Card className=" border-none bg-slate-900 shadow-lg shadow-primary">
         <CardHeader>

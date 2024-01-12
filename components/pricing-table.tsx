@@ -14,7 +14,7 @@ declare global {
 }
 }
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, 'id' | 'name' | 'email'>
+  user: Pick<User, 'id' | 'email'>
 }
 
 export default function StripePricingTable({ user }: Props) {
@@ -25,7 +25,7 @@ export default function StripePricingTable({ user }: Props) {
         pricing-table-id="prctbl_1OJh6bH2WewsQNa1kvFilGEn"
         publishable-key="pk_test_51LTpiNH2WewsQNa1yQ9Yde3afFnAPxqovufTUtCbyti0xF0EWj9GuvV1eZJV7jE6xgHScYhjc6R1em09od95xjXg008dDvTmdW"
         customer-email={user.email}
-        client-reference-id={user.email}
+        client-reference-id={user.id}
       ></stripe-pricing-table>
     </div>
   )

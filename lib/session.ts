@@ -9,17 +9,23 @@ export async function getCurrentUser() {
 }
 
 export async function getUserCredits() {
-  const user = await getCurrentUser();
+  
+  // Get current user session
+  const user = await getCurrentUser()
 
-  if (!user) return;
+  // Handle no user
+  if (!user) return null
 
+  // Lookup credits for user
   const credits = await prismadb.user.findUnique({
     where: { id: user.id },
-    select: { credits: true },
-  });
+    select: { credits: true } 
+  })
 
-  return credits?.credits ?? 0;
+  // Return credits or default 0
+  return credits?.credits ?? 0
 }
+
 
 export async function addUserCredits(credits: number) {
   const user = await getCurrentUser();

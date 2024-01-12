@@ -16,16 +16,15 @@ const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 interface SidebarProps {
   creationCount: number;
   userCredits: number;
-  isPro: boolean;
 }
 
-export const Sidebar = ({ creationCount, userCredits, isPro }: SidebarProps) => {
+export const Sidebar = ({ creationCount, userCredits}: SidebarProps) => {
   const pathname = usePathname();
 
   const user = useUserStore((state) => state.user);
 
   return (
-    <div className="flex h-full flex-col bg-[#161719] py-4 text-white">
+    <div className="flex h-full flex-col bg-slate-950 py-4 text-white">
       <div className="flex-1 px-3 py-2">
         <Link href="/dashboard" className="mb-14 flex items-center pl-3">
           <div className="relative mr-2 h-10 w-10">
@@ -68,7 +67,7 @@ export const Sidebar = ({ creationCount, userCredits, isPro }: SidebarProps) => 
         </div>
 
       </div>
-      <FreeCounter creationCount={creationCount} isPro={isPro} userCredits={userCredits} />
+      <FreeCounter creationCount={creationCount} userCredits={userCredits} />
     </div>
   );
 };

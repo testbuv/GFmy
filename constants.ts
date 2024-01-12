@@ -1,5 +1,3 @@
-export const MAX_FREE_COUNT = 30;
-
 export const routes = [
   {
     label: "Dashboard",
