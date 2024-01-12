@@ -48,7 +48,7 @@ export const LandingFooter = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-y-2 order-none">
+            <div className="flex flex-col gap-y-2">
               <span className="text-base-semi">Legals</span>
               <ul className="flex flex-col gap-y-2">
                 <li>
