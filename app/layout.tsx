@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TestingAI",
+  title: "Printinc AI",
 };
 
 export default function RootLayout({

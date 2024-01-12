@@ -9,7 +9,7 @@ export const LandingFooter = () => {
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between">
           <div>
             <Link href="/" className="text-xl-semi uppercase">
-              TestingAI.
+              Printinc AI.
             </Link>
             <section className="flex justify-center items-center space-x-6 hover:scale-105 transition-transform duration-200 border-2 border-transparent hover:border-gray-400 dark:hover:border-gray-600">
               <div className="flex items-center">
@@ -39,7 +39,7 @@ export const LandingFooter = () => {
               <ul className="flex flex-col gap-y-2">
                 <li>
                   <a
-                    href="mailto:support@testingAI.shop"
+                    href="mailto:support@Printinc AI.shop"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -67,7 +67,7 @@ export const LandingFooter = () => {
         </div>
         <div className="flex flex-col-reverse gap-y-4 justify-center items-center sm:flex-row sm:items-end sm:justify-between">
           <span className="text-xsmall-regular text-gray-500">
-            © Copyright 2023 TestingAI.
+            © Copyright 2023 Printinc AI.
           </span>
         </div>
       </div>

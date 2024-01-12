@@ -5,7 +5,7 @@ export const TypewriterLandingComponent = () => {
   return (
     <Typewriter
       onInit={(typewriter) => {
-        typewriter.typeString("TestingAI.").start();
+        typewriter.typeString("Printinc AI.").start();
       }}
     />
   );

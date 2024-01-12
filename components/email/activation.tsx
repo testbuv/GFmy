@@ -17,10 +17,10 @@ interface ActivationLinkProps {
 export const ActivationLink = ({ url }: ActivationLinkProps) => (
   <Html>
     <Head />
-    <Preview>TestingAI magic link for registration</Preview>
+    <Preview>Printinc AI magic link for registration</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Hey!! Welcome Back to TestingAI</Heading>
+        <Heading style={h1}>Hey!! Welcome Back to Printinc AI</Heading>
         <Link
           href={url}
           target="_blank"
