@@ -29,7 +29,7 @@ export const FreeCounter = ({ creationCount, userCredits }: FreeCounterProps) =>
       <Card className=" border-none bg-slate-900 shadow-lg shadow-primary">
         <CardHeader>
           <CardTitle className="text-md text-center font-semibold text-white ">
-            {creationCount}/{userCredits} Available Credits
+            {creationCount}/{userCredits} Credits consumed
           </CardTitle>
         </CardHeader>
         <CardContent className="text-center">
