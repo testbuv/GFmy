@@ -82,9 +82,9 @@ function calculateCredits(amount: number) {
 
 function calculateCreditsBasedOnRange(amountEuros: number) {
   let credits;
-  if (amountEuros >= 500) {
+  if (amountEuros >= 50) {
     credits = amountEuros / 0.16; // Rate for purchases above 500 euros
-  } else if (amountEuros >= 100) {
+  } else if (amountEuros >= 35) {
     credits = amountEuros / 0.18; // Rate for purchases between 100 and 500 euros
   } else {
     credits = amountEuros / 0.2; // Rate for purchases less than 100 euros

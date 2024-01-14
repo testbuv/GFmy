@@ -5,10 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Sidebar } from "@/components/sidebar";
 import { useState, useEffect } from "react";
 
-
 interface MobileSidebarProps {
   creationCount: number;
-  userCredits: number; // Assuming userCredits is a number. Change the type as needed.
+  userCredits: number;
 }
 
 export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps) => {
@@ -23,9 +22,12 @@ export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps
   return (
     <Sheet>
       <SheetTrigger>
-        <PanelRight className="md:hidden" />
+        <PanelRight className="block md:hidden cursor-pointer" />
       </SheetTrigger>
-      <SheetContent side="left" className="p-0 text-white">
+      <SheetContent 
+        side="left" 
+        className="p-0 text-white w-full fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 md:w-64 transition duration-200 ease-in-out z-50"
+      >
         <Sidebar creationCount={creationCount} userCredits={userCredits} />
       </SheetContent>
     </Sheet>
