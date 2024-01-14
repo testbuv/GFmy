@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prismadb from "@/lib/db";
 import Stripe from "stripe";
+// import { sendMail } from "@/lib/mail";
+// import { render } from "@react-email/render"; 
+// import { OrderConfirmationEmail } from "@/components/email/order-confirmation"
+
 
 const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
   apiVersion: "2023-08-16",
   typescript: true,
 });
+
 
 export const runtime = 'nodejs';
 
@@ -44,7 +49,7 @@ export async function POST(req: NextRequest) {
       // @ts-ignore
       async function handleCheckoutSessionCompleted(session) {
   console.log("Handling checkout.session.completed with session data:", session);
-
+  const amount = session.amount_subtotal / 100;;
   const credits = calculateCredits(session.amount_subtotal);
   console.log(`Calculated credits: ${credits} for amount: ${session.amount_subtotal}`);
 
@@ -58,16 +63,26 @@ export async function POST(req: NextRequest) {
     const purchaseCreateResponse = await prismadb.purchase.create({
       data: {
         creditAmount: credits,
+        eurAmount: amount,
         user: { connect: { id: session.client_reference_id } }
+      },
+      include: {
+        user: true, // Include user data to get email
       }
     });
-    console.log("Purchase record created:", purchaseCreateResponse);
-  } catch (err) {
-    console.error("Error updating database:", err);
-    // Consider handling the error appropriately, possibly re-throwing or returning a specific response.
-  }
+//     const emailHtml = await OrderConfirmationEmail({ purchaseId, amountPaid, creditAmount, createdAt });
+//     await sendMail({
+//       from: process.env.EMAIL_FROM, 
+//       to: session.user.email,
+//       subject: "Your Order Confirmation",
+//       html: emailHtml,
+//     })
+console.log("Purchase record created:", purchaseCreateResponse);
+} catch (err) {
+console.error("Error updating database:", err);
 }
-
+}
+  
 function calculateCredits(amount: number) {
   const amountEuros = amount / 100;
   console.log(`Calculating credits for amount in Euros: ${amountEuros}`);
