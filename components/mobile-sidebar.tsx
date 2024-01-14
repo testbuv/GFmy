@@ -3,7 +3,7 @@
 import { PanelRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Sidebar } from "@/components/sidebar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface MobileSidebarProps {
   creationCount: number;
@@ -11,25 +11,24 @@ interface MobileSidebarProps {
 }
 
 export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-  
-  if (!isMounted) return null;
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleSidebar = () => setIsOpen(!isOpen);
+  const sidebarClasses = isOpen 
+  ? "animate-slideInFromLeft" 
+  : "animate-slideOutToLeft";
 
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger onClick={toggleSidebar}>
         <PanelRight className="block md:hidden cursor-pointer" />
       </SheetTrigger>
       <SheetContent 
         side="left" 
-        className="p-0 text-white w-full fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 md:w-64 transition duration-200 ease-in-out z-50"
+        className={`p-0 text-white w-full fixed inset-y-0 left-0 z-50 transition duration-200 ease-in-out ${sidebarClasses}`}
       >
         <Sidebar creationCount={creationCount} userCredits={userCredits} />
       </SheetContent>
     </Sheet>
+  
   );
-};
+}
