@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import { sendMail } from "@/lib/mail";
 import { OrderConfirmationEmail } from "@/components/email/order-confirmation"
 
+
 const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
   apiVersion: "2023-08-16",
   typescript: true,
@@ -69,24 +70,40 @@ async function handleCheckoutSessionCompleted(session) {
     });
     console.log("Purchase record created:", purchaseCreateResponse);
 
-    const emailHtml = OrderConfirmationEmail({
+    const emailHtml = generateOrderConfirmationHtml({
       purchaseId: purchaseCreateResponse.id,
       amountPaid: amount,
       creditAmount: credits,
       createdAt: purchaseCreateResponse.createdAt.toISOString(),
     });
-    
+
     await sendMail({
       from: process.env.EMAIL_FROM, 
       to: user!.email!,
       subject: "Your Order Confirmation",
-      html: emailHtml.toString(),
+      html: emailHtml,
     });
 
   } catch (err) {
     console.error("Error updating database or sending email:", err);
   }
 }
+
+function generateOrderConfirmationHtml({ purchaseId, amountPaid, creditAmount, createdAt }: { purchaseId: string, amountPaid: number, creditAmount: number, createdAt: string }) {
+  return `
+    <html>
+      <body>
+        <h1>Thank you for your order!</h1>
+        <p>Your order ID: ${purchaseId}</p>
+        <p>Amount Paid: €${amountPaid.toFixed(2)}</p>
+        <p>Credits available: €${creditAmount.toFixed(2)}</p>
+        <p>Order Date: ${new Date(createdAt).toLocaleDateString("en-US")}</p>
+        <p>If you have any questions, please contact us at support@printinc.shop.</p>
+      </body>
+    </html>
+  `;
+}
+
 
 function calculateCredits(amount: number) {
   const amountEuros = amount / 100;
