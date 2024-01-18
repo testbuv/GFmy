@@ -56,10 +56,8 @@ const Cookies = () => {
                         <p>Printinc AI’s e-commerce platform set cookies in order for basic functionality of the site to work- check out, shopping cart etc.</p>
                         <h3>ADVERTISING & MARKETING:</h3>
                         <ul>
-                            <li>Commision Junction ads - a cookie is set and a pixel is used to track your journey and experience on our websites in order to personalise the content of Commision Junction's advertising programme.</li>
                             <li>Google Adwords - a cookie is set, and a pixel is used to track your journey and experience on our websites in order to customise the content of Google Adwords' program and to optimize the advertising on the Google Ads platform.</li>
                             <li>Facebook ads - a cookie is set, and a pixel is used to track your journey and experience on our websites in order to customise the content of Facebook’s ad program and to optimize the advertising on Facebook's platforms.</li>
-                            <li>Google Dynamic Remarketing- used for remarketing.</li>
                             <li>SendGrid – a cookie is set, and a pixel is used to track your journey and experience on our websites in order to optimise the email notifications.</li>
                         </ul>
                     </section>

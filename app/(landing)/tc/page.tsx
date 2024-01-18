@@ -5,7 +5,7 @@ import { LandingNav } from "@/components/landing/landing-nav";
 import {LandingFooter}  from "@/components/landing/landing-footer";
 
 export const metadata: Metadata = {
-    title: 'Terms and Conditions of Sale',
+    title: 'Terms and Conditions',
 };
 
 const TermsAndConditions = () => {
@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
             <LandingHero />
             <main className="bg-gray-100 text-slate-900 py-12">
             <div className="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6 prose prose-blue">
-                    <h1 className="text-3xl font-bold mb-6 border-b pb-3 text-center text-slate-800">TERMS AND CONDITIONS OF SALE</h1>
+                    <h1 className="text-3xl font-bold mb-6 border-b pb-3 text-center text-slate-800">TERMS AND CONDITIONS</h1>
                     
                     <section className="space-y-4">
                         <h2 className="text-2xl font-semibold text-slate-800">1. BACKGROUND</h2>
@@ -32,7 +32,7 @@ const TermsAndConditions = () => {
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl font-semibold text-slate-800">3. CUSTOMER INFORMATION ETC.</h2>
+                        <h2 className="text-2xl font-semibold text-slate-800">3. CUSTOMER INFORMATION.</h2>
                         <p>3.1 When the Customer registers its user account and/or places an order, the Customer will be requested to provide some personal data. The Customer confirms that the information provided is correct and complete and is responsible for any errors in the information provided. Information about Printinc AI’s processing of personal data is set forth in Printinc AI’s Privacy Policy, which constitutes an integral part of these General Conditions.</p>
                         <p>3.2 The Customer undertakes to ensure that no one, except the Customer, uses the Customer’s log-in details. The Customer may not disclose its username or password to any person and shall ensure that any documentation with information about username and password is kept in such a way that unauthorised persons may not access the information. The Customer shall notify Printinc AI without delay if it may be suspected that any unauthorised person has obtained access to the Customer’s password. The Customer is responsible for all purchases made with the Customers log-in details if the Customer has not provided such notification.</p>
                         <p>3.3 If Printinc AI suspects that the Customer abuses its user account or its log-in details or otherwise violates the General Conditions, Printinc AI is entitled to block the Customer’s access to its user account. Printinc AI is furthermore entitled to assign new log-in details to the Customer.</p>
@@ -40,7 +40,7 @@ const TermsAndConditions = () => {
 
                     <section className="space-y-4">
                         <h2 className="text-2xl font-semibold text-slate-800">4. PRICES, FEES AND PAYMENT</h2>
-                        <p>The prices stated on the Website apply to orders placed on the Website. All prices are presented in € and do not include payment, which are given separately. 25% VAT is not included in the product price for the EU countries.</p>
+                        <p>The prices stated on the Website apply to orders placed on the Website. All prices are presented in € and do not include payment, which are given separately. 21% VAT is not included in the product price for the EU countries.</p>
                         <p>The Customer can pay for its purchase in the manner specified on the Website. Printinc AI is entitled to charge the Customer already in connection with the order. Printinc AI reserves the right not to offer all payment methods at all times, alternatively change payment method if the payment method the Customer has selected does not work, for whichever reasons, at the time of fulfilment of the order. Please note that limitations of available payment methods are set forth on the Website.</p>
                     </section>
 
@@ -72,6 +72,15 @@ const TermsAndConditions = () => {
                     <section className="space-y-4">
                         <h2 className="text-2xl font-semibold text-slate-800">15. APPLICABLE LAW AND DISPUTE RESOLUTIONS</h2>
                         <p>Printinc AI shall not be liable or deemed to be in breach of contract by reason of any delay in performing, or failure to perform, any of its obligations if the delay or failure was due to any cause beyond its reasonable control. Notwithstanding contrary clauses in this Agreement, in the event that Printinc AI.shop are deemed liable to you for breach of this Agreement, you agree that Printinc AI.shop liability is limited to the amount actually paid by you for your services, which amount calculated in reliance upon this clause. You hereby release Printinc AI from any and all obligations, liabilities and claims in excess of this limitation.</p>
+                    </section>
+                    <section className="space-y-4">
+                        <h2 className="text-2xl font-semibold text-slate-800">14. DISCLAIMER AND WARRANTIES</h2>
+                        <p>OUR SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. YOUR USE OF OUR SERVICES IS AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OUR SERVICES ARE PROVIDED WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM US OR THROUGH OUR SERVICES WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED HEREIN. WITHOUT LIMITING THE FOREGOING, WE, OUR SUBSIDIARIES, OUR AFFILIATES, AND OUR LICENSORS DO NOT WARRANT THAT THE CONTENT ON OUR SERVICES IS ACCURATE, RELIABLE, OR CORRECT; THAT OUR SERVICES WILL MEET YOUR REQUIREMENTS; THAT OUR SERVICES WILL BE AVAILABLE AT ANY PARTICULAR TIME OR LOCATION, UNINTERRUPTED OR SECURE; THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED; OR THAT OUR SERVICES ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR MOBILE DEVICE OR LOSS OF DATA THAT RESULTS FROM YOUR USE OF OUR SERVICES OR ANY DOWNLOAD OF CONTENT THROUGH THE USE OF OUR SERVICES. YOU MAY HAVE OTHER STATUTORY RIGHTS, BUT THE DURATION OF STATUTORILY REQUIRED WARRANTIES, IF ANY, WILL BE LIMITED TO THE SHORTEST PERIOD PERMITTED BY LAW.</p>
+                        <p>The content provided through or in connection with OUR Services is designed to provide practical and useful information on the subject matter covered. WHILE SUCH CONTENT MAY CONCERN ISSUES RELATED TO PROFESSIONAL SERVICES, SUCH CONTENT IS NOT PROFESSIONAL SERVICES ADVICE. YOU SHOULD NOT ACT OR REFRAIN FROM ACTING ON THE BASIS OF ANY CONTENT INCLUDED ON THIS SITE OR IN CONNECTION WITH OUR SERVICES WITHOUT SEEKING THE ADVICE OF A COMPETENT PROFESSIONAL IN THE APPLICABLE SUBJECT MATTER. We EXPRESSLY DISCLAIM ALL LIABILITY IN RESPECT OF ACTIONS TAKEN OR NOT TAKEN BASED ON ANY CONTENT OF OR IN CONNECTION WITH OUR SERVICES.</p>
+                    </section>
+                    <section className="space-y-4">
+                        <h2 className="text-2xl font-semibold text-slate-800">15. APPLICABLE LAW AND DISPUTE RESOLUTIONS</h2>
+                        <p>Printinc AI shall not be liable or deemed to be in breach of contract by reason of any delay in performing, or failure to perform, any of its obligations if the delay or failure was due to any cause beyond its reasonable control. Notwithstanding contrary clauses in this Agreement, in the event that Printinc AI.shop is deemed liable to you for breach of this Agreement, you agree that Printinc AI.shop's liability is limited to the amount actually paid by you for your services, calculated in reliance upon this clause. You hereby release Printinc AI from any and all obligations, liabilities, and claims in excess of this limitation.</p>
                     </section>
                 </div>
                 <section className="mx-auto mt-6 max-w-screen-xl">
