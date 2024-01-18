@@ -1,16 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prismadb from "@/lib/db";
 import Stripe from "stripe";
-// import { sendMail } from "@/lib/mail";
-// import { render } from "@react-email/render"; 
-// import { OrderConfirmationEmail } from "@/components/email/order-confirmation"
-
+import { sendMail } from "@/lib/mail";
+import { OrderConfirmationEmail } from "@/components/email/order-confirmation"
 
 const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
   apiVersion: "2023-08-16",
   typescript: true,
 });
-
 
 export const runtime = 'nodejs';
 
@@ -46,14 +43,17 @@ export async function POST(req: NextRequest) {
   console.log("Response sent for event type:", event.type);
   return new NextResponse(JSON.stringify({ received: true }));
 }
-      // @ts-ignore
-      async function handleCheckoutSessionCompleted(session) {
+// @ts-ignore
+async function handleCheckoutSessionCompleted(session) {
   console.log("Handling checkout.session.completed with session data:", session);
-  const amount = session.amount_subtotal / 100;;
+  const amount = session.amount_subtotal / 100;
   const credits = calculateCredits(session.amount_subtotal);
   console.log(`Calculated credits: ${credits} for amount: ${session.amount_subtotal}`);
 
   try {
+    const user = await prismadb.user.findUnique({ 
+      where: { id: session.client_reference_id },
+    });
     const userUpdateResponse = await prismadb.user.update({ 
       where: { id: session.client_reference_id },
       data: { credits: { increment: credits } },
@@ -66,23 +66,28 @@ export async function POST(req: NextRequest) {
         eurAmount: amount,
         user: { connect: { id: session.client_reference_id } }
       },
-      include: {
-        user: true, // Include user data to get email
-      }
     });
-//     const emailHtml = await OrderConfirmationEmail({ purchaseId, amountPaid, creditAmount, createdAt });
-//     await sendMail({
-//       from: process.env.EMAIL_FROM, 
-//       to: session.user.email,
-//       subject: "Your Order Confirmation",
-//       html: emailHtml,
-//     })
-console.log("Purchase record created:", purchaseCreateResponse);
-} catch (err) {
-console.error("Error updating database:", err);
+    console.log("Purchase record created:", purchaseCreateResponse);
+
+    const emailHtml = OrderConfirmationEmail({
+      purchaseId: purchaseCreateResponse.id,
+      amountPaid: amount,
+      creditAmount: credits,
+      createdAt: purchaseCreateResponse.createdAt.toISOString(),
+    });
+    
+    await sendMail({
+      from: process.env.EMAIL_FROM, 
+      to: user!.email!,
+      subject: "Your Order Confirmation",
+      html: emailHtml.toString(),
+    });
+
+  } catch (err) {
+    console.error("Error updating database or sending email:", err);
+  }
 }
-}
-  
+
 function calculateCredits(amount: number) {
   const amountEuros = amount / 100;
   console.log(`Calculating credits for amount in Euros: ${amountEuros}`);
