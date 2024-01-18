@@ -96,7 +96,7 @@ function generateOrderConfirmationHtml({ purchaseId, amountPaid, creditAmount, c
         <h1>Thank you for your order!</h1>
         <p>Your order ID: ${purchaseId}</p>
         <p>Amount Paid: €${amountPaid.toFixed(2)}</p>
-        <p>Credits available: €${creditAmount.toFixed(2)}</p>
+        <p>Credits purchased: ${creditAmount.toFixed(2)}</p>
         <p>Order Date: ${new Date(createdAt).toLocaleDateString("en-US")}</p>
         <p>If you have any questions, please contact us at support@printinc.shop.</p>
       </body>
