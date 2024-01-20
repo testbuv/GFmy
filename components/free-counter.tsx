@@ -14,7 +14,6 @@ interface FreeCounterProps {
 export const FreeCounter = ({ creationCount, userCredits }: FreeCounterProps) => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
-
   const redirectToPricingTable = () => {
     router.push('/billing'); 
   };

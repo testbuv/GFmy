@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import prismadb from "@/lib/db";
 import Stripe from "stripe";
 import { sendMail } from "@/lib/mail";
-import { OrderConfirmationEmail } from "@/components/email/order-confirmation"
 
 
 const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
