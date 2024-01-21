@@ -39,3 +39,5 @@ export const routes = [
 export const tools = routes.filter(
   (route) => route.label !== "Settings" && route.label !== "Dashboard",
 );
+export const IS_BROWSER = typeof window !== "undefined"
+

@@ -1,4 +1,4 @@
-// MobileSidebar.tsx
+
 "use client";
 
 import { PanelRight } from "lucide-react";
@@ -12,45 +12,20 @@ interface MobileSidebarProps {
 }
 
 export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth >= 390) {
-        setIsOpen(false); // Close the sidebar on larger screens
-      }
-    }
-
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Call handleResize immediately to set initial state
-    handleResize();
-
-    // Cleanup listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    setIsMounted(true);
   }, []);
-
-  const toggleSidebar = () => {
-    if (window.innerWidth < 390) {
-      setIsOpen(!isOpen);
-    }
-  };
-
-  const sidebarClasses = isOpen 
-    ? "animate-slideInFromLeft" 
-    : "animate-slideOutToLeft";
+  if (!isMounted) return null;
 
   return (
     <Sheet>
-      <SheetTrigger onClick={toggleSidebar}>
-        <PanelRight className="block md:hidden cursor-pointer" />
+      <SheetTrigger>
+        <PanelRight className="md:hidden" />
       </SheetTrigger>
-      <SheetContent side="left">
-        <div className={`text-white w-full fixed inset-y-0 left-0 z-50 transition duration-200 ease-in-out ${sidebarClasses}`}>
-          <Sidebar creationCount={creationCount} userCredits={userCredits} />
-        </div>
-      </SheetContent>
+      <SheetContent side="left" className="p-0 text-white">
+        <Sidebar creationCount={creationCount} userCredits={userCredits} />
+        </SheetContent>
     </Sheet>
   );
 }

@@ -5,13 +5,13 @@ import { UserAccountNav } from "@/components/user-account-nav";
 import { getCreationCount } from "@/lib/api-limit";
 import { ModeToggle } from "@/components/theme-toggle";
 import { getUserCredits } from "@/lib/session";
-
 export const Navbar = async () => {
   
   const creationCount = (await getCreationCount()) || 0;
   const userCredits = (await getUserCredits()) || 0;
 
   return (
+    
     <div className="flex items-center p-4">
       <MobileSidebar creationCount={creationCount} userCredits={userCredits} />
       <div className="flex w-full justify-end gap-4">
