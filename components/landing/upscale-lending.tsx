@@ -18,7 +18,7 @@ export const UpscaleLanding = () => {
     <div className="flex flex-col items-center justify-center gap-4 md:flex-row  md:gap-8">
       <div>
         <Image
-          src="/upscalelanding.png" // Replace with an actual sample image URL
+          src="https://store-diet.s3.eu-north-1.amazonaws.com/upscalelanding.png" // Replace with an actual sample image URL
           alt="Upscale"
           width={800}
           height={500}

@@ -7,6 +7,7 @@ const nextConfig = {
       "pbxt.replicate.delivery",
       "replicate.delivery",
       "res.cloudinary.com",
+      "store-diet.s3.eu-north-1.amazonaws.com",
     ],
   },
   compiler: {

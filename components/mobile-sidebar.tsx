@@ -25,7 +25,7 @@ export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps
       </SheetTrigger>
       <SheetContent side="left" className="p-0 text-white">
         <Sidebar creationCount={creationCount} userCredits={userCredits} />
-        </SheetContent>
+      </SheetContent>
     </Sheet>
   );
 }
