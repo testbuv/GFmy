@@ -81,8 +81,8 @@ const BackgroundRemovePage = () => {
       form.reset();
     } catch (err: any) {
       console.log("[CLIENT_BGREMOVE_ERROR");
-      if (err?.response?.status === 403) {
-        proModal.onOpen();
+      if (err?.response?.status === 403 || err?.response?.status === 503 || err?.response?.status === 500){
+        toast.error("Credit limit reached. Please purchase more to continue.");
       } else toast.error("Internal Server Error.");
     } finally {
       router.refresh();

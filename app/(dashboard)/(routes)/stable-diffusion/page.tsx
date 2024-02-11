@@ -58,7 +58,9 @@ const ImageGenerationPage = () => {
       setImages(response.data.outputURL);
     } catch (err: any) {
       console.error("[IMAGE_GEN_CLIENT_ERROR]", err);
-      toast.error("Internal Server Error.");
+      if (err?.response?.status === 403 || err?.response?.status === 503 || err?.response?.status === 500){
+        toast.error("Credit limit reached. Please purchase more to continue.");
+      } else toast.error("Internal Server Error.");
     } finally {
       router.refresh();
     }

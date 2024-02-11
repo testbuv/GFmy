@@ -72,9 +72,9 @@ const QRGenerationPage = () => {
       form.reset();
     } catch (err: any) {
       console.log("[QR_CODE_CLIENT_ERROR]");
-      if (err?.response?.status === 403) {
-        proModal.onOpen();
-      } else toast.error("Internal Server Error.");
+      if (err?.response?.status === 403 || err?.response?.status === 503 || err?.response?.status === 500){
+        toast.error("Credit limit reached. Please purchase more to continue.");
+            } else toast.error("Internal Server Error.");
     } finally {
       router.refresh();
     }
