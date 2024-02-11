@@ -34,11 +34,20 @@ export const LandingFooter = () => {
           <div className="flex flex-col gap-y-2">
             <span className="text-xl-semi uppercase">Contact</span>
             <ul className="flex flex-col gap-y-2">
-              <li>
+            <li>
                 <Link href="mailto:support@printinc.shop" className="hover:text-primary transition-colors duration-200">
                   Support
                 </Link>
               </li>
+              <br/>
+                  <p className="text-xsmall-regular text-gray-200">
+                    APPLIED BUSINESS LTD
+                    Company number 12815106
+
+                    7 Bell Yard, London, 
+                    <br />
+                    England, WC2A 2JR
+                  </p>
             </ul>
           </div>
           <div className="flex flex-col gap-y-2">
