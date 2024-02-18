@@ -32,7 +32,7 @@ export async function GET(
       await prismadb.creation.create({
         data: {
           imageUrl: null,
-          domain: "bg-remove",
+          domain: "upscale",
           userId: user.id,
         },
       });
