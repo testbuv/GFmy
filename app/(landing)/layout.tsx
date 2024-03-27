@@ -2,15 +2,7 @@ import Image from "next/image";
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="relative h-full overflow-auto bg-[#090521] ">
-      <Image
-        src="/twist_line_edit.png"
-        alt="landing"
-        fill
-        priority
-        sizes="100vw"
-        className="absolute inset-0 object-cover"
-      />
+    <main className="relative h-full overflow-autobg-gradient-to-r from-slate-800 to-slate-900">
       <div className="relative z-20 h-full w-full ">{children}</div>
     </main>
   );

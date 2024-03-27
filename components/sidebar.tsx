@@ -28,10 +28,10 @@ export const Sidebar = ({ creationCount, userCredits}: SidebarProps) => {
       <div className="flex-1 px-3 py-2">
         <Link href="/dashboard" className="mb-14 flex items-center pl-3">
           <div className="relative mr-2 h-10 w-10">
-            <Image fill alt="Logo" src="/logo3.png" sizes="50%" />
+            <Image fill alt="Logo" src="/logo.svg" sizes="50%" />
           </div>
           <h1 className={cn(montserrat.className, "text-2xl font-bold")}>
-            Printinc AI
+            Demo AI
           </h1>
         </Link>
         <div className="flex items-center pl-3">

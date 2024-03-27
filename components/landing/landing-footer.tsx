@@ -9,7 +9,7 @@ export const LandingFooter = () => {
         {/* Branding and Payment Methods */}
         <div>
           <Link href="/" className="text-xl-semi uppercase hover:text-primary transition-colors duration-200">
-            Printinc AI.
+            Demo AI.
           </Link>
           <section className="flex justify-center items-center space-x-6 mt-4">
             <Image
@@ -35,18 +35,14 @@ export const LandingFooter = () => {
             <span className="text-xl-semi uppercase">Contact</span>
             <ul className="flex flex-col gap-y-2">
             <li>
-                <Link href="mailto:support@printinc.shop" className="hover:text-primary transition-colors duration-200">
+                <Link href="mailto:support@Demo.shop" className="hover:text-primary transition-colors duration-200">
                   Support
                 </Link>
               </li>
               <br/>
                   <p className="text-xsmall-regular text-gray-200">
-                    APPLIED BUSINESS LTD
-                    Company number 12815106
-
-                    7 Bell Yard, London, 
-                    <br />
-                    England, WC2A 2JR
+                    Demo
+                    Company number 
                   </p>
             </ul>
           </div>
@@ -70,7 +66,7 @@ export const LandingFooter = () => {
       {/* Footer Bottom Section */}
       <div className="flex flex-col-reverse gap-y-4 justify-center items-center sm:flex-row sm:items-end sm:justify-between">
         <span className="text-xsmall-regular text-gray-500">
-          © Copyright 2023 Printinc AI.
+          © Copyright 2023 Demo AI.
         </span>
       </div>
     </div>

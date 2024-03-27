@@ -17,10 +17,10 @@ export const LandingNav = ({ user }: LandingNavProps) => {
     <nav className=" flex items-center justify-between rounded-lg bg-white/10 px-4 py-2 shadow-2xl drop-shadow backdrop-blur-3xl lg:mt-2">
       <Link href="/" className="flex items-center">
         <div className="relative mr-2 h-8 w-8">
-          <Image fill src="/logo3.png" alt="Logo" />
+          <Image fill src="/logo.svg" alt="Logo" />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
-          Printinc AI
+          Demo AI
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">

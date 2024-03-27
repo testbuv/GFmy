@@ -28,47 +28,47 @@ html,body,:root{
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 263.4 70% 50.4%;
-    --radius: 0.5rem;
+    --background: 240 100% 99%; /* Lighter shade for light mode background */
+    --foreground: 210 50% 20%; /* Darker text for better contrast in light mode */
+    --card: 240 100% 98%; /* Light card background */
+    --card-foreground: 210 50% 20%; /* Dark text on card for light mode */
+    --popover: 240 100% 98%; /* Light popover background */
+    --popover-foreground: 210 50% 20%; /* Dark text on popover for light mode */
+    --primary: 190 80% 40%; /* Adjusted primary color */
+    --primary-foreground: 0 0% 100%; /* White text on primary color background */
+    --secondary: 340 65% 52%; /* Adjusted secondary color */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary color background */
+    --muted: 220 15% 60%; /* Less saturated color for muted text */
+    --muted-foreground: 240 7% 14%; /* Darker muted text */
+    --accent: 45 100% 50%; /* Bright accent color */
+    --accent-foreground: 0 0% 0%; /* Black text on accent color background */
+    --destructive-foreground: 0 100% 50%; /* Bright red for destructive actions */
+    --border: 210 25% 90%; /* Light border color */
+    --input: 210 25% 95%; /* Light input field background */
+    --ring: 190 80% 40%; /* Primary color for focus ring */
+    --radius: 0.5rem; /* Border radius */
   }
  
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 263.4 70% 50.4%;
+    --background: 210 30% 15%; /* Darker shade for dark mode background */
+    --foreground: 210 20% 98%; /* Lighter text for better contrast in dark mode */
+    --card: 210 30% 20%; /* Dark card background */
+    --card-foreground: 210 20% 98%; /* Light text on card for dark mode */
+    --popover: 210 30% 20%; /* Dark popover background */
+    --popover-foreground: 210 20% 98%; /* Light text on popover for dark mode */
+    --primary: 190 80% 50%; /* Adjusted primary color for dark mode */
+    --primary-foreground: 0 0% 100%; /* White text on primary color background */
+    --secondary: 340 65% 60%; /* Adjusted secondary color for dark mode */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary color background */
+    --muted: 220 15% 70%; /* Less saturated color for muted text in dark mode */
+    --muted-foreground: 240 7% 80%; /* Lighter muted text for dark mode */
+    --accent: 45 100% 55%; /* Bright accent color for dark mode */
+    --accent-foreground: 0 0% 0%; /* Black text on accent color background */
+    --destructive: 0 100% 67%; /* Brighter red for destructive actions in dark mode */
+    --destructive-foreground: 210 20% 98%; /* Light text for destructive actions */
+    --border: 215 30% 30%; /* Dark border color for dark mode */
+    --input: 215 30% 25%; /* Dark input field background */
+    --ring: 190 80% 50%; /* Adjusted primary color for focus ring in dark mode */
   }
 }
 

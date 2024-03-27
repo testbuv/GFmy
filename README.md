@@ -1,4 +1,4 @@
-# Printinc AI
+# Demo AI
 
 A SaaS application for image editing using AI.
 
