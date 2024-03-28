@@ -18,7 +18,7 @@ export const ImageGenLanding = () => {
         </p>
       </div>
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/imagegen-landing.png" // Replace with an actual sample image URL
+          src="https://store-diet.s3.eu-north-1.amazonaws.com/imagegen-landing2.png" // Replace with an actual sample image URL
           alt="Image Generation"
           width={800}
           height={500}

@@ -15,7 +15,7 @@ export const QRCodeLanding = () => {
       </div>
       <div>
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/qrlanding.png"
+          src="https://store-diet.s3.eu-north-1.amazonaws.com/qrlanding2.png"
           alt="QR Code"
           width={800}
           height={500}

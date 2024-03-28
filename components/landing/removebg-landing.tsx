@@ -14,7 +14,7 @@ export const RemoveBgLanding = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-4  lg:flex-row ">
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/removebg-src.png"
+          src="https://store-diet.s3.eu-north-1.amazonaws.com/removebg-src2.png"
           alt="Remove Bg Source"
           width={800}
           height={500}
