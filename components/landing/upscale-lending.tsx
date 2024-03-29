@@ -20,8 +20,8 @@ export const UpscaleLanding = () => {
         <Image
           src="https://store-diet.s3.eu-north-1.amazonaws.com/upscalelanding2.png" // Replace with an actual sample image URL
           alt="Upscale"
-          width={800}
-          height={500}
+          width={600}
+          height={300}
           className="mt-2 rounded-sm"
         />
       </div>

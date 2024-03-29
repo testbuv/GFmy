@@ -16,8 +16,8 @@ export const RemoveBgLanding = () => {
         <Image
           src="https://store-diet.s3.eu-north-1.amazonaws.com/removebg-src2.png"
           alt="Remove Bg Source"
-          width={800}
-          height={500}
+          width={600}
+          height={300}
           className="rounded-sm"
         />
 
