@@ -83,10 +83,10 @@ const TermsAndConditions = () => {
                         <p>Demo AI shall not be liable or deemed to be in breach of contract by reason of any delay in performing, or failure to perform, any of its obligations if the delay or failure was due to any cause beyond its reasonable control. Notwithstanding contrary clauses in this Agreement, in the event that Demo AI.shop is deemed liable to you for breach of this Agreement, you agree that Demo AI.shop's liability is limited to the amount actually paid by you for your services, calculated in reliance upon this clause. You hereby release Demo AI from any and all obligations, liabilities, and claims in excess of this limitation.</p>
                     </section>
                 </div>
-                <section className="mx-auto mt-6 max-w-screen-xl">
-          <LandingFooter />
-        </section>
             </main>
+            <section className="mx-auto mt-6 max-w-screen-xl">
+                <LandingFooter />
+            </section>
         </>
     );
 };

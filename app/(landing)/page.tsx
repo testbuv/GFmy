@@ -35,10 +35,10 @@ export default async function Landing() {
           <LandingSectionThree />
         </section>    
         <CookieConsent />    
-        <section className="mx-auto mt-6 max-w-screen-xl">
-          <LandingFooter />
-        </section>
       </main>
+      <section className="mx-auto mt-6 max-w-screen-xl">
+                <LandingFooter />
+            </section>
     </>
   );
 }

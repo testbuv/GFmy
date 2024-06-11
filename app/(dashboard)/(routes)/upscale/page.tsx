@@ -120,45 +120,51 @@ const ImageUpscalePage = () => {
           </FormItem>
 
           <div className=" mt-2 grid grid-cols-2 gap-2 ">
-            <FormField
-              control={form.control}
-              name="scale"
-              render={({ field }) => (
-                <FormItem className="col-span-2 rounded-lg  text-[12px] font-bold uppercase md:col-span-1">
-                  <Select
-                    disabled={isLoading}
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className=" border-2 border-primary ">
-                        <SelectValue
-                          defaultValue={field.value}
-                          placeholder="Select Scale"
-                        />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {scaleOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </FormItem>
-              )}
+         
+<FormField
+  control={form.control}
+  name="scale"
+  render={({ field }) => (
+    <FormItem className="col-span-2 rounded-lg text-[12px] font-bold uppercase text-foreground dark:text-foreground md:col-span-1">
+      <Select
+        disabled={isLoading}
+        onValueChange={field.onChange}
+        value={field.value}
+        defaultValue={field.value}
+      >
+        <FormControl>
+          <SelectTrigger className="border-2 border-primary text-foreground dark:text-foreground">
+            <SelectValue
+              defaultValue={field.value}
+              placeholder="Select Scale"
             />
-
-            <Button
-              variant="outline"
-              type="submit"
-              disabled={isLoading}
-              className="col-span-2 border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-white md:col-span-1 "
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {scaleOptions.map((option) => (
+            <SelectItem 
+              key={option.value} 
+              value={option.value}
+              className="text-foreground dark:text-foreground hover:bg-accent hover:text-accent-foreground"
             >
-              Submit
-            </Button>
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </FormItem>
+  )}
+/>
+
+
+<Button
+  variant="outline"
+  type="submit"
+  disabled={isLoading}
+  className="col-span-2 border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1"
+>
+  Submit
+</Button>
           </div>
         </form>
       </Form>

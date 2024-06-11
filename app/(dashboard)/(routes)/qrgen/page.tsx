@@ -127,62 +127,69 @@ const QRGenerationPage = () => {
               )}
             />
 
-            <FormField
-              control={form.control}
-              name="model"
-              render={({ field }) => (
-                <FormItem className="col-span-6 ">
-                  <Select
-                    disabled={isLoading}
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className="truncate border-2 border-primary ">
-                        <SelectValue defaultValue={field.value} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {modelOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </FormItem>
-              )}
-            />
+<FormField
+  control={form.control}
+  name="model"
+  render={({ field }) => (
+    <FormItem className="col-span-6">
+      <Select
+        disabled={isLoading}
+        onValueChange={field.onChange}
+        value={field.value}
+        defaultValue={field.value}
+      >
+        <FormControl>
+          <SelectTrigger className="truncate border-2 border-primary text-foreground dark:text-foreground">
+            <SelectValue defaultValue={field.value} />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {modelOptions.map((option) => (
+            <SelectItem 
+              key={option.value} 
+              value={option.value}
+              className="text-foreground dark:text-foreground hover:bg-accent hover:text-accent-foreground"
+            >
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </FormItem>
+  )}
+/>
 
-            <FormField
-              control={form.control}
-              name="amount"
-              render={({ field }) => (
-                <FormItem className="col-span-6 md:col-span-3">
-                  <Select
-                    disabled={isLoading}
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className=" truncate border-2 border-primary">
-                        <SelectValue defaultValue={field.value} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {amountOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </FormItem>
-              )}
-            />
-
+<FormField
+  control={form.control}
+  name="amount"
+  render={({ field }) => (
+    <FormItem className="col-span-6 md:col-span-3">
+      <Select
+        disabled={isLoading}
+        onValueChange={field.onChange}
+        value={field.value}
+        defaultValue={field.value}
+      >
+        <FormControl>
+          <SelectTrigger className="truncate border-2 border-primary text-foreground dark:text-foreground">
+            <SelectValue defaultValue={field.value} />
+          </SelectTrigger>
+        </FormControl>
+        <SelectContent>
+          {amountOptions.map((option) => (
+            <SelectItem 
+              key={option.value} 
+              value={option.value}
+              className="text-foreground dark:text-foreground hover:bg-accent hover:text-accent-foreground"
+            >
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </FormItem>
+  )}
+/>
             <Button
               variant="outline"
               type="submit"

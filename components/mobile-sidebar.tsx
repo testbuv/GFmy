@@ -19,13 +19,13 @@ export const MobileSidebar = ({ creationCount, userCredits }: MobileSidebarProps
   if (!isMounted) return null;
 
   return (
-    <Sheet>
-      <SheetTrigger>
-        <PanelRight className="md:hidden" />
-      </SheetTrigger>
-      <SheetContent side="left" className="p-0 text-white">
-        <Sidebar creationCount={creationCount} userCredits={userCredits} />
-      </SheetContent>
-    </Sheet>
+<Sheet>
+  <SheetTrigger>
+    <PanelRight className="md:hidden text-foreground dark:text-foreground" />
+  </SheetTrigger>
+  <SheetContent side="left" className="p-0 bg-background text-foreground dark:bg-background dark:text-foreground">
+    <Sidebar creationCount={creationCount} userCredits={userCredits} />
+  </SheetContent>
+</Sheet>
   );
 }

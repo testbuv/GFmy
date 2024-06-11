@@ -51,18 +51,19 @@ export const Sidebar = ({ creationCount, userCredits}: SidebarProps) => {
         </div>
         <div className="mt-10 space-y-1">
           {routes.map((route) => (
-            <Link
-              key={route.path}
-              href={route.path}
-              className={cn(
-                "flex w-full cursor-pointer justify-start rounded-xl p-3 text-sm font-medium transition hover:bg-primary hover:text-white",
-                pathname === route.path
-                  ? "bg-primary text-white"
-                  : "text-gray-400",
-              )}
-            >
-              <div className="flex flex-1 items-center">{route.label}</div>
-            </Link>
+          <Link
+          key={route.path}
+          href={route.path}
+          className={cn(
+            "flex w-full cursor-pointer justify-start rounded-xl p-3 text-sm font-medium transition",
+            "hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground-dark",
+            pathname === route.path
+              ? "bg-primary text-primary-foreground dark:text-primary-foreground-dark"
+              : "text-muted-foreground",
+          )}
+        >
+          <div className="flex flex-1 items-center">{route.label}</div>
+        </Link>
           ))}
         </div>
 

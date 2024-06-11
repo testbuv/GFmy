@@ -35,7 +35,7 @@ export const LandingFooter = () => {
             <span className="text-xl-semi uppercase">Contact</span>
             <ul className="flex flex-col gap-y-2">
             <li>
-                <Link href="mailto:support@Demo.shop" className="hover:text-primary transition-colors duration-200">
+                <Link href="mailto:hello@op-app.co" className="hover:text-primary transition-colors duration-200">
                   Support
                 </Link>
               </li>
@@ -66,7 +66,7 @@ export const LandingFooter = () => {
       {/* Footer Bottom Section */}
       <div className="flex flex-col-reverse gap-y-4 justify-center items-center sm:flex-row sm:items-end sm:justify-between">
         <span className="text-xsmall-regular text-gray-500">
-          © Copyright 2023 Demo AI.
+          © Copyright 2024 Demo AI.
         </span>
       </div>
     </div>

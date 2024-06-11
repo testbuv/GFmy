@@ -77,50 +77,51 @@ export function UserSettingsForm({
         className={cn("mx-6", className)}
         {...props}
       >
-        <Card className="border-2 border-primary">
-          <CardHeader>
-            <CardTitle>Profile </CardTitle>
-            <CardDescription>
-              Configure your profile information.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-1">
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Username</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="John Doe"
-                        className="w-[400px]"
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              {errors?.username && (
-                <p className="px-1 text-xs text-red-600">
-                  {errors.username.message}
-                </p>
-              )}
-            </div>
-          </CardContent>
-          <CardFooter className="flex flex-col items-start space-y-2 md:flex-row md:justify-between md:space-x-0">
-            <Button
-              disabled={isSubmitting}
-              variant="outline"
-              type="submit"
-              className="border-primary font-bold tracking-wider transition-colors hover:bg-primary hover:text-white"
-            >
-              {isSubmitting && <Loader className="mr-2 h-4 w-4 animate-spin" />}
-              Submit
-            </Button>
-          </CardFooter>
-        </Card>
+ <Card className="border-2 border-primary">
+  <CardHeader>
+    <CardTitle className="text-foreground dark:text-foreground">Profile</CardTitle>
+    <CardDescription className="text-foreground dark:text-foreground"
+>
+      Configure your profile information.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+        <div className="grid gap-1">
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-foreground dark:text-foreground">Username</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="John Doe"
+                    className="w-[400px] text-foreground dark:text-foreground"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          {errors?.username && (
+            <p className="px-1 text-xs text-red-600 dark:text-red-500">
+              {errors.username.message}
+            </p>
+          )}
+        </div>
+      </CardContent>
+  <CardFooter className="flex flex-col items-start space-y-2 md:flex-row md:justify-between md:space-x-0">
+    <Button
+      disabled={isSubmitting}
+      variant="outline"
+      type="submit"
+      className="border-primary font-bold tracking-wider transition-colors hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground-dark"
+    >
+      {isSubmitting && <Loader className="mr-2 h-4 w-4 animate-spin" />}
+      Submit
+    </Button>
+  </CardFooter>
+</Card>
       </form>
     </Form>
   );

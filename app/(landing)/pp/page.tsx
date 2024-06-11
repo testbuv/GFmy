@@ -59,10 +59,10 @@ const PrivacyPolicy = () => {
                     <h2 className="text-2xl font-semibold text-slate-800">Contact</h2>
                     <p>For any privacy-related inquiries or complaints, please contact us at support@Demo.shop</p>
                 </div>
-                <section className="mx-auto mt-6 max-w-screen-xl">
-                    <LandingFooter />
-                </section>
             </main> 
+            <section className="mx-auto mt-6 max-w-screen-xl">
+                <LandingFooter />
+            </section>
         </>
     );
 };

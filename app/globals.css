@@ -2,82 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body,:root{
-  height: 100%;
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* CSS for slide-out-to-left */
-@keyframes slideOutToLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
 @layer base {
   :root {
-    --background: 240 100% 99%; /* Lighter shade for light mode background */
-    --foreground: 210 50% 20%; /* Darker text for better contrast in light mode */
-    --card: 240 100% 98%; /* Light card background */
-    --card-foreground: 210 50% 20%; /* Dark text on card for light mode */
-    --popover: 240 100% 98%; /* Light popover background */
-    --popover-foreground: 210 50% 20%; /* Dark text on popover for light mode */
-    --primary: 190 80% 40%; /* Adjusted primary color */
-    --primary-foreground: 0 0% 100%; /* White text on primary color background */
-    --secondary: 340 65% 52%; /* Adjusted secondary color */
-    --secondary-foreground: 0 0% 100%; /* White text on secondary color background */
-    --muted: 220 15% 60%; /* Less saturated color for muted text */
-    --muted-foreground: 240 7% 14%; /* Darker muted text */
-    --accent: 45 100% 50%; /* Bright accent color */
-    --accent-foreground: 0 0% 0%; /* Black text on accent color background */
-    --destructive-foreground: 0 100% 50%; /* Bright red for destructive actions */
-    --border: 210 25% 90%; /* Light border color */
-    --input: 210 25% 95%; /* Light input field background */
-    --ring: 190 80% 40%; /* Primary color for focus ring */
-    --radius: 0.5rem; /* Border radius */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --primary-foreground-dark: 222.2 47.4% 11.2%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.75rem;
   }
- 
+
   .dark {
-    --background: 210 30% 15%; /* Darker shade for dark mode background */
-    --foreground: 210 20% 98%; /* Lighter text for better contrast in dark mode */
-    --card: 210 30% 20%; /* Dark card background */
-    --card-foreground: 210 20% 98%; /* Light text on card for dark mode */
-    --popover: 210 30% 20%; /* Dark popover background */
-    --popover-foreground: 210 20% 98%; /* Light text on popover for dark mode */
-    --primary: 190 80% 50%; /* Adjusted primary color for dark mode */
-    --primary-foreground: 0 0% 100%; /* White text on primary color background */
-    --secondary: 340 65% 60%; /* Adjusted secondary color for dark mode */
-    --secondary-foreground: 0 0% 100%; /* White text on secondary color background */
-    --muted: 220 15% 70%; /* Less saturated color for muted text in dark mode */
-    --muted-foreground: 240 7% 80%; /* Lighter muted text for dark mode */
-    --accent: 45 100% 55%; /* Bright accent color for dark mode */
-    --accent-foreground: 0 0% 0%; /* Black text on accent color background */
-    --destructive: 0 100% 67%; /* Brighter red for destructive actions in dark mode */
-    --destructive-foreground: 210 20% 98%; /* Light text for destructive actions */
-    --border: 215 30% 30%; /* Dark border color for dark mode */
-    --input: 215 30% 25%; /* Dark input field background */
-    --ring: 190 80% 50%; /* Adjusted primary color for focus ring in dark mode */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground-dark: 210 40% 98%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground-dark: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9;
   }
 }
 
- 
-@layer base {
-  * {
-    @apply border-border;
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .no-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply -translate-y-2 text-xsmall-regular; 
+  }
+
+  input:focus ~ label {
+    @apply left-0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus, 
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: 1px solid #212121;
+    -webkit-text-fill-color: #212121;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-background text-foreground px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted dark:hover:text-muted-foreground;
+  }
+  .content-container {
+    @apply max-w-[1440px] w-full mx-auto px-8
+  }
+
+  .contrast-btn {
+    @apply px-4 py-2 border border-primary-foreground rounded-full hover:bg-muted hover:text-white transition-colors duration-200 ease-in;
+  }
+
+  .text-xsmall-regular {
+    @apply text-[10px] leading-4 font-normal;
+  }
+
+  .text-small-regular {
+    @apply text-xs leading-5 font-normal;
+  }
+
+  .text-small-semi {
+    @apply text-xs leading-5 font-semibold;
+  }
+
+  .text-base-regular {
+    @apply text-sm leading-6 font-normal;
+  }
+
+  .text-base-semi {
+    @apply text-sm leading-6 font-semibold;
+  }
+
+  .text-large-regular {
+    @apply text-base leading-6 font-normal;
+  }
+
+  .text-large-semi {
+    @apply text-base leading-6 font-semibold;
+  }
+
+  .text-xl-regular {
+    @apply text-2xl leading-[36px] font-normal;
+  }
+
+  .text-xl-semi {
+    @apply text-2xl leading-[36px] font-semibold;
+  }
+
+  .text-2xl-regular {
+    @apply text-[30px] leading-[48px] font-normal;
+  }
+
+  .text-2xl-semi {
+    @apply text-[30px] leading-[48px] font-semibold;
+  }
+
+  .text-3xl-regular {
+    @apply text-[36px] leading-[48px] font-normal;
+  }
+
+  .text-3xl-semi {
+    @apply text-[36px] leading-[48px] font-semibold;
   }
 }

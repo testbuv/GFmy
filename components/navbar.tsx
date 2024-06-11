@@ -12,12 +12,12 @@ export const Navbar = async () => {
 
   return (
     
-    <div className="flex items-center p-4">
-      <MobileSidebar creationCount={creationCount} userCredits={userCredits} />
-      <div className="flex w-full justify-end gap-4">
-        <ModeToggle />
-        <UserAccountNav />
-      </div>
-    </div>
+<div className="flex items-center p-4">
+  <MobileSidebar creationCount={creationCount} userCredits={userCredits} />
+  <div className="flex w-full justify-end gap-4">
+    <ModeToggle />
+    <UserAccountNav />
+  </div>
+</div>
   );
 };

@@ -25,10 +25,8 @@ export const LandingNav = ({ user }: LandingNavProps) => {
       </Link>
       <div className="flex items-center gap-x-2">
         <Link href={user ? "/dashboard" : "/sign-in"}>
-          <Button
-            variant="outline"
-            className="rounded-md border-none bg-primary tracking-wider text-white transition-colors hover:bg-slate-800 hover:text-white"
-          >
+            <Button
+            className="bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
             Get Started
           </Button>
         </Link>
