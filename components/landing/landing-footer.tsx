@@ -9,7 +9,7 @@ export const LandingFooter = () => {
         {/* Branding and Payment Methods */}
         <div>
           <Link href="/" className="text-xl-semi uppercase hover:text-primary transition-colors duration-200">
-            Demo AI.
+            Printifai.
           </Link>
           <section className="flex justify-center items-center space-x-6 mt-4">
             <Image
@@ -66,7 +66,7 @@ export const LandingFooter = () => {
       {/* Footer Bottom Section */}
       <div className="flex flex-col-reverse gap-y-4 justify-center items-center sm:flex-row sm:items-end sm:justify-between">
         <span className="text-xsmall-regular text-gray-500">
-          © Copyright 2024 Demo AI.
+          © Copyright 2024 Printifai.
         </span>
       </div>
     </div>

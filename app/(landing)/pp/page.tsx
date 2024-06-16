@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
              <h1 className="text-3xl font-bold mb-6 border-b pb-3 text-center text-slate-800">PRIVACY POLICY</h1>
 
                     <p>Last updated: January 5, 2024</p>
-                    <p>This Privacy Policy describes how ai.Demo.shop collects and uses the information, which may include personal data, you provide on our website. This policy applies to customers, employees, representatives, or others acting on behalf of parties to whom ai.Demo.shop provides services. We act in our customers’ interest and are transparent about the processing of personal data. “Personal data” refers to any information relating to an identifiable individual or their personal identity.</p>
+                    <p>This Privacy Policy describes how ai.printifai.shop collects and uses the information, which may include personal data, you provide on our website. This policy applies to customers, employees, representatives, or others acting on behalf of parties to whom ai.printifai.shop provides services. We act in our customers’ interest and are transparent about the processing of personal data. “Personal data” refers to any information relating to an identifiable individual or their personal identity.</p>
 
                     <h2 className="text-2xl font-semibold text-slate-800">Consent</h2>
                     <p>By subscribing to our services or filling in a contact form on our site, you consent to our collection, processing, storage, and use of your submitted personal data, as outlined in this policy. You retain the right to have your personal data rectified and/or erased.</p>
@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
                     <p>We share your information with third parties as needed to provide our services, process payments, comply with legal requirements, or with your consent. We do not sell or rent your personal data.</p>
 
                     <h2 className="text-2xl font-semibold text-slate-800">Third-Party Data</h2>
-                    <p>ai.Demo.shop captures and stores information about end-users, such as IP addresses and data submitted via our API. We do not sell, share, or rent out this data.</p>
+                    <p>ai.printifai.shop captures and stores information about end-users, such as IP addresses and data submitted via our API. We do not sell, share, or rent out this data.</p>
 
                     <h2 className="text-2xl font-semibold text-slate-800">Data Security</h2>
                     <p>We prioritize the security and integrity of your personal data and implement appropriate measures to prevent unauthorized access and misuse.</p>
@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
                     <p>This policy may be updated periodically. Material changes will be communicated via our website or email.</p>
                     
                     <h2 className="text-2xl font-semibold text-slate-800">Contact</h2>
-                    <p>For any privacy-related inquiries or complaints, please contact us at support@Demo.shop</p>
+                    <p>For any privacy-related inquiries or complaints, please contact us at hello@printifai.shop</p>
                 </div>
             </main> 
             <section className="mx-auto mt-6 max-w-screen-xl">

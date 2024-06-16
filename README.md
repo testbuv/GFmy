@@ -1,4 +1,4 @@
-# Demo AI
+# Printifai
 
 A SaaS application for image editing using AI.
 

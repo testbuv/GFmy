@@ -17,10 +17,10 @@ interface NewUserEmailProps {
 export const NewUserEmail = ({ url }: NewUserEmailProps) => (
   <Html>
     <Head />
-    <Preview>Demo AI magic link for registration</Preview>
+    <Preview>Printifai magic link for registration</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Welcome to Demo AI✨</Heading>
+        <Heading style={h1}>Welcome to Printifai✨</Heading>
         <Link
           href={url}
           target="_blank"

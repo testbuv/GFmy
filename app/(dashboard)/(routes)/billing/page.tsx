@@ -30,7 +30,7 @@ return (
     <div className="w-full max-w-xl">
 <Card className="mb-8">
 <CardHeader>
-<CardTitle className="text-center">Your Demo AI Credits</CardTitle>
+<CardTitle className="text-center">Your Printifai Credits</CardTitle>
 </CardHeader>
 <CardContent className="flex flex-col items-center gap-4">
   
