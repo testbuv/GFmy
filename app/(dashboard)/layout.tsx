@@ -1,6 +1,5 @@
 import React from "react";
 import { redirect } from "next/navigation";
-
 import { Sidebar } from "@/components/sidebar";
 import { getCurrentUser } from "@/lib/session";
 import { Navbar } from "@/components/navbar";

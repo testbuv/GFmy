@@ -9,25 +9,19 @@ export const routes = [
     label: "Image Generation",
     path: "/stable-diffusion",
     description: "Generate Art from the text prompt.",
-    image: "https://store-diet.s3.eu-north-1.amazonaws.com/imagegen-landing2.png",
+    image: "https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.53+-+Vertical+aspect+ratio+architecture+photos+of+London%2C+featuring+different+sights+and+bridges%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+T.webp",
   },
   {
     label: "Image Upscale",
     path: "/upscale",
     description: "Upscale your Image",
-    image: "https://store-diet.s3.eu-north-1.amazonaws.com/upscalelanding2.png",
-  },
-  {
-    label: "QR Code Generator",
-    path: "/qrgen",
-    description: "Generate Stylised QR Code from Link/Text",
-    image: "https://store-diet.s3.eu-north-1.amazonaws.com/qrlanding2.png",
+    image: "https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.55+-+Vertical+aspect+ratio+architecture+photos+of+London+buildings%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+The+images+should+capture+the+u.webp",
   },
   {
     label: "Background Remove",
     path: "/bg-remove",
     description: "Remove Background from your Image",
-    image: "https://store-diet.s3.eu-north-1.amazonaws.com/removebg-src2.png",
+    image: "https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.38.03+-+Vertical+aspect+ratio+architecture+photos+of+Mexico+City%2C+featuring+different+sights+and+landmarks%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+.webp",
   },
   {
     label: "Settings",
