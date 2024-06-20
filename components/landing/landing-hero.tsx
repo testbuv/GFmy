@@ -36,11 +36,11 @@ export const LandingHero = ({ user }: LandingHeroProps) => {
         </div>
       </div>
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center ">
-      {/* <Link href={user ? "/dashboard" : "/sign-in"}>
+      <Link href={user ? "/dashboard" : "/sign-in"}>
        <Button className="bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
             Get Started – It&apos;s Free!
           </Button>
-        </Link> */}
+        </Link>
 
         <div className="text-xs font-normal text-zinc-400 md:text-sm">
           No Credit Card required

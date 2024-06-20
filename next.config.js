@@ -8,7 +8,7 @@ const nextConfig = {
       "replicate.delivery",
       "res.cloudinary.com",
       "store-diet.s3.eu-north-1.amazonaws.com",
-      "tpstore.s3.eu-north-1.amazonaws.com",
+      "tpstore-media.s3.eu-north-1.amazonaws.com",
     ],
   },
   compiler: {
