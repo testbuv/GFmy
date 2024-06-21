@@ -6,8 +6,6 @@ import { ToasterProvider } from "@/components/toaster-provider";
 import { ModalProvider } from "@/components/modal-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
-
-
 export const metadata: Metadata = {
   title: "Printifai",
 };
@@ -19,11 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className={GeistSans.className}>
+      <body className={`${GeistSans.className} dark`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <ModalProvider />

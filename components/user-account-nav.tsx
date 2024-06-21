@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { UserAvatar } from "@/components/user-avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { LogOut } from "lucide-react";
 import { useUserStore } from "@/store/store";
 
@@ -33,12 +33,14 @@ export const UserAccountNav = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <UserAvatar
-          user={{
-            name: user.name || user.email || "MysteriousOne",
-            image: user.image || "avatar_fallback.jpg",
-          }}
-        />
+        <Avatar>
+          <AvatarImage src={user.image ?? undefined} alt={user.name || user.email || "User avatar"} />
+          <AvatarFallback>
+            <span className="text-sm font-medium uppercase text-muted-foreground">
+              {user.name?.[0] || user.email?.[0] || ""}
+            </span>
+          </AvatarFallback>
+        </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel className="w-[200px] truncate text-sm text-muted-foreground">

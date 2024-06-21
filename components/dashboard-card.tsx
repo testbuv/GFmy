@@ -22,7 +22,7 @@ export const DashboardCard = ({
   return (
     <Card className="max-w-[350px] overflow-hidden">
       <div className="relative h-full w-full">
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className="absolute inset-[-1000%] bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69]" />
         <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-zinc-900 p-6">
           <Image
             src={img}

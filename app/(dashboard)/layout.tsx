@@ -1,8 +1,6 @@
 import React from "react";
 import { redirect } from "next/navigation";
-import { Sidebar } from "@/components/sidebar";
 import { getCurrentUser } from "@/lib/session";
-import { Navbar } from "@/components/navbar";
 import UserStoreProvider from "@/components/user-store-provider";
 import { getCreationCount } from "@/lib/api-limit";
 import { getUserCredits } from "@/lib/session";
@@ -30,20 +28,12 @@ export default async function DashboardLayout({
           email: user.email,
         }}
       />
-
-      <div className="hidden md:fixed md:inset-y-0 md:flex md:w-72 md:flex-col">
-        <Sidebar
-          creationCount={creationCount || 0}
-          userCredits={userCredits || 0}
-        />
-      </div>
-      <main className="md:pl-72">
-        <Navbar />
-        <NavigationMenuComponent
-          creationCount={creationCount || 0}
-          userCredits={userCredits || 0}
-        />
-        {children}
+      <NavigationMenuComponent
+        creationCount={creationCount || 0}
+        userCredits={userCredits || 0}
+      />
+      <main className="mt-8 p-4">
+        <div className="container mx-auto">{children}</div>
       </main>
     </div>
   );

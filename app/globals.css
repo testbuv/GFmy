@@ -105,6 +105,9 @@
   .button {
     @apply bg-background text-foreground px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted dark:hover:text-muted-foreground;
   }
+  .border-b-gradient-to-r {
+    border-image: linear-gradient(to right, #ed6ea0, #ec8c69) 1;
+  }
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-8
   }

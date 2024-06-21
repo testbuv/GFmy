@@ -89,12 +89,22 @@ export default {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
       },
-      animation: {
+
+      "animation": {
+          "text-gradient": "text-gradient 1.5s linear infinite"
+        },
+        "keyframes": {
+          "text-gradient": {
+            "to": {
+              "backgroundPosition": "200% center"
+            },
+          },
+        },
+      
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.5s ease-in-out",
       },
     },
-  },
   plugins: [require("tailwindcss-animate")],
 };
