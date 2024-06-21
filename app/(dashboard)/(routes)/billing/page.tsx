@@ -15,43 +15,36 @@ export const metadata: Metadata = {
 };
 
 export default async function BillingPage() {
-  
   const user = await getCurrentUser();
-  
+
   if (!user) {
     redirect("/sign-in");
   }
-  const credits = await getUserCredits()
-  const creationCount = await getCreationCount();
 
-return (
-    <>
-     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-slate-900">
-    <div className="w-full max-w-xl">
-<Card className="mb-8">
-<CardHeader>
-<CardTitle className="text-center">Your Growth Fast.io Credits</CardTitle>
-</CardHeader>
-<CardContent className="flex flex-col items-center gap-4">
-  
-<div className="text-5xl font-bold">{(credits ?? 0) - creationCount}
-</div>
-<p className="text-gray-100">Credits remaining</p>
-
-</CardContent>
-</Card>
-<Card>
-<CardHeader>
-<CardTitle className="text-center">Buy More Tokens</CardTitle>
-</CardHeader>
-<CardContent>
-      <div className="grid ">
-      <StripePricingTable user={user} />
-      </div>
-      </CardContent>
-</Card>
-</div>
-</main>
-    </>
+  return (
+    <div className="relative h-full">
+      <main className="mt-8 p-4">
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-3xl">
+          <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
+              <div className="w-full">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-center">
+                      Buy More Tokens for your design work
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                  <div className="grid grid-cols-1">
+                  <StripePricingTable user={user} />
+                  </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

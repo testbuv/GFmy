@@ -101,7 +101,7 @@ const ImageGenerationPage = () => {
 
             <FormItem className="col-span-12">
             <Button
-              variant="secondary" type="submit" disabled={isLoading}   className="col-span-2 rounded-full text-[12px] font-bold uppercase tracking-wider transition-colors hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1"
+              variant="secondary" type="submit" disabled={isLoading}   className="col-span-2 rounded-full text-[12px] font-bold uppercase tracking-wider transition-colors  hover:text-muted-foreground dark:hover:text-primary-foreground-dark md:col-span-1"
 >
                 Generate
               </Button>

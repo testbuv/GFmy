@@ -193,9 +193,8 @@ const QRGenerationPage = () => {
             <Button
               variant="outline"
               type="submit"
-              className="col-span-12 border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-white md:col-span-3"
               disabled={isLoading}
-            >
+              className="col-span-2 rounded-full text-[12px] font-bold uppercase tracking-wider transition-colors hover:text-muted-foreground dark:hover:text-primary-foreground-dark md:col-span-1">
               Submit
             </Button>
           </form>

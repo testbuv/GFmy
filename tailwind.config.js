@@ -94,8 +94,26 @@ export default {
           "text-gradient": "text-gradient 1.5s linear infinite",
           "background-shine": "background-shine 2s linear infinite",
           "spin": "spin 2s linear infinite",
-        },
+          "slide-in": "slide-in 0.3s ease-out",
+          "slide-out": "slide-out 0.3s ease-out",
+          },
         "keyframes": {
+          "slide-in": {
+            "0%": {
+              transform: "translateX(100%)",
+            },
+            "100%": {
+              transform: "translateX(0)",
+            },
+          },
+          "slide-out": {
+            "0%": {
+              transform: "translateX(0)",
+            },
+            "100%": {
+              transform: "translateX(-100%)",
+            },
+          },
           "text-gradient": {
             "to": {
               "backgroundPosition": "200% center"

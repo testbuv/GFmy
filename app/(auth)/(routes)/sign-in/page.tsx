@@ -15,8 +15,8 @@ export default function RegisterPage() {
         <div className="absolute inset-0 ">
           <Image
             src="/bg.gif"
-            width={400}
-            height={400}
+            width={640}
+            height={360}
             alt="Landing"
             className="h-full w-auto object-cover"
           />

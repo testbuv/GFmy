@@ -12,7 +12,7 @@
     --primary-foreground: 210 40% 98%;
     --primary-foreground-dark: 222.2 47.4% 11.2%;
     --muted-foreground: 215 20.2% 65.1%;
-    --background: 0 0% 100%;
+    --background: 224, 71.4%, 4.1%;
     --foreground: 222.2 84% 4.9%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -105,6 +105,8 @@
   .button-secondary {
     @apply inline-flex h-full w-full items-center justify-center rounded-xl border-b-gradient-to-r bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl;
   }
+
+
   .button {
     @apply bg-background text-foreground px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted dark:hover:text-muted-foreground;
   }
