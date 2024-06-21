@@ -25,7 +25,7 @@ export default function RegisterPage() {
           <div className="relative mr-2 h-10 w-10">
             <Image fill alt="Logo" src="/logo.svg" />
           </div>
-          Printifai
+          Growth Fast.io
         </div>
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
@@ -42,7 +42,7 @@ export default function RegisterPage() {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">
-              Welcome to Printifai
+              Welcome to Growth Fast.io
             </h1>
           </div>
           <UserAuthForm />

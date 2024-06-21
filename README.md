@@ -1,4 +1,4 @@
-# Printifai
+# Growth Fast.io
 
 A SaaS application for image editing using AI.
 

@@ -7,7 +7,7 @@ import { ModalProvider } from "@/components/modal-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Printifai",
+  title: "Growth Fast.io",
 };
 
 export default function RootLayout({

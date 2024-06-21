@@ -1,0 +1,76 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { UserAccountNav } from "@/components/user-account-nav";
+import Image from "next/image";
+import Link from "next/link";
+import { useUserStore } from "@/store/store";
+import { Menu, X } from "lucide-react";
+
+interface MobileNavigationMenuProps {
+  creationCount: number;
+  userCredits: number;
+}
+
+export const MobileNavigationMenu = ({ creationCount, userCredits }: MobileNavigationMenuProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const user = useUserStore((state) => state.user);
+  const availableCredits = userCredits - creationCount;
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="relative z-10 flex w-full items-center justify-between bg-background p-4 border-b-2 border-transparent border-b-gradient-to-r from-[#ed6ea0] to-[#ec8c69]">
+      <div className="flex items-center space-x-2">
+        <Image src="/logo.svg" alt="Logo" width={32} height={32} />
+        <span className="text-lg font-semibold">Growth Fast.io</span>
+      </div>
+
+      <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
+          <span className="inline-flex bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-l text-transparent">
+            Available Credits: {availableCredits}
+          </span>
+        </div>
+        <UserAccountNav />
+        <button
+          className="rounded-md bg-transparent p-1 text-muted-foreground hover:bg-muted"
+          onClick={toggleMenu}
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="absolute left-0 top-full mt-2 w-full origin-top rounded-md bg-popover p-2 shadow-lg">
+          <nav className="flex flex-col space-y-2">
+            <Link href="/stable-diffusion" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              Create
+            </Link>
+            <Link href="/upscale" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              Upscale
+            </Link>
+            <Link href="/bg-remove" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              Remove Background
+            </Link>
+            <Link href="/dashboard" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              Dashboard
+            </Link>
+            <Link href="/billing" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              Buy Credits
+            </Link>
+          </nav>
+        </div>
+      )}
+    </div>
+  );
+};

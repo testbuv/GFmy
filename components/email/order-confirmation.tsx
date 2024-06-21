@@ -19,7 +19,7 @@ interface OrderConfirmationEmailProps {
 export const OrderConfirmationEmail = ({ purchaseId, amountPaid, creditAmount, createdAt }: OrderConfirmationEmailProps) => (
   <Html>
     <Head />
-    <Preview>Your order confirmation from Printifai</Preview>
+    <Preview>Your order confirmation from Growth Fast.io</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>Thank you for your order!</Heading>
@@ -36,7 +36,7 @@ export const OrderConfirmationEmail = ({ purchaseId, amountPaid, creditAmount, c
           Order Date: {new Date(createdAt).toLocaleDateString("en-US")}
         </Text>
         <Text style={text}>
-          If you have any questions, please contact us at hello@printifai.shop.
+          If you have any questions, please contact us at hello@Growth Fast.io.shop.
         </Text>
       </Container>
     </Body>
