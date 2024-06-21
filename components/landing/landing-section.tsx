@@ -1,5 +1,5 @@
 import React from "react";
-import { QRCodeLanding } from "./qrcode-landing";
+import { RemoveBgLanding } from "./removebg-landing";
 
 export const LandingSection = () => {
   return (
@@ -16,7 +16,7 @@ export const LandingSection = () => {
         </p>
       </div>
       <div className=" p-8 lg:mt-8 lg:p-16">
-        <QRCodeLanding />
+      <RemoveBgLanding />
       </div>
       
     </main>

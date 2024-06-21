@@ -18,10 +18,10 @@ export const UpscaleLanding = () => {
     <div className="flex flex-col items-center justify-center gap-4 md:flex-row  md:gap-8">
       <div>
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/upscalelanding2.png" // Replace with an actual sample image URL
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.55+-+Vertical+aspect+ratio+architecture+photos+of+London+buildings%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+The+images+should+capture+the+u.webp"
           alt="Upscale"
-          width={600}
-          height={300}
+          width={400}
+          height={700}
           className="mt-2 rounded-sm"
         />
       </div>

@@ -12,16 +12,13 @@ export const RemoveBgLanding = () => {
           Remove Background from your Image.
         </h1>
       </div>
-      <div className="flex flex-col items-center justify-center gap-4  lg:flex-row ">
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/removebg-src2.png"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.38.03+-+Vertical+aspect+ratio+architecture+photos+of+Mexico+City%2C+featuring+different+sights+and+landmarks%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+.webp"
           alt="Remove Bg Source"
-          width={600}
-          height={300}
-          className="rounded-sm"
+          width={400}
+          height={700}
+          className="mt-2 rounded-sm"
         />
-
-      </div>
     </div>
   );
 };

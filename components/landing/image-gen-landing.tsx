@@ -18,10 +18,10 @@ export const ImageGenLanding = () => {
         </p>
       </div>
         <Image
-          src="https://store-diet.s3.eu-north-1.amazonaws.com/imagegen-landing2.png" // Replace with an actual sample image URL
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.53+-+Vertical+aspect+ratio+architecture+photos+of+London%2C+featuring+different+sights+and+bridges%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+T.webp"
           alt="Image Generation"
-          width={600}
-          height={300}
+          width={400}
+          height={700}
           className="mt-2 rounded-sm"
         />
       </div>
