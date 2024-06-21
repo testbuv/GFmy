@@ -145,8 +145,8 @@ const ImageUpscalePage = () => {
             <SelectItem 
               key={option.value} 
               value={option.value}
-              className="text-foreground dark:text-foreground hover:bg-accent hover:text-accent-foreground"
-            >
+              className="col-span-2 border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1"
+              >
               {option.label}
             </SelectItem>
           ))}
@@ -158,11 +158,10 @@ const ImageUpscalePage = () => {
 
 
 <Button
-  variant="outline"
+  variant="secondary"
   type="submit"
   disabled={isLoading}
-  className="col-span-2 border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1"
->
+  className="col-span-2 rounded-full text-[12px] font-bold uppercase tracking-wider transition-colors hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1">
   Submit
 </Button>
           </div>

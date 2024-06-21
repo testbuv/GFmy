@@ -14,9 +14,9 @@ export default function RegisterPage() {
       <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
         <div className="absolute inset-0 ">
           <Image
-            src="/test.gif"
-            width={500}
-            height={500}
+            src="/bg.gif"
+            width={400}
+            height={400}
             alt="Landing"
             className="h-full w-auto object-cover"
           />
@@ -34,7 +34,7 @@ export default function RegisterPage() {
               helped me deliver stunning designs to my clients faster than ever
               before.&rdquo;
             </p>
-            <footer className="text-sm">Muthuvel Pandian</footer>
+            <footer className="text-sm">Marc Wales</footer>
           </blockquote>
         </div>
       </div>

@@ -1,6 +1,8 @@
 "use client"
 import Link from 'next/link';
 import UnderlineLink from "@/components/ui/underline-link"
+import { Button } from "@/components/ui/button"
+
 import { setCookie, hasCookie } from 'cookies-next';
 import { useState, useEffect } from 'react';
 
@@ -37,12 +39,12 @@ export const CookieConsent = () => {
         </p>
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 my-2 sm:my-0">
           <UnderlineLink href='/cc'>Learn more</UnderlineLink>
-          <button onClick={acceptConsent} className="bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
+          <Button  onClick={acceptConsent} className="bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
             Accept
-          </button>
-          <button onClick={declineConsent} className="bg-transparent border-2 border-white text-white px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
+          </Button>
+          <Button variant="outline" onClick={declineConsent} className="bg-transparent border-2 border-white text-white px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
             Decline
-          </button>
+          </Button>
         </div>
       </div>
     </div>

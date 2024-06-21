@@ -82,7 +82,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                 </p>
               )}
             </div>
-            <Button disabled={isLoading}>
+            <Button variant="primary" disabled={isLoading}>
               {isLoading && (
                 <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
               )}
@@ -102,7 +102,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         </div>
       </div>
       <Button
-        variant="outline"
+        variant="secondary"
         type="button"
         disabled={isGoogleLoading || isLoading}
         onClick={() => {

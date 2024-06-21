@@ -91,7 +91,9 @@ export default {
       },
 
       "animation": {
-          "text-gradient": "text-gradient 1.5s linear infinite"
+          "text-gradient": "text-gradient 1.5s linear infinite",
+          "background-shine": "background-shine 2s linear infinite",
+          "spin": "spin 2s linear infinite",
         },
         "keyframes": {
           "text-gradient": {
@@ -99,8 +101,24 @@ export default {
               "backgroundPosition": "200% center"
             },
           },
-        },
-      
+          "background-shine": {
+            "from": {
+              "backgroundPosition": "0 0"
+            },
+            "to": {
+              "backgroundPosition": "-200% 0"
+            },
+
+          },
+          "spin": {
+            "from": {
+              transform: "rotate(0deg)"
+            },
+            "to": {
+              transform: "rotate(360deg)"
+            }
+          },
+      },
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.5s ease-in-out",

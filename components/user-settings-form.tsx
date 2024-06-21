@@ -113,7 +113,7 @@ export function UserSettingsForm({
   <CardFooter className="flex flex-col items-start space-y-2 md:flex-row md:justify-between md:space-x-0">
     <Button
       disabled={isSubmitting}
-      variant="outline"
+      variant="secondary"
       type="submit"
       className="border-primary font-bold tracking-wider transition-colors hover:bg-primary hover:text-primary-foreground dark:hover:text-primary-foreground-dark"
     >

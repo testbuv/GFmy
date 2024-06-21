@@ -122,11 +122,10 @@ const BackgroundRemovePage = () => {
 
           <div className="mx-6 mt-1 ">
             <Button
-              variant="outline"
+              variant="secondary"
               type="submit"
               disabled={isLoading}
-              className="w-full rounded-md border-2 border-primary text-[12px] font-bold uppercase tracking-wider transition-colors hover:bg-primary hover:text-white"
-            >
+              className="col-span-2 rounded-full text-[12px] font-bold uppercase tracking-wider transition-colors hover:text-primary-foreground dark:hover:text-primary-foreground-dark md:col-span-1"              >
               Submit
             </Button>
           </div>
