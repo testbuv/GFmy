@@ -48,22 +48,17 @@ export const UserAccountNav = () => {
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="my-2 border-t border-border" />
         <DropdownMenuItem asChild>
-          <Link href="/dashboard" className="flex items-center space-x-2 px-3 py-2 text-sm transition-colors hover:bg-muted">
-            <span>Dashboard</span>
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href="/billing" className="flex items-center space-x-2 px-3 py-2 text-sm transition-colors hover:bg-muted">
+          <Link href="/billing" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
             <span>Buy Credits</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/settings" className="flex items-center space-x-2 px-3 py-2 text-sm transition-colors hover:bg-muted">
+          <Link href="/settings" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
             <span>Settings</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="my-2 border-t border-border" />
-        <DropdownMenuItem className="flex cursor-pointer items-center space-x-2 px-3 py-2 text-sm transition-colors hover:bg-muted" onClick={handleSignOut}>
+        <DropdownMenuItem className="flex cursor-pointer items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted" onClick={handleSignOut}>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Sign Out</span>
         </DropdownMenuItem>
