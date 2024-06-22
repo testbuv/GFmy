@@ -1,12 +1,12 @@
 import React from "react";
-import { RemoveBgLanding } from "./removebg-landing";
+import { AboutSectionLanding } from "./about-landing"
 
 export const LandingSection = () => {
   return (
     <main className="p-4 text-center text-slate-900">
       <div className="mt-28">
         <div className=" text-5xl font-semibold md:text-6xl lg:text-7xl">
-          <span className="to-sky-blue-600 bg-gradient-to-b from-teal-700 to-teal-900  bg-clip-text  text-transparent">
+        <span className="bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-transparent">
             Power Up
           </span>{" "}
           With AI!
@@ -16,7 +16,7 @@ export const LandingSection = () => {
         </p>
       </div>
       <div className=" p-8 lg:mt-8 lg:p-16">
-      <RemoveBgLanding />
+        <AboutSectionLanding/>
       </div>
       
     </main>

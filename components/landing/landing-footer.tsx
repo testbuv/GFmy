@@ -65,7 +65,7 @@ export const LandingFooter = () => {
 
       {/* Footer Bottom Section */}
       <div className="flex flex-col-reverse gap-y-4 justify-center items-center sm:flex-row sm:items-end sm:justify-between">
-        <span className="text-xsmall-regular text-gray-500">
+        <span className="text-xsmall-regular text-muted-foreground">
           © Copyright 2024 Growth Fast.io.
         </span>
       </div>

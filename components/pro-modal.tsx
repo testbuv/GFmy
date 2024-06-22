@@ -40,7 +40,7 @@ export const ProModal = () => {
               className="m-auto"
             />
           )}
-          <p className="mb-4 text-center text-gray-600 dark:text-white">
+          <p className="mb-4 text-center text-primary-foreground-dark dark:text-white">
             Select a package that fits your needs.
           </p>
           <div className="w-full md:w-3/4 mx-auto">
