@@ -25,7 +25,7 @@ export const AboutSectionLanding = ({ user }: LandingHeroProps) => {
         <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center ">
       <Link href={user ? "/dashboard" : "/sign-in"}>
        <Button variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
-          Start Saving Your Today
+           Save Time and Effort
           </Button>
         </Link>
       </div>
