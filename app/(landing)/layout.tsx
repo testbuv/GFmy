@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (

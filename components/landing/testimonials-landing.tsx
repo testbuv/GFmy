@@ -11,7 +11,7 @@ export const LandingTestimonials = () => {
           <p className="text-primary-foreground mb-4">
             "As a junior designer, Growth Fast.io has been a game-changer for me. The AI-powered tools have saved me countless hours and helped me deliver professional-quality designs to my clients in record time."
           </p>
-          <p className="font-semibold">John Doe</p>
+          <p className="font-semibold">Marc Jacobs</p>
           <p className="text-muted-foreground">Junior Designer</p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -19,7 +19,7 @@ export const LandingTestimonials = () => {
           <p className="text-primary-foreground mb-4">
             "I run a small business and have no design skills, but Growth Fast.io has made it incredibly easy for me to create stunning visuals for my marketing campaigns. The background removal and upscaling features are a lifesaver!"
           </p>
-          <p className="font-semibold">Jane Smith</p>
+          <p className="font-semibold">Jane Southfield</p>
           <p className="text-muted-foreground">Business Owner</p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -27,7 +27,7 @@ export const LandingTestimonials = () => {
           <p className="text-primary-foreground mb-4">
             "Growth Fast.io has revolutionized my design workflow. The AI-generated designs are a great starting point, and the ability to quickly upscale and remove backgrounds has significantly reduced my time to market."
           </p>
-          <p className="font-semibold">Mark Johnson</p>
+          <p className="font-semibold">Mark Diaz</p>
           <p className="text-muted-foreground">Designer</p>
         </div>
       </div>
