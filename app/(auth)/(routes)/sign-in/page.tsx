@@ -11,10 +11,14 @@ export const metadata: Metadata = {
 export default function RegisterPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="relative h-240 md:h-96">
+      <div className="relative h-240 md:h-[500px]">
         <Image
-          src="/bg.gif"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/replicate-prediction-fm5r18fcvsrge0cg9adtt2a0gc.gif"
+          loading="lazy"
+          priority={false}
+          quality={80}
           fill
+          sizes="100vw"
           alt="Landing"
           className="object-cover"
         />
