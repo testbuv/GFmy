@@ -12,9 +12,13 @@ export const RemoveBgLanding = () => {
           Effortlessly Remove Backgrounds from Your Images
         </h1>
         <p className="mt-4 text-base md:text-lg">
-          Our intelligent background removal tool makes it simple to isolate the subject of your image from its background. Whether you need transparent PNGs for product listings, creative designs, or any other purpose, our AI-driven solution delivers precise and seamless results in just a few clicks.
+          Say goodbye to the hassle of manually removing backgrounds from your images! Our cutting-edge background removal tool, powered by advanced AI technology, makes the process a breeze. With just a few clicks, you can easily isolate the subject of your image and remove the background, leaving you with a pristine, transparent PNG ready for any application.
+        </p>
+        <p className="mt-4 text-base md:text-lg">
+          Whether you're an e-commerce business looking to showcase your products in the best light, a graphic designer in need of clean, isolated elements for your compositions, or simply someone who wants to get creative with their photos, our background removal tool has got you covered. No more tedious manual selection or time-consuming editing – our AI-driven solution does the heavy lifting for you, delivering precise and seamless results every time.
         </p>
       </div>
+      <div className="md:self-start">
       <Image
         src="https://tpstore-media.s3.eu-north-1.amazonaws.com/remove-bg.png"
         alt="Remove Bg Source"
@@ -22,6 +26,7 @@ export const RemoveBgLanding = () => {
         height={700}
         className="mt-2 rounded-sm"
       />
+      </div>
     </div>
   );
 };
