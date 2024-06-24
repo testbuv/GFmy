@@ -23,7 +23,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
       <NavigationMenu.List className="flex items-center space-x-8">
         <NavigationMenu.Item>
           <Link href="/dashboard" className="flex items-center space-x-2">
-            <Image src="/logo.svg" alt="Logo" width={32} height={32} />
+            <Image src="/logo.png" alt="Logo" width={32} height={32} />
             <span className="text-lg font-semibold">Growth Fast.io</span>
           </Link>
         </NavigationMenu.Item>

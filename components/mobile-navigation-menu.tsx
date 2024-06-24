@@ -48,7 +48,7 @@ export const MobileNavigationMenu = ({ creationCount, userCredits }: MobileNavig
       {isOpen && (
         <div className="absolute left-0 top-full mt-2 w-full origin-top rounded-md bg-popover p-2 shadow-lg">
           <div className="flex items-center space-x-2 mb-4">
-            <Image src="/logo.svg" alt="Logo" width={32} height={32} />
+            <Image src="/logo.png" alt="Logo" width={32} height={32} />
             <span className="text-lg font-semibold">Growth Fast.io</span>
           </div>
           <nav className="flex flex-col space-y-2">
