@@ -55,7 +55,7 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </section>
-                <section className="mx-auto mt-6 max-w-screen-xl">
+                <section className="border-t border-t-gradient-to-r mx-auto mt-6 max-w-screen-xl">
                     <LandingFooter />
                 </section>
             </main>
