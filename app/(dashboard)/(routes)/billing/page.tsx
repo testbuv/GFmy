@@ -22,7 +22,7 @@ export default async function BillingPage() {
   const creationCount = await getCreationCount();
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-slate-900">
+    <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-background">
       <div className="w-full max-w-xl">
         <Card className="mb-8">
           <CardHeader>

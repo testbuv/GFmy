@@ -97,7 +97,7 @@ function generateOrderConfirmationHtml({ purchaseId, amountPaid, creditAmount, c
         <p>Amount Paid: €${amountPaid.toFixed(2)}</p>
         <p>Credits purchased: ${creditAmount.toFixed(2)}</p>
         <p>Order Date: ${new Date(createdAt).toLocaleDateString("en-US")}</p>
-        <p>If you have any questions, please contact us at hello@growthfast.io.</p>
+        <p>If you have any questions, please contact us at hello@printifai.shop.</p>
       </body>
     </html>
   `;
