@@ -22,18 +22,16 @@ export default function RegisterPage() {
           alt="Landing"
           className="object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative z-20 flex items-center text-4xl font-medium text-white">
-            <div className="relative mr-2 h-10 w-10">
-              <Image fill alt="Logo" src="/logo.svg" />
-            </div>
-            Growth Fast.io
-          </div>
-        </div>
       </div>
       <div className="flex-grow p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
-          <div className="flex flex-col space-y-2 text-center">
+          <div className="flex flex-col items-center space-y-2 text-center">
+            <div className="relative z-20 flex items-center text-4xl font-medium">
+              <div className="relative mr-2 h-10 w-10">
+                <Image fill alt="Logo" src="/logo.svg" />
+              </div>
+              Growth Fast.io
+            </div>
             <h1 className="text-2xl font-semibold tracking-tight">
               Welcome to Growth Fast.io
             </h1>
