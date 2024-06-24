@@ -16,7 +16,7 @@ export const RemoveBgLanding = () => {
         </p>
       </div>
       <Image
-        src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.38.03+-+Vertical+aspect+ratio+architecture+photos+of+Mexico+City%2C+featuring+different+sights+and+landmarks%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+.webp"
+        src="https://tpstore-media.s3.eu-north-1.amazonaws.com/remove-bg.png"
         alt="Remove Bg Source"
         width={400}
         height={700}
