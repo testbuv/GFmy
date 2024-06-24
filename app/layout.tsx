@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className={`${GeistSans.className} dark`}>
+      <body className={`${GeistSans.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -26,7 +26,12 @@ export default function RootLayout({
         >
           <ModalProvider />
           <ToasterProvider />
-          {children}
+          <div className="min-h-screen flex flex-col">
+            <main className="flex-grow">{children}</main>
+            {/* <footer className="mt-6 border-t-2 border-t-gradient-to-r border-t-fixed">
+           <LandingFooter />
+            </footer>               */}
+          </div>
         </ThemeProvider>
       </body>
     </html>

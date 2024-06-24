@@ -6,8 +6,7 @@ import { Metadata } from "next";
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { getCurrentUser} from "@/lib/session";
 import  StripePricingTable  from "@/components/pricing-table";
-import { getUserCredits } from '@/lib/session'
-import { getCreationCount } from "@/lib/api-limit";
+
 
 export const metadata: Metadata = {
   title: "Billing",

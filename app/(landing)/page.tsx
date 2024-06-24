@@ -16,7 +16,7 @@ export default async function Landing() {
   return (
     <>
       <main>
-        <section className="mx-auto min-h-screen max-w-screen-xl">
+      <section className="mx-auto min-h-screen max-w-screen-xl">
           <LandingNav user={user} />
           <LandingHero user={user} />
           <ChevronDown className="m-auto animate-[fade-in_1.5s_ease-out,bounce_1s_infinite_2s] text-white" />
