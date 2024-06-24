@@ -6,6 +6,8 @@ import { getCurrentUser } from "@/lib/session";
 import StripePricingTable from "@/components/pricing-table";
 import { getUserCredits } from "@/lib/session";
 import { getCreationCount } from "@/lib/api-limit";
+import { calculateAvailableCredits } from "@/lib/credits";
+
 
 export const metadata: Metadata = {
   title: "Billing",
@@ -20,6 +22,7 @@ export default async function BillingPage() {
   }
   const credits = await getUserCredits();
   const creationCount = await getCreationCount();
+  const availableCredits = calculateAvailableCredits(credits ?? 0, creationCount);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-background">
@@ -32,7 +35,7 @@ export default async function BillingPage() {
           </CardHeader>
           <CardContent className="flex flex-col items-center gap-4">
             <div className="text-5xl font-bold">
-              {(credits ?? 0) - creationCount}
+              {availableCredits}
             </div>
             <p className="text-gray-100">Credits remaining</p>
           </CardContent>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useUserStore } from "@/store/store";
 import { Menu, X } from "lucide-react";
+import { calculateAvailableCredits } from "@/lib/credits";
 
 interface MobileNavigationMenuProps {
   creationCount: number;
@@ -16,7 +17,7 @@ export const MobileNavigationMenu = ({ creationCount, userCredits }: MobileNavig
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const user = useUserStore((state) => state.user);
-  const availableCredits = userCredits - creationCount;
+  const availableCredits = calculateAvailableCredits(userCredits, creationCount);
 
   useEffect(() => {
     setIsMounted(true);
@@ -43,7 +44,7 @@ export const MobileNavigationMenu = ({ creationCount, userCredits }: MobileNavig
         </span>
         <UserAccountNav />
       </div>
-
+      
       {isOpen && (
         <div className="absolute left-0 top-full mt-2 w-full origin-top rounded-md bg-popover p-2 shadow-lg">
           <div className="flex items-center space-x-2 mb-4">

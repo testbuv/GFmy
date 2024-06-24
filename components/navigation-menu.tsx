@@ -6,6 +6,7 @@ import { UserAccountNav } from "@/components/user-account-nav";
 import Image from "next/image";
 import Link from "next/link";
 import { useUserStore } from "@/store/store";
+import { calculateAvailableCredits } from "@/lib/credits";
 
 interface NavigationMenuProps {
   creationCount: number;
@@ -14,7 +15,7 @@ interface NavigationMenuProps {
 
 export const NavigationMenuComponent = ({ creationCount, userCredits }: NavigationMenuProps) => {
   const user = useUserStore((state) => state.user);
-  const availableCredits = userCredits - creationCount;
+  const availableCredits = calculateAvailableCredits(userCredits, creationCount);
 
   return (
     <NavigationMenu.Root className="relative z-10 flex w-full items-center justify-between bg-background p-4 border-b-2 border-transparent border-b-gradient-to-r from-[#ed6ea0] to-[#ec8c69]">
@@ -61,7 +62,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
 
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-2">
-        <span className="inline-flex bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-xl text-transparent">
+          <span className="inline-flex bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-xl text-transparent">
             Available Credits: {availableCredits}
           </span>
         </div>
