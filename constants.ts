@@ -20,7 +20,7 @@ export const routes = [
   {
     label: "Remove the background layer",
     path: "/bg-remove",
-    description: "Manipulate your images to remove the background layer.",
+    description: "Remove the background layer from your images.",
     image: "https://tpstore-media.s3.eu-north-1.amazonaws.com/remove-bg.png",
   },
   {

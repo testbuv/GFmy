@@ -51,9 +51,15 @@ export const UserAccountNav = () => {
           <Link href="/billing" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
             <span>Buy Credits</span>
           </Link>
-        </DropdownMenuItem><DropdownMenuItem asChild>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
           <Link href="/purchase-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
             <span>Purchase History</span>
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/creations-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
+            <span>Creations History</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>

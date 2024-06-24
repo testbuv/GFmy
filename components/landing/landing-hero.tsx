@@ -1,16 +1,10 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { Instrument_Sans, Ubuntu } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { TypewriterLandingComponent } from "./typewrite-landing";
 import { Button } from "@/components/ui/button";
 import { User } from "next-auth";
-
-const font = Instrument_Sans({
-  weight: "600",
-  subsets: ["latin"],
-});
-const font_2 = Ubuntu({ weight: "700", subsets: ["latin"] });
 
 type LandingHeroProps = {
   user?: User;
@@ -22,22 +16,25 @@ export const LandingHero = ({ user }: LandingHeroProps) => {
       <div
         className={cn(
           "animate-fade-in-up space-y-5 p-1 text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl",
-          font.className,
+          GeistSans.className,
         )}
       >
         <h1>Revolutionize Your Visual Content Creation with</h1>
         <div
           className={cn(
             "h-16 bg-gradient-to-r from-gray-100 to-gray-900 bg-clip-text text-6xl text-transparent md:h-24 md:text-8xl",
-            font_2.className,
+            GeistSans.className,
           )}
         >
           <TypewriterLandingComponent />
         </div>
       </div>
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center">
-      <Link href={user ? "/dashboard" : "/sign-in"}>
-        <Button variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
+        <Link href={user ? "/dashboard" : "/sign-in"}>
+          <Button
+            variant="primary"
+            className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
+          >
             Unlock Your Creative Potential Now
           </Button>
         </Link>

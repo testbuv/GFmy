@@ -62,11 +62,10 @@ const Cookies = () => {
                         </ul>
                     </section>
                 </div>
-                <section className="mx-auto mt-6 max-w-screen-xl">
+            </main>
+            <section className="mx-auto mt-6 max-w-screen-xl">
           <LandingFooter />
         </section>
-            </main>
-            
         </>
     );
 };

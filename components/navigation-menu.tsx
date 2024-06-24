@@ -17,6 +17,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
   const user = useUserStore((state) => state.user);
   const availableCredits = calculateAvailableCredits(userCredits, creationCount);
 
+
   return (
     <NavigationMenu.Root className="relative z-10 flex w-full items-center justify-between bg-background p-4 border-b-2 border-transparent border-b-gradient-to-r from-[#ed6ea0] to-[#ec8c69]">
       <NavigationMenu.List className="flex items-center space-x-8">
@@ -59,6 +60,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
           </Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
+
 
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-2">

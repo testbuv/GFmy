@@ -124,7 +124,18 @@
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-8
   }
+  .hover-gradient-text {
+    display: inline-flex;
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.3s ease;
+    background-size: 200% auto;
+  }
 
+  .hover-gradient-text:hover {
+    background-position: -100% center;
+  }
   .contrast-btn {
     @apply px-4 py-2 border border-primary-foreground rounded-full hover:bg-muted hover:text-white transition-colors duration-200 ease-in;
   }
