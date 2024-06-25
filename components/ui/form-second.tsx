@@ -105,8 +105,7 @@ const FormControl = React.forwardRef<
   React.ElementRef<typeof Slot>,
   React.ComponentPropsWithoutRef<typeof Slot>
 >(({ ...props }, ref) => {
-  const { error, formItemId, formDescriptionId, formMessageId } =
-    useFormField();
+  const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
   return (
     <Slot
@@ -120,9 +119,9 @@ const FormControl = React.forwardRef<
       aria-invalid={!!error}
       {...props}
     />
-  );
-});
-FormControl.displayName = 'FormControl';
+  )
+})
+FormControl.displayName = "FormControl"
 
 const FormDescription = React.forwardRef<
   HTMLParagraphElement,
