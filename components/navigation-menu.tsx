@@ -33,7 +33,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-48 origin-top rounded-md bg-popover p-2 shadow-lg">
             <NavigationMenu.Link asChild>
-              <Link href="/stable-diffusion" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+              <Link href="/image-generation" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
                 Create
               </Link>
             </NavigationMenu.Link>

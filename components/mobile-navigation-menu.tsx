@@ -52,7 +52,7 @@ export const MobileNavigationMenu = ({ creationCount, userCredits }: MobileNavig
             <span className="text-lg font-semibold">Growth Fast.io</span>
           </div>
           <nav className="flex flex-col space-y-2">
-            <Link href="/stable-diffusion" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
+            <Link href="/image-generation" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
               Create
             </Link>
             <Link href="/upscale" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">

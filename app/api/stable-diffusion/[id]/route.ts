@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Replicate from "replicate";
 import { getCurrentUser } from "@/lib/session";
 import prismadb from "@/lib/db";
+import { uploadMultipleImages } from "@/lib/cloudinary";
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
@@ -17,31 +18,48 @@ export async function GET(
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const prediction = await replicate.predictions.get(params.id);
-  
-  // Check if the prediction is still processing or has failed
-  if (prediction?.status !== "succeeded" && prediction?.status !== "failed") {
-    return NextResponse.json({ status: prediction.status, outputURL: [] });
-  }
+  try {
+    const prediction = await replicate.predictions.get(params.id);
 
-  // Handle successful prediction
-  if (prediction?.status === "succeeded") {
-    const imageUrls = prediction.output as string[];
+    if (prediction?.status === "succeeded") {
+      const imageUrls = prediction.output as string[];
 
-    await prismadb.creation.createMany({
-      data: imageUrls.map((imageUrl) => ({
-        imageUrl,
-        domain: "stable-diffusion",
-        userId: user.id,
-      })),
-    });
+      const cloudinary_resp = await uploadMultipleImages(imageUrls);
 
-    return NextResponse.json({
-      status: prediction.status,
-      outputURL: imageUrls,
-    }, { status: 200 });
-  } else {
-    // Handle failed prediction
-    return NextResponse.json({ status: prediction.status, outputURL: [] }, { status: 500 });
+      await prismadb.creation.createMany({
+        data: cloudinary_resp.map((imageUrl) => ({
+          imageUrl,
+          domain: "stable-diffusion",
+          userId: user.id,
+        })),
+      });
+
+      return NextResponse.json({
+        status: prediction.status,
+        outputURL: cloudinary_resp,
+      }, { status: 200 });
+    } else if (prediction?.status === "failed") {
+      // Handle failed prediction
+      console.error("[STABLE_DIFFUSION_PREDICTION_FAILED]", prediction.error);
+      return NextResponse.json(
+        {
+          status: prediction.status,
+          error: prediction.error,
+        },
+        { status: 500 }
+      );
+    } else {
+      // Handle other prediction statuses (e.g., processing)
+      return NextResponse.json({ status: prediction.status, outputURL: [] });
+    }
+  } catch (error) {
+    console.error("[STABLE_DIFFUSION_API_ERROR]", error);
+    return NextResponse.json(
+      {
+        status: "error",
+        error: "An unexpected error occurred",
+      },
+      { status: 500 }
+    );
   }
 }

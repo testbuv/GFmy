@@ -7,7 +7,7 @@ export const routes = [
 
   {
     label: "Generate images or designs",
-    path: "/stable-diffusion",
+    path: "/image-generation",
     description: "Generate images and designs from the text prompt.",
     image: "https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.53+-+Vertical+aspect+ratio+architecture+photos+of+London%2C+featuring+different+sights+and+bridges%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+T.webp",
   },

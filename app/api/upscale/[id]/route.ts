@@ -25,23 +25,20 @@ export async function GET(
     return NextResponse.json({ status: prediction.status, outputURL: "" });
   } else {
     if (prediction?.status === "succeeded") {
-      // Max size to cloudinary is 10MB [Free plan]
-      //const cloudinary_resp = await uploadImage(replicate_res);
-      //const cloudinary_resp = await uploadImage(prediction.output as string);
-
+      const cloudinary_resp = await uploadImage(prediction.output as string);
+    
       await prismadb.creation.create({
         data: {
-          imageUrl: null,
+          imageUrl: cloudinary_resp.secure_url,
           domain: "upscale",
           userId: user.id,
         },
       });
-
+    
       return NextResponse.json(
         {
           status: prediction.status,
-          //   outputURL: cloudinary_resp.secure_url,
-          outputURL: prediction.output,
+          outputURL: cloudinary_resp.secure_url,
         },
         { status: 200 },
       );

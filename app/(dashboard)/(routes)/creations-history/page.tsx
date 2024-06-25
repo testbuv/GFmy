@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { getCurrentUser } from "@/lib/session";
 import prismadb from "@/lib/db";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { redirect } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "My Creations",
@@ -38,9 +40,10 @@ export default async function CreationsHistoryPage() {
       createdAt: true,
     },
   });
+
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-semibold mb-4">Creations History - WIP</h1>
+      <h1 className="text-3xl font-semibold mb-4">Creations History</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {creations.map((creation) => (
           <Card key={creation.id}>
@@ -50,11 +53,24 @@ export default async function CreationsHistoryPage() {
             <CardContent>
               <div className="space-y-2">
                 {creation.imageUrl && (
-                  <img src={creation.imageUrl} alt={creation.domain} className="w-full h-auto rounded-md" />
+                  <Image
+                    src={creation.imageUrl}
+                    alt={creation.domain}
+                    width={500}
+                    height={500}
+                    className="w-full h-auto rounded-md"
+                  />
                 )}
                 <p>Created At: {creation.createdAt.toISOString()}</p>
               </div>
             </CardContent>
+            <CardFooter>
+              <Link href={`/api/download?id=${creation.id}`}>
+                <button className="btn hover:hover-gradient-text  transition-colors duration-200 border-b-gradient-to-r" disabled={!creation.imageUrl}>
+                  Download
+                </button>
+              </Link>
+            </CardFooter>
           </Card>
         ))}
       </div>

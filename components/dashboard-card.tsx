@@ -54,9 +54,9 @@ export const DashboardCard = ({
     []
   );
 
-  const onMouseLeave = () => {
+  const onMouseLeave = useCallback(() => {
     setRotate({ x: 0, y: 0 });
-  };
+  }, []);
 
   return (
     <Card
