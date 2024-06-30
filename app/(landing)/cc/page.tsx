@@ -53,7 +53,7 @@ const Cookies = () => {
                     <section className="space-y-4">
                         <h2 className="text-2xl font-semibold text-slate-800">WHAT COOKIES ARE USED AT Growth Fast.io.shop?</h2>
                         <h3>BASIC FUNCTIONALITY:</h3>
-                        <p>Growth Fast.io’s e-commerce platform set cookies in order for basic functionality of the site to work- check out, shopping cart etc.</p>
+                        <p>Growth Fast.io e-commerce platform set cookies in order for basic functionality of the site to work- check out, shopping cart etc.</p>
                         <h3>ADVERTISING & MARKETING:</h3>
                         <ul>
                             <li>Google Adwords - a cookie is set, and a pixel is used to track your journey and experience on our websites in order to customise the content of Google Adwords' program and to optimize the advertising on the Google Ads platform.</li>
