@@ -21,7 +21,7 @@ export default async function Landing() {
           <LandingHero user={user} />
           <ChevronDown className="m-auto animate-[fade-in_1.5s_ease-out,bounce_1s_infinite_2s] text-white" />
         </section>
-        <section className="mx-auto py-20 w-full bg-white">
+        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-500">
           <div className="container mx-auto px-4">
             <LandingSection />
           </div>

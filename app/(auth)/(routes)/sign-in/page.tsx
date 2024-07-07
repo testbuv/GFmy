@@ -25,7 +25,7 @@ export default function RegisterPage() {
             className="object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+            <div className="w-full max-w-md p-8 bg-transparent rounded-lg shadow-lg">
               <div className="flex flex-col items-center space-y-2 text-center">
                 <div className="relative z-20 flex items-center text-4xl font-medium">
                   <div className="relative mr-2 h-10 w-10">

@@ -11,16 +11,13 @@ export const UpscaleLanding = () => {
     <div className="flex flex-col items-center justify-center gap-4 md:flex-row lg:gap-8">
       <div className="max-w-[350px] text-start">
         <h1 className={cn("text-2xl md:text-4xl lg:text-5xl", font.className)}>
-          Unleash the Full Potential of Your Images
+          Enhance Your Images with AI Upscaling
         </h1>
-        <p className="mt-4 text-base md:text-lg">
-          Discover the power of AI-driven image upscaling and take your visuals to new heights! Our cutting-edge technology allows you to effortlessly enlarge and enhance your images, transforming them into stunning, high-resolution masterpieces that will leave your audience in awe.
+        <p className="mt-4 text-base md:text-lg font-bold bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-transparent">
+          Enlarge your images up to 4x without losing quality!
         </p>
         <p className="mt-4 text-base md:text-lg">
-          Say goodbye to the limitations of low-resolution images and hello to a world of crystal-clear clarity. Whether you're a professional photographer looking to print your work in large formats, a graphic designer in need of high-quality assets, or simply someone who wants to preserve precious memories in the best possible quality, our image upscaling tool is here to make it happen.
-        </p>
-        <p className="mt-4 text-base md:text-lg">
-          Our advanced AI algorithms work tirelessly behind the scenes, analyzing every pixel of your image and intelligently filling in the missing details. The result? Breathtakingly sharp and detailed images that maintain their integrity even when scaled up to much larger sizes. No more pixelation, no more blurriness – just pure, unadulterated visual perfection.
+          Our advanced AI technology intelligently upscales your images, delivering crystal-clear results perfect for printing, graphic design, and preserving precious memories.
         </p>
       </div>
       <div className="md:self-start">
