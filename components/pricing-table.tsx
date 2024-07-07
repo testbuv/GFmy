@@ -31,46 +31,76 @@ export default function StripePricingTable({ user }: Props) {
   )
 }
 
-// /**
-//  * v0 by Vercel.
-//  * @see https://v0.dev/t/kQBP6fYxfk7
-//  */
-// import { Button } from "@/components/ui/button"
+
+// "use client";
+
+// import React from "react";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Card,
+//   CardFooter,
+//   CardTitle,
+//   CardDescription,
+// } from "@/components/ui/card";
 
 // export default function PricingTable() {
 //   return (
-//     <div className="bg-slate-900 text-white p-6 max-w-sm mx-auto rounded-lg">
-//       <h2 className="text-2xl font-bold mb-6">Buy More Tokens</h2>
-//       <div className="space-y-6">
-//         <div className="bg-slate-900 p-4 rounded-lg">
-//           <h3 className="text-lg font-semibold mb-1">Custom Credits</h3>
-//           <p className="text-sm mb-4">You choose the volume</p>
-//           <div className="text-3xl font-bold mb-4">€0.50</div>
-//           <Button className="bg-[#22D3EE] text-black">Pay</Button>
-//         </div>
-//         <div className="bg-slate-900 p-4 rounded-lg">
-//           <h3 className="text-lg font-semibold mb-1">20 Credits</h3>
-//           <p className="text-sm mb-4">20 credits for image generation and manipulation.</p>
-//           <div className="text-3xl font-bold mb-4">€10</div>
-//           <Button className="bg-[#22D3EE] text-black">Pay</Button>
-//         </div>
-//         <div className="bg-slate-900 p-4 rounded-lg">
-//           <h3 className="text-lg font-semibold mb-1">100 Credits</h3>
-//           <p className="text-sm mb-4">100 credits for image generation and manipulation.</p>
-//           <div className="text-3xl font-bold mb-4">€20</div>
-//           <Button className="bg-[#22D3EE] text-black">Pay</Button>
-//         </div>
-//         <div className="bg-slate-900 p-4 rounded-lg">
-//           <div className="flex justify-between items-center mb-2">
-//             <span className="bg-[#64748B] text-xs uppercase px-2 py-1 inline-block rounded">Most popular</span>
+//     <Card className="max-w-sm mx-auto overflow-hidden">
+//       <div className="relative h-full w-full">
+//         <span className="absolute inset-[-1000%] bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69]" />
+//         <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-zinc-900 p-6 text-white">
+//           <CardTitle className="mb-6 text-2xl font-bold">
+//             Buy More Tokens
+//           </CardTitle>
+//           <div className="space-y-6">
+//             <div className="rounded-lg bg-zinc-900 p-4">
+//               <CardTitle className="mb-1 text-lg font-semibold">
+//                 Custom Credits
+//               </CardTitle>
+//               <CardDescription className="mb-4 text-sm">
+//                 You choose the volume
+//               </CardDescription>
+//               <div className="mb-4 text-3xl font-bold">€0.50</div>
+//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//             </div>
+//             <div className="rounded-lg bg-zinc-900 p-4">
+//               <CardTitle className="mb-1 text-lg font-semibold">
+//                 20 Credits
+//               </CardTitle>
+//               <CardDescription className="mb-4 text-sm">
+//                 20 credits for image generation and manipulation.
+//               </CardDescription>
+//               <div className="mb-4 text-3xl font-bold">€10</div>
+//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//             </div>
+//             <div className="rounded-lg bg-zinc-900 p-4">
+//               <CardTitle className="mb-1 text-lg font-semibold">
+//                 100 Credits
+//               </CardTitle>
+//               <CardDescription className="mb-4 text-sm">
+//                 100 credits for image generation and manipulation.
+//               </CardDescription>
+//               <div className="mb-4 text-3xl font-bold">€20</div>
+//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//             </div>
+//             <div className="rounded-lg bg-zinc-900 p-4">
+//               <div className="mb-2 flex items-center justify-between">
+//                 <span className="inline-block rounded bg-[#64748B] px-2 py-1 text-xs uppercase">
+//                   Most popular
+//                 </span>
+//               </div>
+//               <CardTitle className="mb-1 text-lg font-semibold">
+//                 200 Credits
+//               </CardTitle>
+//               <CardDescription className="mb-4 text-sm">
+//                 200 credits for image generation and manipulation.
+//               </CardDescription>
+//               <div className="mb-4 text-3xl font-bold">€35</div>
+//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//             </div>
 //           </div>
-//           <h3 className="text-lg font-semibold mb-1">200 Credits</h3>
-//           <p className="text-sm mb-4">200 credits for image generation and manipulation.</p>
-//           <div className="text-3xl font-bold mb-4">€35</div>
-//           <Button className="bg-[#22D3EE] text-black">Pay</Button>
 //         </div>
 //       </div>
-//     </div>
-//   )
+//     </Card>
+//   );
 // }
-
