@@ -22,7 +22,7 @@ export const UpscaleLanding = () => {
       </div>
       <div className="md:self-start">
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-06-19+21.37.55+-+Vertical+aspect+ratio+architecture+photos+of+London+buildings%2C+taken+with+a+Mamya+650D+camera+using+Cinestill+50+film.+The+images+should+capture+the+u.webp"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-07-07+20.05.57+-+A+stack+of+surreal+and+imaginative+images+in+a+cubism+style+with+a+vertical+aspect+ratio.+Each+image+features+a+fantastical+scene+similar+to+the+previ+(1).webp"
           alt="Upscale"
           width={400}
           height={700}
