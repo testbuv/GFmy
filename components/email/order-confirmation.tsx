@@ -36,7 +36,7 @@ export const OrderConfirmationEmail = ({ purchaseId, amountPaid, creditAmount, c
           Order Date: {new Date(createdAt).toLocaleDateString("en-US")}
         </Text>
         <Text style={text}>
-          If you have any questions, please contact us at hello@Growth Fast.io.shop.
+          If you have any questions, please contact us at hello@growthfast.io.
         </Text>
       </Container>
     </Body>

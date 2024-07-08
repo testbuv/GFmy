@@ -30,8 +30,8 @@ const Cookies = () => {
                         <h2 className="text-2xl font-semibold text-slate-800">HOW ARE COOKIES USED?</h2>
                         <p>Growth Fast.io uses cookies to improve and tailor the website for optimal user experience. Examples of functions affected by cookies include: order fulfillment, login, and your shopping cart. Cookies also save certain information that helps us target your preferences, in order to provide you with the most relevant ads and offers.</p>
                         <p>We use Google Analytics and it may associate the visitation information that it collects with Google information from accounts of signed-in users (on Google) who have consented to this association for the purpose of ads personalisation. This Google information may include end user location, search history, YouTube history and data from sites that partner with Google – and is used to provide us with aggregated and anonymised insights about users' cross device behaviours. When using our site and accepting our tracking and cookie handling you acknowledge such association. You can access and/or delete such information via Google's My Activity.</p>
-                        <p>Persistent cookies are used to e.g. save potential personal settings that you have chosen when browsing Growth Fast.io.shop, so that you can skip this step on consecutive visits. Session cookies are used to collect statistics on website usage.</p>
-                        <p>By using Growth Fast.io website and/or agreeing to our Privacy and Confidentiality Policy and cookie information, you consent to our use of cookies. Please note that if you choose not to accept cookies by blocking/disabling them, you will not be able to purchase items from Growth Fast.io.shop. Additional site functionality may also be limited.</p>
+                        <p>Persistent cookies are used to e.g. save potential personal settings that you have chosen when browsing Growth Fast.io, so that you can skip this step on consecutive visits. Session cookies are used to collect statistics on website usage.</p>
+                        <p>By using Growth Fast.io website and/or agreeing to our Privacy and Confidentiality Policy and cookie information, you consent to our use of cookies. Please note that if you choose not to accept cookies by blocking/disabling them, you will not be able to purchase items from growthfast.io Additional site functionality may also be limited.</p>
                         <p>If you choose to not accept cookies, you may turn off cookies under the security settings on your browser. Also note that you can manually delete cookies from your hard drive at any time.</p>
                     </section>
 
@@ -51,7 +51,7 @@ const Cookies = () => {
                     </section>
 
                     <section className="space-y-4">
-                        <h2 className="text-2xl font-semibold text-slate-800">WHAT COOKIES ARE USED AT Growth Fast.io.shop?</h2>
+                        <h2 className="text-2xl font-semibold text-slate-800">WHAT COOKIES ARE USED AT growthfast.io.</h2>
                         <h3>BASIC FUNCTIONALITY:</h3>
                         <p>Growth Fast.io e-commerce platform set cookies in order for basic functionality of the site to work- check out, shopping cart etc.</p>
                         <h3>ADVERTISING & MARKETING:</h3>
