@@ -20,10 +20,10 @@ export const RemoveBgLanding = () => {
       </div>
       <div className="md:self-start">
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/remove-bg.png"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+3.png"
           alt="Remove Bg Source"
-          width={400}
-          height={700}
+          width={800}
+          height={1400}
           className="mt-2 rounded-sm"
         />
       </div>

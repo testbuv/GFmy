@@ -21,7 +21,7 @@ export const ImageGenLanding = () => {
       </div>
       <div className="md:self-start">
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-07-07+20.19.59+-+A+stack+of+surreal+and+imaginative+images+in+a+cubism+style+with+a+vertical+aspect+ratio.+Each+image+features+a+fantastical+scene+similar+to+the+previ+(1).webp"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-07-10+16.26.08+-+An+octopus+skateboarding+through+a+surreal+cityscape+with+a+Salvador+Dali+vibe.+The+octopus+has+vibrant%2C+swirling+tentacles+and+a+whimsical+expression.webp"
           alt="Image Generation"
           width={400}
           height={700}

@@ -22,10 +22,10 @@ export const UpscaleLanding = () => {
       </div>
       <div className="md:self-start">
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-07-07+20.05.57+-+A+stack+of+surreal+and+imaginative+images+in+a+cubism+style+with+a+vertical+aspect+ratio.+Each+image+features+a+fantastical+scene+similar+to+the+previ+(1).webp"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+1.png"
           alt="Upscale"
-          width={400}
-          height={700}
+          width={800}
+          height={1400}
           className="mt-2 rounded-sm"
         />
       </div>
