@@ -32,6 +32,8 @@ export async function GET(
           imageUrl: cloudinary_resp.secure_url,
           domain: "bg-remove",
           userId: user.id,
+          prompt: "", // Add the missing 'prompt' property
+          model_latency: 0, // Add the missing 'model_latency'
         },
       });
 

@@ -33,6 +33,8 @@ export async function GET(
           imageUrl,
           domain: "qr-code",
           userId: user.id,
+          prompt: "", // Add the missing 'prompt' property
+          model_latency: 0, // Add the missing 'model_latency'
         })),
       });
 
