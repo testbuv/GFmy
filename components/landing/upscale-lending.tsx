@@ -8,8 +8,8 @@ const font = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const UpscaleLanding = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 md:flex-row lg:gap-8">
-      <div className="max-w-[350px] text-start">
+    <div className="flex flex-col items-center justify-center gap-8">
+      <div className="max-w-[800px] text-center">
         <h1 className={cn("text-2xl md:text-4xl lg:text-5xl", font.className)}>
           Enhance Your Images with AI Upscaling
         </h1>
@@ -20,12 +20,12 @@ export const UpscaleLanding = () => {
           Our advanced AI technology intelligently upscales your images, delivering crystal-clear results perfect for printing, graphic design, and preserving precious memories.
         </p>
       </div>
-      <div className="md:self-start">
+      <div className="grid grid-cols-1 gap-4 md:grid-rows-1">
         <Image
           src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+1.png"
           alt="Upscale"
           width={800}
-          height={1400}
+          height={400}
           className="mt-2 rounded-sm"
         />
       </div>

@@ -7,8 +7,8 @@ const font = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const ImageGenLanding = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
-      <div className="max-w-[350px] text-start">
+    <div className="flex flex-col items-center justify-center gap-8">
+      <div className="max-w-[800px] text-center">
         <h1 className={cn("text-2xl md:text-4xl lg:text-5xl", font.className)}>
           Unleash Your Imagination with AI Image Generation
         </h1>
@@ -19,12 +19,26 @@ export const ImageGenLanding = () => {
           Our AI technology understands your words and creates breathtaking visuals that bring your ideas to life. Perfect for artists, designers, and anyone who loves to explore the power of visual creation.
         </p>
       </div>
-      <div className="md:self-start">
+      <div className="grid grid-cols-1 gap-4 md:grid-rows-3">
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/DALL%C2%B7E+2024-07-10+16.26.08+-+An+octopus+skateboarding+through+a+surreal+cityscape+with+a+Salvador+Dali+vibe.+The+octopus+has+vibrant%2C+swirling+tentacles+and+a+whimsical+expression.webp"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-0.png"
           alt="Image Generation"
-          width={400}
-          height={700}
+          width={800}
+          height={400}
+          className="mt-2 rounded-sm"
+        />
+        <Image
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-1.png"
+          alt="Image Generation"
+          width={800}
+          height={400}
+          className="mt-2 rounded-sm"
+        />
+        <Image
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-2+(1).png"
+          alt="Image Generation"
+          width={800}
+          height={400}
           className="mt-2 rounded-sm"
         />
       </div>
