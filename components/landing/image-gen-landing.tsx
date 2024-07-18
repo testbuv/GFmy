@@ -7,8 +7,8 @@ const font = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const ImageGenLanding = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-8">
-      <div className="max-w-[800px] text-center">
+    <div className="flex flex-col md:flex-row items-start justify-center gap-8">
+      <div className="max-w-[800px] md:w-1/2">
         <h1 className={cn("text-2xl md:text-4xl lg:text-5xl", font.className)}>
           Unleash Your Imagination with AI Image Generation
         </h1>
@@ -19,25 +19,20 @@ export const ImageGenLanding = () => {
           Our AI technology understands your words and creates breathtaking visuals that bring your ideas to life. Perfect for artists, designers, and anyone who loves to explore the power of visual creation.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-rows-3">
+      <div className="grid grid-cols-1 gap-4 md:w-1/2">
+        <div className="flex items-start">
+          <Image
+            src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-0.png"
+            alt="Image Generation"
+            width={400}
+            height={200}
+            className="mt-2 rounded-sm"
+          />
+        </div>
         <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-0.png"
+          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Screenshot+2024-07-18+at+21.26.58.png"
           alt="Image Generation"
-          width={800}
-          height={400}
-          className="mt-2 rounded-sm"
-        />
-        <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-1.png"
-          alt="Image Generation"
-          width={800}
-          height={400}
-          className="mt-2 rounded-sm"
-        />
-        <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/out-2+(1).png"
-          alt="Image Generation"
-          width={800}
+          width={400}
           height={400}
           className="mt-2 rounded-sm"
         />

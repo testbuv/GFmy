@@ -1,4 +1,3 @@
-// File: app/dashboard/routes/image-gen/landing.tsx
 import React from "react";
 import Image from "next/image";
 import { DM_Serif_Display } from "next/font/google";
@@ -8,8 +7,8 @@ const font = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
 
 export const UpscaleLanding = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-8">
-      <div className="max-w-[800px] text-center">
+    <div className="flex flex-col md:flex-row items-start justify-center gap-8">
+      <div className="max-w-[800px] md:w-1/2">
         <h1 className={cn("text-2xl md:text-4xl lg:text-5xl", font.className)}>
           Enhance Your Images with AI Upscaling
         </h1>
@@ -20,14 +19,27 @@ export const UpscaleLanding = () => {
           Our advanced AI technology intelligently upscales your images, delivering crystal-clear results perfect for printing, graphic design, and preserving precious memories.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-rows-1">
-        <Image
-          src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+1.png"
-          alt="Upscale"
-          width={800}
-          height={400}
-          className="mt-2 rounded-sm"
-        />
+      <div className="md:w-1/2">
+        <div className="flex flex-col items-start">
+          <div className="flex justify-between w-full mb-2">
+            <p className="text-sm font-bold">Before:</p>
+            <p className="text-sm font-bold">After:</p>
+          </div>
+          <Image
+            src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+3.png"
+            alt="Upscale"
+            width={600}
+            height={300}
+            className="mt-2 rounded-sm"
+          />
+            <Image
+            src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+43.png"
+            alt="Upscale"
+            width={600}
+            height={300}
+            className="mt-2 rounded-sm"
+          />
+        </div>
       </div>
     </div>
   );

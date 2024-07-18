@@ -31,7 +31,7 @@ export default async function Landing() {
             <LandingTestimonials />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-white">
+        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-300">
           <div className="container mx-auto px-4">
             <LandingSectionFirst />
           </div>
@@ -41,7 +41,7 @@ export default async function Landing() {
             <LandingSectionTwo />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-white">
+        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-300">
           <div className="container mx-auto px-4">
             <LandingSectionThree />
           </div>
