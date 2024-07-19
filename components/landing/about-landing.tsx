@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { User } from "next-auth";
+
 type LandingHeroProps = {
   user?: User;
 };
@@ -35,7 +36,7 @@ const CardSpotlight = ({ children }: { children: React.ReactNode }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative flex h-48 w-48 items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 py-16 shadow-2xl"
+      className="relative flex items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950 p-6 shadow-2xl sm:h-48 sm:w-48 sm:p-8"
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
@@ -56,28 +57,28 @@ export const AboutSectionLanding = ({ user }: LandingHeroProps) => {
       <p className="text-xl text-primary-foreground-dark mb-8">
         Growth Fast.io is the ultimate solution for designers and businesses looking to leverage the power of AI for their creative needs. Our platform offers:
       </p>
-<div className="grid-cols-1 md:grid-cols-2 gap-4 flex items-center justify-center">
-  <CardSpotlight>
-    <div className="flex items-center">
-      <p className="text-sm text-gray-200">✓ Cutting-edge AI technology for image generation, upscaling, and background removal</p>
-    </div>
-  </CardSpotlight>
-  <CardSpotlight>
-    <div className="flex items-center">
-      <p className="text-sm text-gray-200">✓ Significant time and cost savings compared to traditional design methods</p>
-    </div>
-  </CardSpotlight>
-  <CardSpotlight>
-    <div className="flex items-center">
-      <p className="text-sm text-gray-200">✓ Faster time to market for your designs and campaigns</p>
-    </div>
-  </CardSpotlight>
-  <CardSpotlight>
-    <div className="flex items-center">
-      <p className="text-sm text-gray-200">✓ Seamless integration with your existing design workflow</p>
-    </div>
-  </CardSpotlight>
-</div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
+        <CardSpotlight>
+          <div className="flex items-center">
+            <p className="text-sm text-gray-200">✓ Cutting-edge AI technology for image generation, upscaling, and background removal</p>
+          </div>
+        </CardSpotlight>
+        <CardSpotlight>
+          <div className="flex items-center">
+            <p className="text-sm text-gray-200">✓ Significant time and cost savings compared to traditional design methods</p>
+          </div>
+        </CardSpotlight>
+        <CardSpotlight>
+          <div className="flex items-center">
+            <p className="text-sm text-gray-200">✓ Faster time to market for your designs and campaigns</p>
+          </div>
+        </CardSpotlight>
+        <CardSpotlight>
+          <div className="flex items-center">
+            <p className="text-sm text-gray-200">✓ Seamless integration with your existing design workflow</p>
+          </div>
+        </CardSpotlight>
+      </div>
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center">
         <Link href={user ? "/dashboard" : "/sign-in"}>
           <Button variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
