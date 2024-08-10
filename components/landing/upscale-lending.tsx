@@ -32,7 +32,7 @@ export const UpscaleLanding = () => {
             height={300}
             className="mt-2 rounded-sm"
           />
-            <Image
+          <Image
             src="https://tpstore-media.s3.eu-north-1.amazonaws.com/Group+43.png"
             alt="Upscale"
             width={600}

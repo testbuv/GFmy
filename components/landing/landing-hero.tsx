@@ -19,7 +19,7 @@ export const LandingHero = ({ user }: LandingHeroProps) => {
           GeistSans.className,
         )}
       >
-        <h1>Revolutionize Your Visual Content Creation with</h1>
+        <h1>Bringing Words to Life</h1>
         <div
           className={cn(
             "h-16 bg-gradient-to-r from-gray-100 to-gray-900 bg-clip-text text-6xl text-transparent md:h-24 md:text-8xl",
@@ -31,15 +31,12 @@ export const LandingHero = ({ user }: LandingHeroProps) => {
       </div>
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center">
         <Link href={user ? "/dashboard" : "/sign-in"}>
-          <Button
-            variant="primary"
-            className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl"
-          >
-            Unlock Your Creative Potential Now
+        <Button className="w-auto mt-6 bg-plum-800 text-white hover:bg-plum-600">
+            Generate
           </Button>
         </Link>
         <div className="text-xs font-normal text-zinc-400 md:text-sm">
-          Start Creating Stunning Visuals in Minutes
+          Turn ideas into real photos, vectors, videos and much more...
         </div>
       </div>
     </div>

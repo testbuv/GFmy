@@ -6,9 +6,13 @@ import { LandingSection } from "@/components/landing/landing-section";
 import { LandingSectionFirst } from "@/components/landing/landing-section-first";
 import { LandingSectionTwo } from "@/components/landing/landing-section-two";
 import { LandingSectionThree } from "@/components/landing/landing-section-three";
-import { LandingTestimonials } from "@/components/landing/testimonials-landing";
+import  Benefits  from "@/components/landing/ladning-benefits"
+import  Testimonials  from "@/components/landing/testimonials-landing";
 import { LandingFooter } from "@/components/landing/landing-footer";
 import { CookieConsent } from "@/components/landing/cookies-consent";
+import FAQ from "@/components/landing/FAQ";
+import { NewsletterSection } from "@/components/landing/newsletter-section";
+import Pricing from "@/components/landing/pricing";
 
 export default async function Landing() {
   const user = await getCurrentUser();
@@ -16,34 +20,39 @@ export default async function Landing() {
   return (
     <>
       <main>
-      <section className="mx-auto min-h-screen max-w-screen-xl">
+        <section className="mx-auto min-h-screen max-w-screen-xl">
           <LandingNav user={user} />
           <LandingHero user={user} />
           <ChevronDown className="m-auto animate-[fade-in_1.5s_ease-out,bounce_1s_infinite_2s] text-white" />
         </section>
-        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-500">
+        <section className="mx-auto py-20 w-full">
           <div className="container mx-auto px-4">
             <LandingSection />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-gray-100">
+        <section className="mx-auto py-20 w-full">
           <div className="container mx-auto px-4">
-            <LandingTestimonials />
+            <Benefits />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-300">
+        <section className="mx-auto py-20 w-full">
           <div className="container mx-auto px-4">
-            <LandingSectionFirst />
+            <Testimonials />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-gray-100">
+        <section className="mx-auto py-20 w-full">
           <div className="container mx-auto px-4">
-            <LandingSectionTwo />
+            <FAQ />
           </div>
         </section>
-        <section className="mx-auto py-20 w-full bg-gradient-to-r from-white to-zinc-300">
+        <section className="mx-auto py-20 w-full">
           <div className="container mx-auto px-4">
-            <LandingSectionThree />
+            <Pricing />
+          </div>
+        </section>
+        <section className="mx-auto py-20 w-full">
+          <div className="container mx-auto px-4">
+            <NewsletterSection />
           </div>
         </section>
         <CookieConsent />

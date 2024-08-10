@@ -1,37 +1,29 @@
-import { Montserrat } from "next/font/google";
-import Image from "next/image";
+import { FunctionComponent } from 'react';
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { User } from "next-auth";
-
-const font = Montserrat({ weight: "600", subsets: ["latin"] });
 
 type LandingNavProps = {
   user?: User;
 };
 
-export const LandingNav = ({ user }: LandingNavProps) => {
+export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
   return (
-    <nav className=" flex items-center justify-between rounded-lg bg-white/10 px-4 py-2 shadow-2xl drop-shadow backdrop-blur-3xl lg:mt-2">
-      <Link href="/" className="flex items-center">
-        <div className="relative mr-2 h-8 w-8">
-          <Image fill src="/logo.png" alt="Logo" />
-        </div>
-        <h1 className={cn("text-2xl font-bold text-white", font.className)}>
-          Growth Fast.io
-        </h1>
-      </Link>
-      <div className="flex items-center gap-x-2">
-        <Link href={user ? "/dashboard" : "/sign-in"}>
-            <Button
-            variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
-
-            Get Started
-          </Button>
-        </Link>
+    <div className="w-full relative flex flex-row items-center justify-center gap-[140px] text-center text-[37px] text-white font-poppins">
+      <div className="flex flex-row items-start justify-start gap-[5px] text-left font-lokanova">
+        <img className="w-[41px] relative h-[41px] overflow-hidden shrink-0 object-cover" alt="" src="/logo.png" />
+        <div className="w-[197px] relative tracking-[0.03em] uppercase inline-block h-[35px] shrink-0 font-lokanova">GrowthFast</div>    </div>
+      <div className="flex flex-row items-center justify-start gap-7 text-3xl">
+        <div className="w-[142px] relative flex items-center justify-center h-9 shrink-0">Features</div>
+        <div className="w-[136px] relative flex items-center justify-center shrink-0">Pricing</div>
+        <div className="w-[100px] relative flex items-center justify-center h-9 shrink-0">About</div>
+        <div className="w-[136px] relative flex items-center justify-center h-9 shrink-0">FAQ</div>
       </div>
-    </nav>
+      <Link href={user ? "/dashboard" : "/sign-in"}>
+        <div className="bg-[#981C82] text-white w-32 rounded-[10.14px] h-[43.6px] overflow-hidden shrink-0 flex flex-row items-center justify-center py-[6.3px] px-[17.6px] box-border gap-[7px] text-[16.64px]">
+          <div className="relative">Generate</div>
+          <img className="w-[22.5px] relative h-[19.7px]" alt="" src="/Group 3.svg" />
+        </div>
+      </Link>
+    </div>
   );
 };

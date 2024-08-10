@@ -16,10 +16,10 @@ export function Map() {
       const loader = new Loader({
         apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY as string,
         version: "weekly",
-        libraries: ["places"],
+        libraries: ["maps"],
       });
 
-      await loader.load();
+      await loader.importLibrary("maps");
 
       const position = {
         lat: 51.514399,

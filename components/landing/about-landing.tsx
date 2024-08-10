@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import Link from "next/link";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import { User } from "next-auth";
 
 type LandingHeroProps = {
@@ -53,36 +53,31 @@ const CardSpotlight = ({ children }: { children: React.ReactNode }) => {
 export const AboutSectionLanding = ({ user }: LandingHeroProps) => {
   return (
     <div className="text-center">
-      <h2 className="text-4xl font-bold mb-8">Why Growth Fast.io?</h2>
+      <h2 className="text-4xl font-bold mb-8">Explore Your Creativity</h2>
       <p className="text-xl text-primary-foreground-dark mb-8">
-        Growth Fast.io is the ultimate solution for designers and businesses looking to leverage the power of AI for their creative needs. Our platform offers:
+        Make your idea a reality!
       </p>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
         <CardSpotlight>
           <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Cutting-edge AI technology for image generation, upscaling, and background removal</p>
+            <p className="text-sm text-gray-200">✓ High-Quality Images</p>
           </div>
         </CardSpotlight>
         <CardSpotlight>
           <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Significant time and cost savings compared to traditional design methods</p>
+            <p className="text-sm text-gray-200">✓ Ease of Use</p>
           </div>
         </CardSpotlight>
         <CardSpotlight>
           <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Faster time to market for your designs and campaigns</p>
-          </div>
-        </CardSpotlight>
-        <CardSpotlight>
-          <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Seamless integration with your existing design workflow</p>
+            <p className="text-sm text-gray-200">✓ Flexibility</p>
           </div>
         </CardSpotlight>
       </div>
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center">
         <Link href={user ? "/dashboard" : "/sign-in"}>
           <Button variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
-            Try Now
+            Generate
           </Button>
         </Link>
       </div>
