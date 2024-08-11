@@ -1,14 +1,7 @@
-"use client"
-
+"use client";
 import React, { useState, MouseEvent, useCallback } from "react";
 import Image from "next/image";
-
-import {
-  Card,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
 
 interface DashboardCardProps {
   img: string;
@@ -31,11 +24,7 @@ const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
-export const DashboardCard = ({
-  img,
-  heading,
-  description,
-}: DashboardCardProps) => {
+export const DashboardCard = ({ img, heading, description }: DashboardCardProps) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
 
   const onMouseMove = useCallback(
@@ -46,8 +35,8 @@ export const DashboardCard = ({
       const y = e.clientY - box.top;
       const centerX = box.width / 2;
       const centerY = box.height / 2;
-      const rotateX = (y - centerY) / 8; // Adjust the divisor for a gentler tilt
-      const rotateY = (centerX - x) / 8; // Adjust the divisor for a gentler tilt
+      const rotateX = (y - centerY) / 8;
+      const rotateY = (centerX - x) / 8;
 
       setRotate({ x: rotateX, y: rotateY });
     }, 100),
@@ -69,8 +58,8 @@ export const DashboardCard = ({
       }}
     >
       <div className="relative h-full w-full">
-        <span className="absolute inset-[-1000%] bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69]" />
-        <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-zinc-900 p-6">
+        <span className="absolute inset-[-1000%]" />
+        <div className="relative z-10 flex flex-col items-center justify-center rounded-[40px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.4)_0.55%,_rgba(255,_255,_255,_0))] border-glass border-[1px] border-solid box-border p-6">
           <Image
             src={img}
             className="w-full rounded-md p-2"

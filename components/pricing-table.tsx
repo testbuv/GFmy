@@ -47,7 +47,7 @@ export default function StripePricingTable({ user }: Props) {
 //   return (
 //     <Card className="max-w-sm mx-auto overflow-hidden">
 //       <div className="relative h-full w-full">
-//         <span className="absolute inset-[-1000%] bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69]" />
+//         <span className="absolute inset-[-1000%] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.4)_0.55%,_rgba(255,_255,_255,_0))] border-glass border-[1px]" />
 //         <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-zinc-900 p-6 text-white">
 //           <CardTitle className="mb-6 text-2xl font-bold">
 //             Buy More Tokens
@@ -61,7 +61,7 @@ export default function StripePricingTable({ user }: Props) {
 //                 You choose the volume
 //               </CardDescription>
 //               <div className="mb-4 text-3xl font-bold">€0.50</div>
-//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//               <Button className="bg-plum-800 hover: bg-plum-600 text-white">Pay</Button>
 //             </div>
 //             <div className="rounded-lg bg-zinc-900 p-4">
 //               <CardTitle className="mb-1 text-lg font-semibold">
@@ -71,7 +71,7 @@ export default function StripePricingTable({ user }: Props) {
 //                 20 credits for image generation and manipulation.
 //               </CardDescription>
 //               <div className="mb-4 text-3xl font-bold">€10</div>
-//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//               <Button className="bg-plum-800 hover: bg-plum-600 text-white">Pay</Button>
 //             </div>
 //             <div className="rounded-lg bg-zinc-900 p-4">
 //               <CardTitle className="mb-1 text-lg font-semibold">
@@ -81,7 +81,7 @@ export default function StripePricingTable({ user }: Props) {
 //                 100 credits for image generation and manipulation.
 //               </CardDescription>
 //               <div className="mb-4 text-3xl font-bold">€20</div>
-//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//               <Button className="bg-plum-800 hover: bg-plum-600 text-white">Pay</Button>
 //             </div>
 //             <div className="rounded-lg bg-zinc-900 p-4">
 //               <div className="mb-2 flex items-center justify-between">
@@ -96,7 +96,7 @@ export default function StripePricingTable({ user }: Props) {
 //                 200 credits for image generation and manipulation.
 //               </CardDescription>
 //               <div className="mb-4 text-3xl font-bold">€35</div>
-//               <Button className="bg-[#22D3EE] text-black">Pay</Button>
+//               <Button className="bg-plum-800 hover: bg-plum-600 text-white">Pay</Button>
 //             </div>
 //           </div>
 //         </div>

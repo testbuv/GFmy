@@ -36,39 +36,39 @@ export const UserAccountNav = () => {
         <Avatar>
           <AvatarImage src={user.image ?? undefined} alt={user.name || user.email || "User avatar"} />
           <AvatarFallback>
-            <span className="text-sm font-medium uppercase text-muted-foreground">
+            <span className="text-sm font-medium uppercase text-white">
               {user.name?.[0] || user.email?.[0] || ""}
             </span>
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56 rounded-md bg-popover p-2 shadow-lg">
-        <DropdownMenuLabel className="truncate text-sm text-muted-foreground">
+      <DropdownMenuContent align="end" className="w-56 rounded-md bg-black p-2 shadow-lg">
+        <DropdownMenuLabel className="truncate text-sm text-white">
           {user.name || user.email || "MysteriousOne"}
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="my-2 border-t border-border" />
         <DropdownMenuItem asChild>
-          <Link href="/billing" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
+          <Link href="/billing" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-plum-600">
             <span>Buy Credits</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/purchase-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
+          <Link href="/purchase-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-plum-600">
             <span>Purchase History</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/creations-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
+          <Link href="/creations-history" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-plum-600">
             <span>Creations History</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link href="/settings" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted">
+          <Link href="/settings" className="flex items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-plum-600">
             <span>Settings</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="my-2 border-t border-border" />
-        <DropdownMenuItem className="flex cursor-pointer items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted" onClick={handleSignOut}>
+        <DropdownMenuItem className="flex cursor-pointer items-center space-x-2 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-plum-600" onClick={handleSignOut}>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Sign Out</span>
         </DropdownMenuItem>
