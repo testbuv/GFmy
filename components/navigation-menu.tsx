@@ -28,27 +28,27 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
           </Link>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <NavigationMenu.Trigger className="text-sm font-medium text-white hover: text-plum-600">
+          <NavigationMenu.Trigger className="text-sm font-medium text-">
             Get Creative
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-48 origin-top rounded-md bg-black p-2 shadow-lg">
             <NavigationMenu.Link asChild>
-              <Link href="/image-generation" className="block px-3 py-2 text-sm transition-colors hover:text-plum-600">
+              <Link href="/image-generation" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
                 Create
               </Link>
             </NavigationMenu.Link>
             <NavigationMenu.Link asChild>
-              <Link href="/upscale" className="block px-3 py-2 text-sm transition-colors hover:text-plum-600">
+              <Link href="/upscale" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
                 Upscale
               </Link>
             </NavigationMenu.Link>
             <NavigationMenu.Link asChild>
-              <Link href="/bg-remove" className="block px-3 py-2 text-sm transition-colors hover:text-plum-600">
+              <Link href="/bg-remove" className="block px-3 py-2 text-sm transition-colors hover:bg-muted">
                 Remove Background
               </Link>
             </NavigationMenu.Link>
             <NavigationMenu.Link asChild>
-              <Link href="/dashboard" className="block px-3 py-2 text-sm transition-colors hover:text-plum-600">
+              <Link href="/dashboard" className="block px-3 py-2 text-sm transition-colors  hover:bg-muted">
                 Dashboard
               </Link>
             </NavigationMenu.Link>
