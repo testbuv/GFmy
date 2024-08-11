@@ -1,61 +1,68 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/2aANYWTyqXq
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { User } from "next-auth";
 
-export default function Benefits() {
-  return (
-    <div className="flex justify-center space-x-4 p-8 bg-background">
-      <Card className="w-[350px] bg-card text-card-foreground rounded-lg p-6">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
-            <ImageIcon className="text-primary w-8 h-8" />
+type BenefitsProps = {
+  user?: User;
+};
+export default function Benefits({ user }: BenefitsProps) {
+    return (
+      <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 p-8 bg-background">
+        <Card className="w-full md:w-[350px] bg-card text-card-foreground rounded-lg p-6">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
+              <ImageIcon className="text-primary w-8 h-8" />
+            </div>
+            <h2 className="text-xl font-bold">High-Quality Images</h2>
+            <p className="text-center text-sm text-muted-foreground">
+              Our AI generates realistic and detailed images that impress with their quality and accuracy.
+            </p>
+            <Link href={user ? "/dashboard" : "/sign-in"}>
+            <Button variant="link" className="text-primary">
+              Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
+            </Button>
+            </Link>
           </div>
-          <h2 className="text-xl font-bold">High-Quality Images</h2>
-          <p className="text-center text-sm text-muted-foreground">
-            Our AI generates realistic and detailed images that impress with their quality and accuracy.
-          </p>
-          <Button variant="link" className="text-primary">
-            Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
-          </Button>
-        </div>
-      </Card>
-      <Card className="w-[350px] bg-card text-card-foreground rounded-lg p-6">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
-            <HandIcon className="text-primary w-8 h-8" />
+        </Card>
+        <Card className="w-full md:w-[350px] bg-card text-card-foreground rounded-lg p-6">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
+              <HandIcon className="text-primary w-8 h-8" />
+            </div>
+            <h2 className="text-xl font-bold">Ease of Use</h2>
+            <p className="text-center text-sm text-muted-foreground">
+              An intuitive interface allows even beginners to create images quickly and easily, making the generation
+              process as convenient as possible.
+            </p>
+            <Link href={user ? "/dashboard" : "/sign-in"}>
+            <Button variant="link" className="text-primary">
+              Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
+            </Button>
+            </Link>
           </div>
-          <h2 className="text-xl font-bold">Ease of Use</h2>
-          <p className="text-center text-sm text-muted-foreground">
-            An intuitive interface allows even beginners to create images quickly and easily, making the generation
-            process as convenient as possible.
-          </p>
-          <Button variant="link" className="text-primary">
-            Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
-          </Button>
-        </div>
-      </Card>
-      <Card className="w-[350px] bg-card text-card-foreground rounded-lg p-6">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
-            <ShuffleIcon className="text-primary w-8 h-8" />
+        </Card>
+        <Card className="w-full md:w-[350px] bg-card text-card-foreground rounded-lg p-6">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-muted">
+              <ShuffleIcon className="text-primary w-8 h-8" />
+            </div>
+            <h2 className="text-xl font-bold">Flexibility</h2>
+            <p className="text-center text-sm text-muted-foreground">
+              Extensive customization options let you create unique images that perfectly match your requirements and
+              preferences.
+            </p>
+            <Link href={user ? "/dashboard" : "/sign-in"}>
+            <Button variant="link" className="text-primary">
+              Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
+            </Button>
+            </Link>
           </div>
-          <h2 className="text-xl font-bold">Flexibility</h2>
-          <p className="text-center text-sm text-muted-foreground">
-            Extensive customization options let you create unique images that perfectly match your requirements and
-            preferences.
-          </p>
-          <Button variant="link" className="text-primary">
-            Generate <ArrowRightIcon className="ml-1 w-4 h-4" />
-          </Button>
-        </div>
-      </Card>
-    </div>
-  )
-}
+        </Card>
+      </div>
+    );
+  }
 
 function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

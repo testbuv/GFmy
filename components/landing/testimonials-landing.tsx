@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/e07hcxkaF0T
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 "use client"
 
 import { useState } from "react"
@@ -36,8 +31,8 @@ export default function Testimonials() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
       <h2 className="text-2xl font-bold mb-8">What our users say</h2>
-      <div className="relative bg-glass-gradient border-glass border-[1px] border-solid box-border p-8 rounded-lg shadow-lg max-w-2xl">
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer" onClick={handlePrev}>
+      <div className="relative bg-glass-gradient border-glass border-[1px] border-solid box-border p-8 rounded-lg shadow-lg max-w-4xl">
+        <div className="absolute top-1/2 left-2 transform -translate-y-1/2 cursor-pointer" onClick={handlePrev}>
           <ChevronLeftIcon className="w-6 h-6" />
         </div>
         <div className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer" onClick={handleNext}>
@@ -47,7 +42,7 @@ export default function Testimonials() {
         <div className="flex items-center mt-4">
           <span className="text-2xl mr-2">~</span>
           <Avatar className="w-10 h-10 mr-4">
-            <AvatarImage src="/placeholder-user.jpg" alt={testimonials[currentIndex].author} />
+            <AvatarImage src="/Ellipse1.png" alt={testimonials[currentIndex].author} />
             <AvatarFallback>{testimonials[currentIndex].author[0]}</AvatarFallback>
           </Avatar>
           <div>
@@ -78,7 +73,6 @@ function ChevronLeftIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-
 
 function ChevronRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

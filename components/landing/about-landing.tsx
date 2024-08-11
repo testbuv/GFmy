@@ -57,23 +57,7 @@ export const AboutSectionLanding = ({ user }: LandingHeroProps) => {
       <p className="text-xl text-primary-foreground-dark mb-8">
         Make your idea a reality!
       </p>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
-        <CardSpotlight>
-          <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ High-Quality Images</p>
-          </div>
-        </CardSpotlight>
-        <CardSpotlight>
-          <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Ease of Use</p>
-          </div>
-        </CardSpotlight>
-        <CardSpotlight>
-          <div className="flex items-center">
-            <p className="text-sm text-gray-200">✓ Flexibility</p>
-          </div>
-        </CardSpotlight>
-      </div>
+     
       <div className="mt-10 animate-[fade-in-up_1.5s_ease-in-out] space-y-5 text-center">
         <Link href={user ? "/dashboard" : "/sign-in"}>
           <Button variant="primary" className="text-slate-950 font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">

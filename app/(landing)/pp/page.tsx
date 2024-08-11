@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { LandingHero } from "@/components/landing/landing-hero";
+import  Hero  from "@/components/landing/landing-hero";
 import { LandingNav } from "@/components/landing/landing-nav";
 import { LandingFooter } from "@/components/landing/landing-footer";
 
@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
     return (
         <>
             <LandingNav />
-            <LandingHero />
+            <Hero />
             <main className="bg-gray-100 text-slate-900 py-12">
                 <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6 prose prose-blue">
              <h1 className="text-3xl font-bold mb-6 border-b pb-3 text-center text-slate-800">PRIVACY POLICY</h1>

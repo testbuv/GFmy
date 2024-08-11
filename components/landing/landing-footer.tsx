@@ -10,8 +10,8 @@ import {
 export const LandingFooter = () => {
   return (
     <footer className="bg-black text-white py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div className="flex flex-col items-start">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="flex flex-col items-start md:col-span-2">
           <div className="flex items-center mb-4">
             <img
               src="/logo.png"
@@ -23,9 +23,11 @@ export const LandingFooter = () => {
             />
             <h1 className="ml-2 text-3xl font-bold">GROWTHFAST</h1>
           </div>
-          <p className="text-lg">
-            AI image generation tool where <span className="italic">speed</span> meets{" "}
-            <span className="italic">precision</span> and <span className="italic bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] bg-clip-text text-transparent">imagination</span> knows no limits.
+          <p className="text-lg font-bold">
+            AI image generation tool where <br />
+            <span className="italic">speed</span> meets{" "}
+            <span className="italic font-normal">precision</span> and <br/>
+            <span className="bg-gradient-to-r from-[#981C82] to-[#FFB017] bg-clip-text text-transparent">imagination</span> knows no limits.
           </p>
           <section className="flex justify-start items-center space-x-6 mt-4">
             <Image
@@ -44,36 +46,38 @@ export const LandingFooter = () => {
             />
           </section>
         </div>
-        <div className="flex flex-col">
-          <h2 className="text-xl font-semibold mb-4">About</h2>
-          <nav className="space-y-2">
-            <Link href="/about" className="block hover:text-primary transition-colors duration-200">
-              About Us
-            </Link>
-            <Link href="/pricing" className="block hover:text-primary transition-colors duration-200">
-              Pricing
-            </Link>
-            <Link href="/blog" className="block hover:text-primary transition-colors duration-200">
-              Blog
-            </Link>
-            <Link href="/contact" className="block hover:text-primary transition-colors duration-200">
-              Contact
-            </Link>
-          </nav>
-        </div>
-        <div className="flex flex-col">
-          <h2 className="text-xl font-semibold mb-4">Legals</h2>
-          <nav className="space-y-2">
-            <Link href="/tc" className="block hover:text-primary transition-colors duration-200">
-              Terms and Conditions
-            </Link>
-            <Link href="/pp" className="block hover:text-primary transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <Link href="/cc" className="block hover:text-primary transition-colors duration-200">
-              Cookies Policy
-            </Link>
-          </nav>
+        <div className="grid grid-cols-2 gap-10 md:col-span-2">
+          <div className="flex flex-col">
+            <h2 className="text-xl font-semibold mb-4">About</h2>
+            <nav className="space-y-2">
+              <Link href="/about" className="block hover:text-plum-600 transition-colors duration-200">
+                About Us
+              </Link>
+              <Link href="/pricing" className="block hover:text-plum-600 transition-colors duration-200">
+                Pricing
+              </Link>
+              <Link href="/blog" className="block hover:text-plum-600 transition-colors duration-200">
+                Blog
+              </Link>
+              <Link href="/contact" className="block hover:text-plum-600 transition-colors duration-200">
+                Contact
+              </Link>
+            </nav>
+          </div>
+          <div className="flex flex-col">
+            <h2 className="text-xl font-semibold mb-4">Legals</h2>
+            <nav className="space-y-2">
+              <Link href="/tc" className="blockhover:text-plum-600 transition-colors duration-200">
+                Terms and Conditions
+              </Link>
+              <Link href="/pp" className="block hover:text-plum-600 transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link href="/cc" className="block hover:text-plum-600 transition-colors duration-200">
+                Cookies Policy
+              </Link>
+            </nav>
+          </div>
         </div>
       </div>
       <div className="container mx-auto mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
