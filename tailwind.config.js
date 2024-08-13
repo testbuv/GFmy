@@ -13,6 +13,10 @@ export default {
         body: ['var(--font-body)', 'Lokanova', ...fontFamily.sans]
       },
       colors: {
+        plum: {
+          800: '#981C82', 
+          600: '#d128b8',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

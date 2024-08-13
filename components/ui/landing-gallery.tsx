@@ -144,7 +144,7 @@ export default function Gallery({ user }: GalleryProps) {
         </div>
         <div className="mt-8">
           <Link href={user ? "/dashboard" : "/sign-in"}>
-            <Button className="bg-plum-600 text-white rounded-full px-4 py-2">Generate</Button>
+            <Button className="bg-plum-800 hover:bg-plum-600 text-white rounded-full px-4 py-2">Generate</Button>
           </Link>
         </div>
       </div>
