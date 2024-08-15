@@ -50,15 +50,12 @@ export const LandingFooter = () => {
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold mb-4">About</h2>
             <nav className="space-y-2">
-              <Link href="/about" className="block hover:text-plum-600 transition-colors duration-200">
-                About Us
-              </Link>
-              <Link href="/pricing" className="block hover:text-plum-600 transition-colors duration-200">
-                Pricing
-              </Link>
-              <Link href="/blog" className="block hover:text-plum-600 transition-colors duration-200">
-                Blog
-              </Link>
+        <Link href="/pricing" className="block hover:text-plum-600 transition-colors duration-200">
+          Pricing
+        </Link> <br />
+        <Link href="/faq" className="block hover:text-plum-600 transition-colors duration-200">
+          FAQ
+        </Link>
               <Link href="/contact" className="block hover:text-plum-600 transition-colors duration-200">
                 Contact
               </Link>
