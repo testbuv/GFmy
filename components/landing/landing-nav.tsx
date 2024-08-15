@@ -46,16 +46,16 @@ export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
           isOpen ? 'flex' : 'hidden'
         } md:flex flex-col md:flex-row items-center justify-center mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-8 text-lg md:text-xl`}
       >
-        <Link href="#benefits" className="hover:text-plum-600">
+        <Link href="https://growthfast.io/#benefits" className="hover:text-plum-600">
           Features
         </Link>
-        <Link href="#pricing" className="hover:text-plum-600">
+        <Link href="https://growthfast.io/#pricing" className="hover:text-plum-600">
           Pricing
         </Link>
-        <Link href="#testimonials" className="hover:text-plum-600">
+        <Link href="https://growthfast.io/#testimonials" className="hover:text-plum-600">
           About
         </Link>
-        <Link href="#faq" className="hover:text-plum-600">
+        <Link href="https://growthfast.io/#faq" className="hover:text-plum-600">
           FAQ
         </Link>
       </div>
