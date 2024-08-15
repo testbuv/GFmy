@@ -47,20 +47,20 @@ export const LandingFooter = () => {
           </section>
         </div>
         <div className="grid grid-cols-2 gap-10 md:col-span-2">
-          <div className="flex flex-col">
-            <h2 className="text-xl font-semibold mb-4">About</h2>
-            <nav className="space-y-2">
-        <Link href="/pricing" className="block hover:text-plum-600 transition-colors duration-200">
-          Pricing
-        </Link> <br />
-        <Link href="/faq" className="block hover:text-plum-600 transition-colors duration-200">
-          FAQ
-        </Link>
-              <Link href="/contact" className="block hover:text-plum-600 transition-colors duration-200">
-                Contact
-              </Link>
-            </nav>
-          </div>
+        <div className="flex flex-col">
+  <h2 className="text-xl font-semibold mb-4">About</h2>
+  <nav className="space-y-2">
+    <Link href="https://growthfast.io/#pricing" className="block hover:text-plum-600 transition-colors duration-200">
+      Pricing
+    </Link>
+    <Link href="https://growthfast.io/#faq" className="block hover:text-plum-600 transition-colors duration-200">
+      FAQ
+    </Link>
+    <Link href="/contact" className="block hover:text-plum-600 transition-colors duration-200">
+      Contact
+    </Link>
+  </nav>
+</div>
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold mb-4">Legals</h2>
             <nav className="space-y-2">
