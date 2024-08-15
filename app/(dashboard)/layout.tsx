@@ -1,5 +1,4 @@
-startLine: 1
-endLine: 50
+
 import React from "react";
 import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/session";

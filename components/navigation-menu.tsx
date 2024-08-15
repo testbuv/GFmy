@@ -28,7 +28,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
           </Link>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <NavigationMenu.Trigger className="text-sm font-medium text-">
+          <NavigationMenu.Trigger className="text-sm font-medium bg-black">
             Get Creative
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-48 origin-top rounded-md bg-black p-2 shadow-lg">
@@ -55,7 +55,7 @@ export const NavigationMenuComponent = ({ creationCount, userCredits }: Navigati
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <Link href="/billing" className="text-sm font-medium text-muted-foreground">
+          <Link href="/billing" className="text-sm font-medium text-white hover:text-plum-600">
             Buy Credits
           </Link>
         </NavigationMenu.Item>
