@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl",
+        default: "bg-plum-800 hover:bg-plum-600 text-white px-6 py-3 rounded-full",
+        primary: "bg-plum-800 hover:bg-plum-600 text-white px-6 py-3 rounded-full",
         destructive:
           "border bg-destructive text-destructive-foreground hover:bg-destructive/90 dark:hover:bg-destructive/80",
         outline:
-          "border-b-gradient-to-r bg-background hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/80 dark:hover:text-accent-foreground",
+          "border border-plum-800 hover:border-plum-600 bg-transparent text-white px-6 py-3 rounded-full",
         secondary:
-          "border border-b-gradient-to-r rounded-full inline-flex h-50 w-50 items-center justify-center  bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl",
+          "border border-b-gradient-to-r rounded-full inline-flex h-50 w-50 items-center justify-center bg-gray-950 px-8 py-1 text-sm font-medium text-gray-50 backdrop-blur-3xl",
         ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/80 dark:hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline dark:text-primary-foreground",
-        primary: "inline-flex h-12 items-center justify-center rounded-full border border-gray-800 bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69] px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -33,7 +33,6 @@ const buttonVariants = cva(
     },
   }
 )
-
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
