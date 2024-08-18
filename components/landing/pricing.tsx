@@ -10,22 +10,22 @@ export default function Pricing() {
     {
       name: "Custom Credits",
       description: "You choose the volume",
-      price: "€0.50",
+      price: "€0.01",
     },
     {
-      name: "20 Credits",
-      description: "20 credits for image generation and manipulation.",
+      name: "1000 Credits",
+      description: "1000 credits for image generation and manipulation.",
       price: "€10",
     },
     {
-      name: "100 Credits",
-      description: "100 credits for image generation and manipulation.",
-      price: "€20",
+      name: "2500 Credits",
+      description: "2500 credits for image generation and manipulation.",
+      price: "€25",
     },
     {
-      name: "200 Credits",
-      description: "200 credits for image generation and manipulation.",
-      price: "€35",
+      name: "5000 Credits",
+      description: "5000 credits for image generation and manipulation.",
+      price: "€50",
       isMostPopular: true,
     },
   ]
@@ -77,11 +77,11 @@ export default function Pricing() {
                       </li>
                     </>
                   )}
-                  {plan.name === "20 Credits" && (
+                  {plan.name === "1000 Credits" && (
                     <>
                      <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 20 creations
+                       Up to 5 creations
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
@@ -100,11 +100,11 @@ export default function Pricing() {
                       </li>
                     </>
                   )}
-                  {plan.name === "100 Credits" && (
+                  {plan.name === "2500 Credits" && (
                     <>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 100 creations
+                       Up to 12 creations
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
@@ -123,11 +123,11 @@ export default function Pricing() {
                       </li>
                     </>
                   )}
-                  {plan.name === "200 Credits" && (
+                  {plan.name === "5000 Credits" && (
                     <>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 200 creations
+                       Up to 25 creations
                       </li>
                       <li className="flex items-center">
                         <CheckIcon className="w-4 h-4 mr-2 text-green-500" />

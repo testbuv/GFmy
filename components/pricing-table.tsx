@@ -50,7 +50,7 @@ export default function PricingTable({ user }: Props) {
         ? '£' + (10 * EXCHANGE_RATE_EUR_TO_GBP).toFixed(2) 
         : '€10',
       credits: 1000,
-      creations: "10",
+      creations: "5",
       tokens: "1000",
     },
     {
@@ -61,7 +61,7 @@ export default function PricingTable({ user }: Props) {
         ? '£' + (25 * EXCHANGE_RATE_EUR_TO_GBP).toFixed(2) 
         : '€25',
       credits: 2500,
-      creations: "25",
+      creations: "12",
       tokens: "2500",
       isMostPopular: true,
     },
@@ -73,7 +73,7 @@ export default function PricingTable({ user }: Props) {
         ? '£' + (50 * EXCHANGE_RATE_EUR_TO_GBP).toFixed(2) 
         : '€50',
       credits: 5000,
-      creations: "50",
+      creations: "25",
       tokens: "5000",
     },
   ];
