@@ -125,7 +125,7 @@ const ImageUpscalePage = () => {
   control={form.control}
   name="scale"
   render={({ field }) => (
-    <FormItem className="col-span-2 rounded-lg text-[12px] font-bold uppercase text-foreground dark:text-foreground md:col-span-1">
+    <FormItem className="col-span-2 rounded-lg text-[12px] font-bold uppercase text-white md:col-span-1">
       <Select
         disabled={isLoading}
         onValueChange={field.onChange}
@@ -133,7 +133,7 @@ const ImageUpscalePage = () => {
         defaultValue={field.value}
       >
         <FormControl>
-          <SelectTrigger className="border-2 border-primary text-foreground dark:text-foreground">
+          <SelectTrigger className="border-2 border-primary text-white, background-black outline-gray-400d">
             <SelectValue
               defaultValue={field.value}
               placeholder="Select Scale"
