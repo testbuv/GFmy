@@ -3,11 +3,10 @@ import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card";
 import { getCurrentUser } from "@/lib/session";
-import StripePricingTable from "@/components/pricing-table";
+import PricingTable from "@/components/pricing-table";
 import { getUserCredits } from "@/lib/session";
 import { getCreationCount } from "@/lib/api-limit";
 import { calculateAvailableCredits } from "@/lib/credits";
-
 
 export const metadata: Metadata = {
   title: "Billing",
@@ -40,33 +39,12 @@ export default async function BillingPage() {
             <p className="text-gray-100">Credits remaining</p>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <div className="relative h-full">
-              <div className="container mx-auto">
-                <div className="mx-auto max-w-3xl">
-                  <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
-                    <div className="w-full">
-                      <Card>
-                        <CardHeader>
-                          <CardTitle className="text-center">
-                            Buy More Tokens for your design work
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="grid grid-cols-1">
-                            <StripePricingTable user={user} />
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardHeader>
-        </Card>
       </div>
+      <section id="pricing" className="mx-auto py-6 w-full">
+  <div className="container mx-auto px-4">
+    <PricingTable user={user} />
+  </div>
+</section>
     </main>
   );
 }

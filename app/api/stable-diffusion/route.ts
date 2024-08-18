@@ -34,10 +34,8 @@ export async function POST(req: NextRequest) {
       return new NextResponse("Free Tier Ended", { status: 403 });
     }
 
-    // Specify the model for Stable Diffusion
     const modelURL = "8beff3369e81422112d93b89ca01426147de542cd4684c244b673b105188fe5f";
 
-    // Prepare the request options for Stable Diffusion
     const req_options = {
       prompt: prompt,
       num_outputs: num_outputs || 1,

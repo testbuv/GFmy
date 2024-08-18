@@ -15,7 +15,6 @@ export async function GET(
 ) {
   const user = await getCurrentUser();
 
-
   if (!user) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
@@ -33,8 +32,8 @@ export async function GET(
           imageUrl,
           domain: "qr-code",
           userId: user.id,
-          prompt: "", // Add the missing 'prompt' property
-          model_latency: 0, // Add the missing 'model_latency'
+          prompt: "", 
+          model_latency: 0,
         })),
       });
 

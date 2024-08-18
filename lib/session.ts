@@ -26,11 +26,12 @@ export async function getUserCredits() {
   return credits?.credits ?? 0
 }
 
-
-export async function addUserCredits(credits: number) {
+export async function addUserCredits(amount: number) {
   const user = await getCurrentUser();
 
   if (!user) return;
+
+  const credits = amount * 100; // 1 EUR = 100 credits
 
   return prismadb.user.update({
     where: { id: user.id },

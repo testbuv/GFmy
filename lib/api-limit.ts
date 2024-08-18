@@ -1,33 +1,29 @@
 import { getCurrentUser } from "@/lib/session";
-import prismadb from "@/lib/db"; 
+import prismadb from "@/lib/db";
 
-export const checkApiLimit = async (
-  ) => {
-
+export const checkApiLimit = async () => {
   const user = await getCurrentUser();
 
-  if(!user) {
+  if (!user) {
     throw new Error("Not authenticated");
   }
 
   const tokenBalance = await prismadb.user.findUnique({
     where: {
-      id: user.id
-
+      id: user.id,
     },
     select: {
-      credits: true    
-    }   
+      credits: true,
+    },
   });
-  
+
   const creationCount = await getCreationCount();
 
-  if (tokenBalance && tokenBalance.credits && creationCount >= tokenBalance.credits) {
+  if (tokenBalance && tokenBalance.credits && creationCount * 200 >= tokenBalance.credits) {
     throw new Error("Out of credits");
-  } else {  
+  } else {
     return true;
   }
-
 };
 
 export const getCreationCount = async () => {
@@ -47,15 +43,5 @@ export const getCreationCount = async () => {
 
 export function calculateCreditAmount(amount: number): number {
   const amountEuros = amount / 100; // Convert to full EUR units
-
-  switch (amountEuros) {
-    case 10:
-      return 20;
-    case 20:
-      return 100;
-    case 35:
-      return 200;
-    default:
-      return amountEuros / 0.5; // Custom rate: 0.5 EUR per credit
-  }
+  return amountEuros * 100; // 1 EUR = 100 credits
 }
