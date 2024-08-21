@@ -57,7 +57,7 @@ model User {
   accounts               Account[]
   sessions               Session[]
   creations              Creation[]
-  credits                Int      @default(300)
+  credits                Int      @default(400)
   purchases              Purchase[]
 
   @@map("users")
