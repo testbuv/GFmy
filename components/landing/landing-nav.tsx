@@ -46,6 +46,9 @@ export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
           isOpen ? 'flex' : 'hidden'
         } md:flex flex-col md:flex-row items-center justify-center mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-8 text-lg md:text-xl`}
       >
+         <Link href="https://qr.growthfast.io/" className="hover:text-plum-600">
+          QR Generation
+        </Link>
         <Link href="https://growthfast.io/#benefits" className="hover:text-plum-600">
           Features
         </Link>

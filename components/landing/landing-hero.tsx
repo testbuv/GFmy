@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from 'next/image';
+import UnderlineLink from '../ui/underline-link';
 
 function SparkleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -40,6 +41,10 @@ export default function Hero() {
               Generate <SparkleIcon className="ml-2 h-5 w-5" />
             </Button>
           </Link>
+        </div>
+        <div>
+        <UnderlineLink href='https://qr.growthfast.io/'>Try our QR Generation App!</UnderlineLink>
+
         </div>
       </div>
       <div className="mt-8 md:mt-0 relative z-10">
