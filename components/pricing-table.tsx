@@ -111,7 +111,7 @@ export default function PricingTable({ user }: Props) {
                     value={customAmount}
                     onChange={(e) => setCustomAmount(e.target.value)}
                     min={1}
-                    className="mt-2 text-lg text-center bg-transparent outline-none"
+                    className="mt-2 text-lg text-center bg-transparent outline-none border-white border-[1px] border-solid rounded-[10px] p-2 w-full"
                     placeholder="Enter amount"
                   />
                   <div className="mt-2 text-sm text-gray-400">Flexible credit amount</div>

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import React from "react"
 export default function Pricing() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const pricingPlans = [
@@ -14,17 +15,17 @@ export default function Pricing() {
     },
     {
       name: "1000 Credits",
-      description: "1000 credits for image generation and manipulation.",
+      description: "Up to 5 creations.",
       price: "€10",
     },
     {
       name: "2500 Credits",
-      description: "2500 credits for image generation and manipulation.",
+      description: "Up to 12 creations.",
       price: "€25",
     },
     {
       name: "5000 Credits",
-      description: "5000 credits for image generation and manipulation.",
+      description: "Up to 25 creations.",
       price: "€50",
       isMostPopular: true,
     },
@@ -38,9 +39,37 @@ export default function Pricing() {
     setCurrentIndex((prevIndex) => (prevIndex === pricingPlans.length - 1 ? 0 : prevIndex + 1))
   }
 
+  const renderPlanFeatures = (plan: typeof pricingPlans[0]) => (
+    <>
+      <li className="flex items-center">
+        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
+        {plan.name === "Custom Credits" 
+          ? "Custom pricing with discounts" 
+          : `${plan.description}`}
+      </li>
+      <li className="flex items-center">
+        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
+        Remove Image's Background
+      </li>
+      <li className="flex items-center">
+        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
+        Enlarge your Images
+      </li>
+      <li className="flex items-center">
+        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
+        Stable Diffusion
+      </li>
+      <li className="flex items-center">
+        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
+        Text to Image
+      </li>
+    </>
+  )
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
       <h1 className="mb-8 text-3xl font-bold">Pricing</h1>
+      {/* Desktop view */}
       <div className="hidden md:grid gap-8 md:grid-cols-4">
         {pricingPlans.map((plan, index) => (
           <div
@@ -54,103 +83,13 @@ export default function Pricing() {
               </CardHeader>
               <CardContent className="mt-4">
                 <ul className="space-y-2">
-                  {plan.name === "Custom Credits" && (
-                    <>
-                        <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Custom pricing with discounts
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                    </>
-                  )}
-                  {plan.name === "1000 Credits" && (
-                    <>
-                     <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 5 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                    </>
-                  )}
-                  {plan.name === "2500 Credits" && (
-                    <>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 12 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                    </>
-                  )}
-                  {plan.name === "5000 Credits" && (
-                    <>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 25 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                    </>
-                  )}
+                  {renderPlanFeatures(plan)}
                 </ul>
                 <Link href={"/sign-in"}>
-
-                <Button className="w-full mt-6 bg-plum-800 text-white hover:bg-plum-600">
-                  Get Started                </Button></Link>
+                  <Button className="w-full mt-6 bg-plum-800 text-white hover:bg-plum-600">
+                    Get Started
+                  </Button>
+                </Link>
                 <div className="mt-2 text-center text-sm text-gray-400">
                   No credit card required
                 </div>
@@ -159,130 +98,41 @@ export default function Pricing() {
           </div>
         ))}
       </div>
-      <div className="md:hidden relative">
+      {/* Mobile view */}
+      <div className="md:hidden relative w-full max-w-sm">
         <div className="flex flex-col items-center justify-center">
-          <Card>
+          <Card className="w-full bg-glass-gradient border-glass border-[1px] border-solid">
             <CardHeader className="text-center">
               <div className="text-4xl font-bold">{pricingPlans[currentIndex].price}</div>
               <div className="text-lg">{pricingPlans[currentIndex].name}</div>
             </CardHeader>
             <CardContent className="mt-4">
-              <ul className="space-y-2">
-                {pricingPlans[currentIndex].name === "Custom Credits" && (
-                  <>
-                    <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Custom pricing with discounts
-                        </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                  </>
-                )}
-                {pricingPlans[currentIndex].name === "20 Credits" && (
-                  <>
-                    <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 20 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                  </>
-                )}
-                {pricingPlans[currentIndex].name === "100 Credits" && (
-                  <>
-                     <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 100 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                  </>
-                )}
-                {pricingPlans[currentIndex].name === "200 Credits" && (
-                  <>
-                    <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                       Up to 200 creations
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Remove Image's Background                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Enlarge your Images
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Stable Diffusion
-                      </li>
-                      <li className="flex items-center">
-                        <CheckIcon className="w-4 h-4 mr-2 text-green-500" />
-                        Text to Image
-                      </li>
-                  </>
-                )}
+              <ul className="space-y-2 mb-4">
+                {renderPlanFeatures(pricingPlans[currentIndex])}
               </ul>
-              <Link href={"/sign-in"}>
-              <Button className="w-full mt-6 bg-plum-800 text-white hover:bg-plum-600">
-Get Started               </Button>
-</Link>
+              <Link href="/sign-in" className="w-full">
+                <Button className="w-full bg-plum-800 text-white hover:bg-plum-600">
+                  Get Started
+                </Button>
+              </Link>
               <div className="mt-2 text-center text-sm text-gray-400">
                 No credit card required
               </div>
             </CardContent>
           </Card>
         </div>
-        <div
-          className="absolute top-1/2 left-1 transform -translate-y-1/2 cursor-pointer"
+        <button
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/50 rounded-full p-2"
           onClick={handlePrev}
         >
-          <ChevronLeftIcon className="w-6 h-6" />
-        </div>
-        <div
-          className="absolute top-1/2 right-1 transform -translate-y-1/2 cursor-pointer"
+          <ChevronLeftIcon className="w-6 h-6 text-white" />
+        </button>
+        <button
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/50 rounded-full p-2"
           onClick={handleNext}
         >
-          <ChevronRightIcon className="w-6 h-6" />
-        </div>
+          <ChevronRightIcon className="w-6 h-6 text-white" />
+        </button>
       </div>
     </div>
   )
