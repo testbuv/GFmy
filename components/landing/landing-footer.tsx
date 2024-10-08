@@ -27,11 +27,9 @@ export const LandingFooter = () => {
             </span>{" "}
             knows no limits.
           </p>
-
           <div className="wd-image text-left mt-4">
             <p className="p1">
-              GrowthFast LTD (15630467)<br />
-              41 Devonshire Street London, W1G 7AJ, United Kingdom
+              GROWTHFAST LTD, a company registered under the laws of the United Kingdom under the company number 15932559 and the registered address 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ
             </p>
           </div>
         </div>
@@ -64,29 +62,23 @@ export const LandingFooter = () => {
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold mb-4">Legals</h2>
             <nav className="space-y-2">
-              <a
-                href="/tc"
+            <a
+                href="/docs/Terms_of_Use.pdf"
                 className="block hover:text-plum-600 transition-colors duration-200"
               >
-                Terms and Conditions
+                Terms of Use
               </a>
               <a
-                href="/pp"
+                href="/docs/Privacy_Policy.pdf"
                 className="block hover:text-plum-600 transition-colors duration-200"
               >
                 Privacy Policy
               </a>
               <a
-                href="/cc"
+                href="/docs/Cookies_Policy.pdf"
                 className="block hover:text-plum-600 transition-colors duration-200"
               >
                 Cookies Policy
-              </a>
-              <a
-                href="/cc"
-                className="block hover:text-plum-600 transition-colors duration-200"
-              >
-                Refund Policy
               </a>
             </nav>
           </div>
@@ -94,7 +86,7 @@ export const LandingFooter = () => {
       </div>
 
       <div className="container mx-auto mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-sm">&copy;2024 GrowthFast All Rights Reserved</p>
+        <p className="text-sm">&copy;2024 GROWTHFAST LTD All Rights Reserved</p>
 
         {/* Social */}
         <div className="flex space-x-4 mt-4 md:mt-0">
@@ -113,7 +105,7 @@ export const LandingFooter = () => {
   );
 };
 
-// Facebook
+//  Facebook
 function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -133,7 +125,7 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// Instagram
+//  Instagram
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -155,7 +147,7 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// Twitter
+//  Twitter
 function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
