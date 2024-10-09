@@ -41,12 +41,7 @@ export default function ContactPage() {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="space-y-2">
-                                    <h3 className="text-xl font-regular">Phone</h3>
-                                    <Link className="text-foreground-dark hover:hover-gradient-text underline-offset-2" href="tel:+440123456789">
-                                    +44 123 456 789          
-                                </Link>
-                                </div>
+                                
                             </div>
                         </div>
                         <div className="mt-8 aspect-w-16 aspect-h-9 overflow-hidden rounded-large shadow-md">
