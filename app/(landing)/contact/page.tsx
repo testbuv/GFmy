@@ -28,9 +28,9 @@ export default function ContactPage() {
                                     <p className="primary-foreground-dark dark:text-primary-foreground-dark ">
                                         GrowthFast.io 
                                         < br />
-                                        Company Address
+                                        Company Address: 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ
                                         < br />
-                                        Company number
+                                        Company number: 15932559
                                     </p>
                                 </div>
                                 <div className="space-y-2">

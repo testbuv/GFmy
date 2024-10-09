@@ -27,11 +27,31 @@ export const LandingFooter = () => {
             </span>{" "}
             knows no limits.
           </p>
+
+          {/* Юридическая информация */}
           <div className="wd-image text-left mt-4">
             <p className="p1">
               GROWTHFAST LTD, a company registered under the laws of the United Kingdom under the company number 15932559 and the registered address 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ
             </p>
           </div>
+
+          {/* Логотипы платёжных систем */}
+          <section className="flex justify-start items-center space-x-6 mt-4">
+            <Image
+              alt="Mastercard"
+              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+              height="78"
+              src="/ma_symbol_opt_73_3x.png"
+              width="110"
+            />
+            <Image
+              alt="Visa"
+              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+              height="99"
+              src="/visa-secure_blk.png"
+              width="99"
+            />
+          </section>
         </div>
 
         <div className="grid grid-cols-2 gap-10 md:col-span-2">
@@ -62,7 +82,7 @@ export const LandingFooter = () => {
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold mb-4">Legals</h2>
             <nav className="space-y-2">
-            <a
+              <a
                 href="/docs/Terms_of_Use.pdf"
                 className="block hover:text-plum-600 transition-colors duration-200"
               >
@@ -88,7 +108,7 @@ export const LandingFooter = () => {
       <div className="container mx-auto mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm">&copy;2024 GROWTHFAST LTD All Rights Reserved</p>
 
-        {/* Social */}
+        {/* Социальные иконки */}
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a href="#" aria-label="Facebook">
             <FacebookIcon className="h-6 w-6 text-white" />
@@ -105,7 +125,7 @@ export const LandingFooter = () => {
   );
 };
 
-//  Facebook
+// Facebook
 function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -125,7 +145,7 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-//  Instagram
+// Instagram
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -147,7 +167,7 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-//  Twitter
+// Twitter
 function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
