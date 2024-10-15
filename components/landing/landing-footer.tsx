@@ -28,28 +28,30 @@ export const LandingFooter = () => {
             knows no limits.
           </p>
 
-          {/* Юридическая информация */}
+          {/* Leagal */}
           <div className="wd-image text-left mt-4">
             <p className="p1">
               GROWTHFAST LTD, a company registered under the laws of the United Kingdom under the company number 15932559 and the registered address 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ
             </p>
           </div>
 
-          {/* Логотипы платёжных систем */}
+          {/* Payment */}
           <section className="flex justify-start items-center space-x-6 mt-4">
             <Image
               alt="Mastercard"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="78"
-              src="/ma_symbol_opt_73_3x.png"
-              width="110"
+              src="/mc-logo.png"
+              width={100} 
+              height={70}  
+              style={{ width: 'auto' }}  
             />
             <Image
               alt="Visa"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="99"
-              src="/visa-secure_blk.png"
-              width="99"
+              src="/Visa_Logo.png"
+              width={100}  
+              height={70}  
+              style={{ width: 'auto' }}  
             />
           </section>
         </div>
@@ -108,42 +110,19 @@ export const LandingFooter = () => {
       <div className="container mx-auto mt-10 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm">&copy;2024 GROWTHFAST LTD All Rights Reserved</p>
 
-        {/* Социальные иконки */}
+        {/* Social */}
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" aria-label="Facebook">
-            <FacebookIcon className="h-6 w-6 text-white" />
-          </a>
           <a href="#" aria-label="Instagram">
             <InstagramIcon className="h-6 w-6 text-white" />
           </a>
-          <a href="#" aria-label="Twitter">
-            <TwitterIcon className="h-6 w-6 text-white" />
+          <a href="https://x.com/thegrowthfast" aria-label="Twitter">
+            <XIcon className="h-6 w-6 text-white" />
           </a>
         </div>
       </div>
     </footer>
   );
 };
-
-// Facebook
-function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
 
 // Instagram
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -167,22 +146,17 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// Twitter
-function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 48 48"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="currentColor"
     >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      <path d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"></path>
     </svg>
   );
 }

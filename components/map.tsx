@@ -22,10 +22,10 @@ export function Map() {
       await loader.importLibrary("maps");
 
       const position = {
-        lat: 51.514399,
-        lng: -1.111823,
+        lat: 51.514882,
+        lng: -0.123571,
       };
-
+     
       const mapOptions: google.maps.MapOptions = {
         center: position,
         zoom: 14,
