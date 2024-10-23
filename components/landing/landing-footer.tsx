@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/image"; // Добавлено импортирование
 
 export const LandingFooter = () => {
   return (
@@ -7,12 +7,12 @@ export const LandingFooter = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="flex flex-col items-start md:col-span-2">
           <div className="flex items-center mb-4">
-            <img
+            <Image
               src="/logo.png"
               alt="GrowthFast Logo"
               className="h-12 w-12"
-              width="50"
-              height="50"
+              width={50}
+              height={50}
               style={{ aspectRatio: "50/50", objectFit: "cover" }}
             />
             <h1 className="ml-2 text-3xl font-bold">GROWTHFAST</h1>
@@ -28,7 +28,7 @@ export const LandingFooter = () => {
             knows no limits.
           </p>
 
-          {/* Leagal */}
+          {/* Legal */}
           <div className="wd-image text-left mt-4">
             <p className="p1">
               GROWTHFAST LTD, a company registered under the laws of the United Kingdom under the company number 15932559 and the registered address 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ
@@ -112,9 +112,9 @@ export const LandingFooter = () => {
 
         {/* Social */}
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" aria-label="Instagram">
+          {/* <a href="#" aria-label="Instagram">
             <InstagramIcon className="h-6 w-6 text-white" />
-          </a>
+          </a> */}
           <a href="https://x.com/thegrowthfast" aria-label="Twitter">
             <XIcon className="h-6 w-6 text-white" />
           </a>
@@ -125,26 +125,26 @@ export const LandingFooter = () => {
 };
 
 // Instagram
-function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
+// function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+//   return (
+//     <svg
+//       {...props}
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//     >
+//       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+//       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+//       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+//     </svg>
+//   );
+// }
 
 function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

@@ -1,7 +1,14 @@
 "use client";
-import React, { useState, MouseEvent, useCallback } from "react";
+
+import React, { useState, MouseEvent, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Card, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
+
+import {
+  Card,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 interface DashboardCardProps {
   img: string;
@@ -24,11 +31,16 @@ const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
-export const DashboardCard = ({ img, heading, description }: DashboardCardProps) => {
+export const DashboardCard = ({
+  img,
+  heading,
+  description,
+}: DashboardCardProps) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const throttledMouseMove = useRef<(e: MouseEvent<HTMLDivElement>) => void>();
 
-  const onMouseMove = useCallback(
-    throttle((e: MouseEvent<HTMLDivElement>) => {
+  useEffect(() => {
+    throttledMouseMove.current = throttle((e: MouseEvent<HTMLDivElement>) => {
       const card = e.currentTarget;
       const box = card.getBoundingClientRect();
       const x = e.clientX - box.left;
@@ -39,13 +51,18 @@ export const DashboardCard = ({ img, heading, description }: DashboardCardProps)
       const rotateY = (centerX - x) / 8;
 
       setRotate({ x: rotateX, y: rotateY });
-    }, 100),
-    []
-  );
-
-  const onMouseLeave = useCallback(() => {
-    setRotate({ x: 0, y: 0 });
+    }, 100);
   }, []);
+
+  const onMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (throttledMouseMove.current) {
+      throttledMouseMove.current(e);
+    }
+  };
+
+  const onMouseLeave = () => {
+    setRotate({ x: 0, y: 0 });
+  };
 
   return (
     <Card
@@ -58,8 +75,8 @@ export const DashboardCard = ({ img, heading, description }: DashboardCardProps)
       }}
     >
       <div className="relative h-full w-full">
-        <span className="absolute inset-[-1000%]" />
-        <div className="relative z-10 flex flex-col items-center justify-center rounded-[40px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.4)_0.55%,_rgba(255,_255,_255,_0))] border-glass border-[1px] border-solid box-border p-6">
+        <span className="absolute inset-[-1000%] bg-gradient-to-r from-[#ed6ea0] to-[#ec8c69]" />
+        <div className="relative z-10 flex flex-col items-center justify-center rounded-lg bg-zinc-900 p-6">
           <Image
             src={img}
             className="w-full rounded-md p-2"

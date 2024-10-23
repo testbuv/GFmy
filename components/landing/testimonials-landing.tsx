@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -40,11 +39,6 @@ export default function Testimonials() {
         </div>
         <p className="text-lg mb-4">{testimonials[currentIndex].text}</p>
         <div className="flex items-center mt-4">
-          <span className="text-2xl mr-2">~</span>
-          <Avatar className="w-10 h-10 mr-4">
-            <AvatarImage src="/Ellipse1.png" alt={testimonials[currentIndex].author} />
-            <AvatarFallback>{testimonials[currentIndex].author[0]}</AvatarFallback>
-          </Avatar>
           <div>
             <p className="font-semibold">{testimonials[currentIndex].author}</p>
             <p className="text-sm text-gray-400">{testimonials[currentIndex].role}</p>

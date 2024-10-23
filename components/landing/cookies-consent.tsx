@@ -38,7 +38,7 @@ export const CookieConsent = () => {
           We use cookies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.
         </p>
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 my-2 sm:my-0">
-          <UnderlineLink href='/cc'>Learn more</UnderlineLink>
+          <UnderlineLink href='/docs/Cookies_Policy.pdf'>Learn more</UnderlineLink>
           <Button  onClick={acceptConsent} className="bg-white text-slate-950 px-4 py-2 rounded text-sm sm:text-base font-medium shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl">
             Accept
           </Button>

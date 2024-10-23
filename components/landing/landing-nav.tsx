@@ -2,6 +2,7 @@
 import { FunctionComponent, useState } from 'react';
 import Link from "next/link";
 import { User } from "next-auth";
+import Image from 'next/image'; // Добавлено импортирование
 
 type LandingNavProps = {
   user?: User;
@@ -18,14 +19,20 @@ export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
     <div className="w-full relative flex flex-col md:flex-row items-center justify-between px-4 py-4 md:px-8 md:py-6 text-white font-poppins">
       <div className="flex flex-row items-center justify-between w-full md:w-auto">
         <div className="flex flex-row items-start justify-start gap-2 text-left font-lokanova">
-          <img className="w-8 h-8 md:w-10 md:h-10 relative overflow-hidden shrink-0 object-cover" alt="" src="/logo.png" />
+          <Image
+            className="w-8 h-8 md:w-10 md:h-10 relative overflow-hidden shrink-0 object-cover"
+            alt=""
+            src="/logo.png"
+            width={40} // Максимальная ширина
+            height={40}
+          />
           <div className="text-xl md:text-2xl relative tracking-[0.03em] uppercase inline-block shrink-0 font-lokanova">GrowthFast</div>
         </div>
         <button
           className="md:hidden focus:outline-none"
           onClick={toggleMenu}
         >
-                 <svg
+          <svg
             className="w-6 h-6"
             fill="none"
             stroke="white"
@@ -46,7 +53,7 @@ export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
           isOpen ? 'flex' : 'hidden'
         } md:flex flex-col md:flex-row items-center justify-center mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-8 text-lg md:text-xl`}
       >
-         <Link href="https://qr.growthfast.io/" className="hover:text-plum-600">
+        <Link href="https://qr.growthfast.io/" className="hover:text-plum-600">
           QR Generation
         </Link>
         <Link href="https://growthfast.io/#benefits" className="hover:text-plum-600">
@@ -65,7 +72,13 @@ export const LandingNav: FunctionComponent<LandingNavProps> = ({ user }) => {
       <Link href={user ? "/dashboard" : "/sign-in"}>
         <div className="hidden md:flex bg-[#981C82] hover:bg-plum-600 text-white px-6 py-2 rounded-lg text-lg">
           <div className="relative">Generate</div>
-          <img className="w-5 h-5 ml-2" alt="" src="/Group 3.svg" />
+          <Image
+            className="w-5 h-5 ml-2"
+            alt=""
+            src="/Group 3.svg"
+            width={20}
+            height={20}
+          />
         </div>
       </Link>
     </div>
